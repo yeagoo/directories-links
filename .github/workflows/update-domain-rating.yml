@@ -1,0 +1,42 @@
+name: Update Domain Rating
+
+"on":
+  schedule:
+    - cron: "23 2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-domain-rating
+  cancel-in-progress: false
+
+jobs:
+  update-domain-rating:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Update three Domain Ratings
+        run: python scripts/update_domain_rating.py --file link.json --limit 3
+
+      - name: Commit updated ratings
+        run: |
+          if git diff --quiet -- link.json; then
+            echo "No Domain Rating changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add link.json
+          git commit -m "chore: update domain ratings"
+          git push

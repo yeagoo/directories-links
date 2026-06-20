@@ -1,0 +1,716 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>友情链接展示预览</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f6f7f9;
+      --paper: #ffffff;
+      --ink: #17191d;
+      --muted: #646b75;
+      --line: #d9dee5;
+      --footer: #181a1f;
+      --footer-soft: #252832;
+      --footer-ink: #f3f5f7;
+      --teal: #057a73;
+      --red: #b42318;
+      --gold: #a16207;
+      --green: #277044;
+      --shadow: 0 18px 50px rgba(24, 26, 31, .08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        linear-gradient(90deg, rgba(23, 25, 29, .035) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(23, 25, 29, .025) 1px, transparent 1px),
+        var(--bg);
+      background-size: 42px 42px;
+      color: var(--ink);
+      font-family: ui-serif, Georgia, "Times New Roman", "Noto Serif SC", serif;
+      letter-spacing: 0;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .shell {
+      width: min(1180px, calc(100vw - 32px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 34px 0 22px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .title-block {
+      display: grid;
+      gap: 8px;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin: 0;
+    }
+
+    h1 {
+      max-width: 760px;
+      font-size: clamp(32px, 5vw, 62px);
+      line-height: .96;
+      font-weight: 760;
+      letter-spacing: 0;
+    }
+
+    .kicker {
+      color: var(--teal);
+      font: 700 12px/1.2 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      text-transform: uppercase;
+    }
+
+    .counts {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(120px, 1fr));
+      gap: 10px;
+      min-width: 286px;
+    }
+
+    .count {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--paper);
+      padding: 12px 14px;
+      box-shadow: var(--shadow);
+    }
+
+    .count strong {
+      display: block;
+      font: 800 28px/1 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+
+    .count span {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 18px;
+      margin: 36px 0 14px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(24px, 3vw, 36px);
+      line-height: 1;
+      font-weight: 760;
+    }
+
+    .section-head p {
+      max-width: 560px;
+      color: var(--muted);
+      line-height: 1.65;
+      font-family: ui-sans-serif, "Noto Sans SC", "Microsoft YaHei", sans-serif;
+      font-size: 14px;
+    }
+
+    .footer-preview {
+      overflow: hidden;
+      border-radius: 8px;
+      background: var(--footer);
+      color: var(--footer-ink);
+      box-shadow: 0 26px 70px rgba(24, 26, 31, .22);
+    }
+
+    .footer-inner {
+      padding: 28px;
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid rgba(255, 255, 255, .12);
+    }
+
+    .footer-brand {
+      display: grid;
+      gap: 5px;
+    }
+
+    .footer-brand strong {
+      font-size: 18px;
+    }
+
+    .footer-brand span,
+    .footer-stat {
+      color: rgba(243, 245, 247, .68);
+      font-family: ui-sans-serif, "Noto Sans SC", "Microsoft YaHei", sans-serif;
+      font-size: 13px;
+    }
+
+    .badge-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(178px, 1fr));
+      gap: 10px;
+      padding-top: 22px;
+    }
+
+    .badge-card {
+      min-height: 112px;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      gap: 10px;
+      padding: 12px;
+      border: 1px solid rgba(255, 255, 255, .12);
+      border-radius: 8px;
+      background: var(--footer-soft);
+      transition: transform .18s ease, border-color .18s ease, background .18s ease;
+    }
+
+    .badge-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(255, 255, 255, .34);
+      background: #2c303b;
+    }
+
+    .badge-main {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .logo-box {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      flex: 0 0 auto;
+      place-items: center;
+      border-radius: 7px;
+      background: #fff;
+      overflow: hidden;
+    }
+
+    .logo-box img {
+      max-width: 25px;
+      max-height: 25px;
+      object-fit: contain;
+    }
+
+    .badge-name {
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-family: ui-sans-serif, "Noto Sans SC", "Microsoft YaHei", sans-serif;
+      font-weight: 800;
+    }
+
+    .badge-desc {
+      color: rgba(243, 245, 247, .72);
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      font-family: ui-sans-serif, "Noto Sans SC", "Microsoft YaHei", sans-serif;
+      font-size: 12px;
+      line-height: 1.55;
+    }
+
+    .badge-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      color: rgba(243, 245, 247, .58);
+      font: 700 11px/1.2 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+
+    .badge-meta span:first-child {
+      color: #8bd7c9;
+    }
+
+    .status-pill {
+      width: fit-content;
+      max-width: 100%;
+      border-radius: 999px;
+      padding: 5px 8px;
+      color: var(--green);
+      background: rgba(39, 112, 68, .1);
+      font: 800 11px/1.1 ui-sans-serif, "Noto Sans SC", "Microsoft YaHei", sans-serif;
+      overflow-wrap: anywhere;
+    }
+
+    .status-pill.pending,
+    .status-pill.error {
+      color: var(--gold);
+      background: rgba(161, 98, 7, .12);
+    }
+
+    .status-pill.unreachable,
+    .status-pill.archived {
+      color: var(--red);
+      background: rgba(180, 35, 24, .1);
+    }
+
+    .docs-preview {
+      margin-bottom: 46px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, .72);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .docs-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      padding: 14px;
+      border-bottom: 1px solid var(--line);
+      background: #fff;
+    }
+
+    .search {
+      width: min(380px, 100%);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 11px 12px;
+      color: var(--ink);
+      background: #f9fafb;
+      font: 14px/1.2 ui-sans-serif, "Noto Sans SC", "Microsoft YaHei", sans-serif;
+      outline: none;
+    }
+
+    .search:focus {
+      border-color: var(--teal);
+      box-shadow: 0 0 0 3px rgba(5, 122, 115, .14);
+    }
+
+    .category-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 14px;
+      border-bottom: 1px solid var(--line);
+      background: #fbfcfd;
+    }
+
+    .category-button {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--muted);
+      cursor: pointer;
+      padding: 7px 10px;
+      font: 700 12px/1 ui-sans-serif, "Noto Sans SC", "Microsoft YaHei", sans-serif;
+      transition: color .18s ease, border-color .18s ease, background .18s ease;
+    }
+
+    .category-button[aria-pressed="true"] {
+      border-color: var(--ink);
+      background: var(--ink);
+      color: #fff;
+    }
+
+    .docs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1px;
+      background: var(--line);
+    }
+
+    .doc-card {
+      min-height: 198px;
+      display: grid;
+      grid-template-rows: auto auto 1fr auto;
+      gap: 12px;
+      padding: 18px;
+      background: #fff;
+      transition: background .18s ease;
+    }
+
+    .doc-card:hover {
+      background: #f8fbfa;
+    }
+
+    .doc-category {
+      min-width: 0;
+      border-radius: 999px;
+      padding: 5px 8px;
+      color: var(--teal);
+      background: rgba(5, 122, 115, .09);
+      font: 800 12px/1.1 ui-sans-serif, "Noto Sans SC", "Microsoft YaHei", sans-serif;
+      overflow-wrap: anywhere;
+    }
+
+    .doc-topline,
+    .doc-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .dr-pill {
+      border-radius: 999px;
+      padding: 5px 8px;
+      color: #fff;
+      background: var(--ink);
+      font: 800 11px/1.1 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+
+    .doc-card:nth-child(3n + 2) .doc-category {
+      color: var(--red);
+      background: rgba(180, 35, 24, .09);
+    }
+
+    .doc-card:nth-child(3n + 3) .doc-category {
+      color: var(--gold);
+      background: rgba(161, 98, 7, .11);
+    }
+
+    .doc-card h3 {
+      color: var(--ink);
+      font-size: 21px;
+      line-height: 1.15;
+      font-weight: 760;
+      overflow-wrap: anywhere;
+    }
+
+    .doc-card p {
+      color: var(--muted);
+      font-family: ui-sans-serif, "Noto Sans SC", "Microsoft YaHei", sans-serif;
+      font-size: 14px;
+      line-height: 1.62;
+    }
+
+    .doc-url {
+      color: var(--green);
+      font: 700 12px/1.35 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      overflow-wrap: anywhere;
+    }
+
+    .empty {
+      grid-column: 1 / -1;
+      padding: 34px;
+      background: #fff;
+      color: var(--muted);
+      font-family: ui-sans-serif, "Noto Sans SC", "Microsoft YaHei", sans-serif;
+      text-align: center;
+    }
+
+    @media (max-width: 760px) {
+      .topbar,
+      .section-head,
+      .footer-top,
+      .docs-toolbar {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .counts {
+        min-width: 0;
+        width: 100%;
+      }
+
+      .footer-inner {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div class="title-block">
+        <span class="kicker">link.json preview</span>
+        <h1>两类友情链接展示</h1>
+      </div>
+      <div class="counts" aria-label="数据统计">
+        <div class="count">
+          <strong id="badgeCount">0</strong>
+          <span>页脚导航站</span>
+        </div>
+        <div class="count">
+          <strong id="friendCount">0</strong>
+          <span>内页文档站</span>
+        </div>
+      </div>
+    </header>
+
+    <section aria-labelledby="footerTitle">
+      <div class="section-head">
+        <h2 id="footerTitle">页脚导航站</h2>
+        <p>适合放在全站页脚的导航站合作链接，突出 logo、名称、DR 和简短介绍。</p>
+      </div>
+      <div class="footer-preview">
+        <div class="footer-inner">
+          <div class="footer-top">
+            <div class="footer-brand">
+              <strong>友情链接</strong>
+              <span>导航站合作链接</span>
+            </div>
+            <span class="footer-stat" id="footerStat">0 sites</span>
+          </div>
+          <div class="badge-grid" id="badgeGrid"></div>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="docsTitle">
+      <div class="section-head">
+        <h2 id="docsTitle">内页友情链接</h2>
+        <p>适合放在专门内页的权威文档站列表，便于按分类浏览和检索。</p>
+      </div>
+      <div class="docs-preview">
+        <div class="docs-toolbar">
+          <strong>权威文档站</strong>
+          <input class="search" id="searchInput" type="search" placeholder="搜索名称、分类或介绍" aria-label="搜索友情链接">
+        </div>
+        <div class="category-row" id="categoryRow" aria-label="网站分类"></div>
+        <div class="docs-grid" id="docsGrid"></div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const state = {
+      links: [],
+      activeCategory: "全部",
+      query: ""
+    };
+
+    const els = {
+      badgeCount: document.querySelector("#badgeCount"),
+      friendCount: document.querySelector("#friendCount"),
+      footerStat: document.querySelector("#footerStat"),
+      badgeGrid: document.querySelector("#badgeGrid"),
+      docsGrid: document.querySelector("#docsGrid"),
+      categoryRow: document.querySelector("#categoryRow"),
+      searchInput: document.querySelector("#searchInput")
+    };
+
+    function text(value) {
+      return value == null ? "" : String(value);
+    }
+
+    function host(url) {
+      try {
+        return new URL(url).host.replace(/^www\./, "");
+      } catch {
+        return url;
+      }
+    }
+
+    function initials(name) {
+      return text(name).trim().split(/\s+/).map((part) => part[0]).join("").slice(0, 2).toUpperCase();
+    }
+
+    function formatDR(value) {
+      return value === null || value === undefined || value === "" ? "DR --" : `DR ${value}`;
+    }
+
+    function statusLabel(status) {
+      const labels = {
+        active: "可访问",
+        pending_dns: "DNS 传播中",
+        unreachable: "不可达",
+        archived: "已归档",
+        error: "更新失败"
+      };
+      return labels[status] || status || "未知";
+    }
+
+    function statusClass(status) {
+      if (!status || status === "active") return "";
+      if (status.includes("pending")) return "pending";
+      if (status === "unreachable" || status === "archived") return status;
+      return "error";
+    }
+
+    function renderBadges(items) {
+      els.badgeCount.textContent = items.length;
+      els.footerStat.textContent = `${items.length} sites`;
+      els.badgeGrid.replaceChildren();
+
+      items.forEach((item) => {
+        const link = document.createElement("a");
+        link.className = "badge-card";
+        link.href = item.url;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        link.setAttribute("aria-label", `${item.name} ${host(item.url)}`);
+
+        const main = document.createElement("div");
+        main.className = "badge-main";
+
+        const logo = document.createElement("span");
+        logo.className = "logo-box";
+        const img = document.createElement("img");
+        img.src = item.logo_svg || item.image;
+        img.alt = "";
+        img.loading = "lazy";
+        img.onerror = () => {
+          logo.textContent = initials(item.name);
+        };
+        logo.append(img);
+
+        const name = document.createElement("span");
+        name.className = "badge-name";
+        name.textContent = item.name;
+        main.append(logo, name);
+
+        const desc = document.createElement("p");
+        desc.className = "badge-desc";
+        desc.textContent = item.description;
+
+        const meta = document.createElement("div");
+        meta.className = "badge-meta";
+        const category = document.createElement("span");
+        category.textContent = item.category;
+        const dr = document.createElement("span");
+        dr.textContent = formatDR(item.dr);
+        meta.append(category, dr);
+
+        link.append(main, desc, meta);
+        els.badgeGrid.append(link);
+      });
+    }
+
+    function renderCategories(items) {
+      const categories = ["全部", ...Array.from(new Set(items.map((item) => item.category))).sort((a, b) => a.localeCompare(b, "zh-CN"))];
+      els.categoryRow.replaceChildren();
+
+      categories.forEach((category) => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "category-button";
+        button.textContent = category;
+        button.setAttribute("aria-pressed", String(category === state.activeCategory));
+        button.addEventListener("click", () => {
+          state.activeCategory = category;
+          renderDocs();
+          renderCategories(state.links);
+        });
+        els.categoryRow.append(button);
+      });
+    }
+
+    function renderDocs() {
+      const query = state.query.trim().toLowerCase();
+      const visible = state.links.filter((item) => {
+        const matchesCategory = state.activeCategory === "全部" || item.category === state.activeCategory;
+        const haystack = `${item.name} ${item.url} ${item.domain} ${item.category} ${item.description} ${item.status} ${item.dr}`.toLowerCase();
+        return matchesCategory && (!query || haystack.includes(query));
+      });
+
+      els.docsGrid.replaceChildren();
+
+      if (!visible.length) {
+        const empty = document.createElement("div");
+        empty.className = "empty";
+        empty.textContent = "没有匹配的友情链接";
+        els.docsGrid.append(empty);
+        return;
+      }
+
+      visible.forEach((item) => {
+        const link = document.createElement("a");
+        link.className = "doc-card";
+        link.href = item.url;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+
+        const topLine = document.createElement("div");
+        topLine.className = "doc-topline";
+
+        const category = document.createElement("span");
+        category.className = "doc-category";
+        category.textContent = item.category;
+
+        const dr = document.createElement("span");
+        dr.className = "dr-pill";
+        dr.textContent = formatDR(item.dr);
+
+        const status = document.createElement("span");
+        status.className = `status-pill ${statusClass(item.status)}`.trim();
+        status.textContent = statusLabel(item.status);
+
+        topLine.append(category, dr, status);
+
+        const title = document.createElement("h3");
+        title.textContent = item.name;
+
+        const desc = document.createElement("p");
+        desc.textContent = item.description;
+
+        const url = document.createElement("span");
+        url.className = "doc-url";
+        url.textContent = host(item.url);
+
+        link.append(topLine, title, desc, url);
+        els.docsGrid.append(link);
+      });
+    }
+
+    async function init() {
+      try {
+        const response = await fetch("./link.json", { cache: "no-store" });
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`);
+        }
+        const data = await response.json();
+        const badges = Array.isArray(data.footer_navigation_sites) ? data.footer_navigation_sites : data.badges || [];
+        state.links = Array.isArray(data.all_friend_links)
+          ? data.all_friend_links
+          : [
+              ...(Array.isArray(data.footer_navigation_sites) ? data.footer_navigation_sites : []),
+              ...(Array.isArray(data.authority_documentation_sites) ? data.authority_documentation_sites : data.friend_links || [])
+            ];
+
+        els.friendCount.textContent = state.links.length;
+        renderBadges(badges);
+        renderCategories(state.links);
+        renderDocs();
+      } catch (error) {
+        els.docsGrid.replaceChildren();
+        const empty = document.createElement("div");
+        empty.className = "empty";
+        empty.textContent = `link.json 读取失败：${error.message}`;
+        els.docsGrid.append(empty);
+      }
+    }
+
+    els.searchInput.addEventListener("input", (event) => {
+      state.query = event.target.value;
+      renderDocs();
+    });
+
+    init();
+  </script>
+</body>
+</html>
