@@ -1070,6 +1070,29 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true
+    },
+    {
+      "id": "onarm-net",
+      "name": "OnARM.Net",
+      "domain": "onarm.net",
+      "url": "https://onarm.net/",
+      "category": "Windows on Arm",
+      "placement": "links_page",
+      "description": "Windows on Arm 应用与游戏兼容性数据库，查询 Snapdragon 和其他 Arm PC 上的原生 Arm64 与模拟运行状态。",
+      "status": "active",
+      "link_rel": "dofollow",
+      "dofollow": true,
+      "links_page_included": true,
+      "dr": 0,
+      "dr_source": "Ahrefs Domain Rating",
+      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
+      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
+      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
+      "dr_attribution": "Domain Rating by Ahrefs",
+      "dr_last_checked_at": "2026-06-21",
+      "dr_update_enabled": true,
+      "dr_status": "ok",
+      "dr_consecutive_errors": 0
     }
   ],
   "badges": [
@@ -2134,6 +2157,29 @@
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok"
+    },
+    {
+      "id": "onarm-net",
+      "name": "OnARM.Net",
+      "domain": "onarm.net",
+      "url": "https://onarm.net/",
+      "category": "Windows on Arm",
+      "placement": "links_page",
+      "description": "Windows on Arm 应用与游戏兼容性数据库，查询 Snapdragon 和其他 Arm PC 上的原生 Arm64 与模拟运行状态。",
+      "status": "active",
+      "link_rel": "dofollow",
+      "dofollow": true,
+      "links_page_included": true,
+      "dr": 0,
+      "dr_source": "Ahrefs Domain Rating",
+      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
+      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
+      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
+      "dr_attribution": "Domain Rating by Ahrefs",
+      "dr_last_checked_at": "2026-06-21",
+      "dr_update_enabled": true,
+      "dr_status": "ok",
+      "dr_consecutive_errors": 0
     }
   ],
   "home_recommend": {
@@ -3290,6 +3336,30 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
+      "source_collection": "authority_documentation_sites"
+    },
+    {
+      "id": "onarm-net",
+      "name": "OnARM.Net",
+      "domain": "onarm.net",
+      "url": "https://onarm.net/",
+      "category": "Windows on Arm",
+      "placement": "links_page",
+      "description": "Windows on Arm 应用与游戏兼容性数据库，查询 Snapdragon 和其他 Arm PC 上的原生 Arm64 与模拟运行状态。",
+      "status": "active",
+      "link_rel": "dofollow",
+      "dofollow": true,
+      "links_page_included": true,
+      "dr": 0,
+      "dr_source": "Ahrefs Domain Rating",
+      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
+      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
+      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
+      "dr_attribution": "Domain Rating by Ahrefs",
+      "dr_last_checked_at": "2026-06-21",
+      "dr_update_enabled": true,
+      "dr_status": "ok",
+      "dr_consecutive_errors": 0,
       "source_collection": "authority_documentation_sites"
     }
   ]
