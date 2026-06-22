@@ -19,30 +19,23 @@
       "footer_display_modes 允许 AI 或前端在页脚空间不足时使用 logo_only，在空间充足时使用 logo_with_name。"
     ],
     "dr_rules": [
-      "DR 表示 Ahrefs Domain Rating，不要手工猜测。",
-      "DR 从 Ahrefs 免费公开接口获取：https://api.ahrefs.com/v3/public/domain-rating-free?target={domain}&output=json。",
-      "接口文档：https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free。",
-      "使用 DR 时应保留归因文字：Domain Rating by Ahrefs。",
-      "GitHub Actions 每天按当前 JSON 顺序轮询更新 3 个网站，范围包含 footer_navigation_sites 和 authority_documentation_sites。",
+      "DR 表示 Domain Rating（域名权重），由更新脚本自动写入 dr 字段，不要手工猜测。",
+      "GitHub Actions 每天按当前 JSON 顺序轮询更新 6 个网站，范围包含 footer_navigation_sites 和 authority_documentation_sites。",
       "如果某个站点 DR 更新失败，脚本会在下一次运行优先重试 dr_status=error 的站点，再继续按顺序补足当天名额。"
     ],
     "automation": {
       "script": "scripts/update_domain_rating.py",
       "workflow": ".github/workflows/update-domain-rating.yml",
-      "daily_limit": 3,
+      "daily_limit": 6,
       "retry_failed_first": true,
       "retry_backoff_max_days": 7,
-      "rotation_state": "_dr_update_meta.next_index"
+      "rotation_state": "_dr_update_meta.next_index",
+      "unreachable_after": 5
     },
-    "prompt_for_ai_agents": "读取 link.json 后，请把 footer_navigation_sites 放在页脚导航站区域，把 authority_documentation_sites 放在友情链接内页；DR 只从 Ahrefs Domain Rating API 或已有 dr 字段读取，并保留 Domain Rating by Ahrefs 归因。 友情链接内页也要包含导航站；所有链接必须保持 dofollow，不要加 nofollow；页脚导航站可按空间显示 logo_only 或 logo_with_name。"
+    "prompt_for_ai_agents": "读取 link.json 后，请把 footer_navigation_sites 放在页脚导航站区域，把 authority_documentation_sites 放在友情链接内页；DR 直接使用已有 dr 字段（由更新脚本维护），不要手工猜测。 友情链接内页也要包含导航站；所有链接必须保持 dofollow，不要加 nofollow；页脚导航站可按空间显示 logo_only 或 logo_with_name。"
   },
   "_dr_update_meta": {
-    "source": "Ahrefs Domain Rating",
-    "api_docs": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-    "api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-    "license_url": "http://ahrefs.com/legal/domain-rating-license",
-    "attribution": "Domain Rating by Ahrefs",
-    "daily_limit": 3,
+    "daily_limit": 6,
     "retry_failed_first": true,
     "rotation_scope": [
       "footer_navigation_sites",
@@ -70,11 +63,6 @@
       "description": "面向创业者和开发者的产品发现与发布平台，收录 AI 工具、SaaS 与新项目。",
       "status": "active",
       "dr": 34,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-21",
       "dr_update_enabled": true,
       "dr_status": "ok",
@@ -87,7 +75,11 @@
       "default_footer_display_mode": "logo_with_name",
       "links_page_included": true,
       "links_page_category": "导航站",
-      "dr_consecutive_errors": 0
+      "dr_consecutive_errors": 0,
+      "description_i18n": {
+        "en-US": "Product discovery and launch platform for founders and developers, listing AI tools, SaaS and new projects.",
+        "zh-CN": "面向创业者和开发者的产品发现与发布平台，收录 AI 工具、SaaS 与新项目。"
+      }
     },
     {
       "id": "mifar",
@@ -101,11 +93,6 @@
       "description": "面向站长和开发者的导航站，聚合实用网站与工具资源。",
       "status": "active",
       "dr": 2.7,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-21",
       "dr_update_enabled": true,
       "dr_status": "ok",
@@ -118,7 +105,11 @@
       "default_footer_display_mode": "logo_with_name",
       "links_page_included": true,
       "links_page_category": "导航站",
-      "dr_consecutive_errors": 0
+      "dr_consecutive_errors": 0,
+      "description_i18n": {
+        "en-US": "A directory for webmasters and developers, aggregating useful sites and tool resources.",
+        "zh-CN": "面向站长和开发者的导航站，聚合实用网站与工具资源。"
+      }
     },
     {
       "id": "qoo-im",
@@ -132,11 +123,6 @@
       "description": "AI 工具导航站，按生产力、创意、开发等场景收录工具。",
       "status": "active",
       "dr": 14,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-21",
       "dr_update_enabled": true,
       "dr_status": "ok",
@@ -149,7 +135,11 @@
       "default_footer_display_mode": "logo_with_name",
       "links_page_included": true,
       "links_page_category": "导航站",
-      "dr_consecutive_errors": 0
+      "dr_consecutive_errors": 0,
+      "description_i18n": {
+        "en-US": "AI tools directory, organizing tools by scenario such as productivity, creativity and development.",
+        "zh-CN": "AI 工具导航站，按生产力、创意、开发等场景收录工具。"
+      }
     },
     {
       "id": "fastd",
@@ -163,11 +153,6 @@
       "description": "快速收录和发现站点的导航平台，适合工具、产品和内容站曝光。",
       "status": "active",
       "dr": 30,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-22",
       "dr_update_enabled": true,
       "dr_status": "ok",
@@ -180,7 +165,11 @@
       "default_footer_display_mode": "logo_with_name",
       "links_page_included": true,
       "links_page_category": "导航站",
-      "dr_consecutive_errors": 0
+      "dr_consecutive_errors": 0,
+      "description_i18n": {
+        "en-US": "A directory platform for fast indexing and discovery, ideal for exposing tools, products and content sites.",
+        "zh-CN": "快速收录和发现站点的导航平台，适合工具、产品和内容站曝光。"
+      }
     },
     {
       "id": "xlayers",
@@ -194,11 +183,6 @@
       "description": "面向设计和开发资源的导航站，聚合前端、产品与创意工具。",
       "status": "active",
       "dr": 36,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-22",
       "dr_update_enabled": true,
       "dr_status": "ok",
@@ -211,7 +195,11 @@
       "default_footer_display_mode": "logo_with_name",
       "links_page_included": true,
       "links_page_category": "导航站",
-      "dr_consecutive_errors": 0
+      "dr_consecutive_errors": 0,
+      "description_i18n": {
+        "en-US": "A directory for design and development resources, aggregating front-end, product and creative tools.",
+        "zh-CN": "面向设计和开发资源的导航站，聚合前端、产品与创意工具。"
+      }
     },
     {
       "id": "upperstory",
@@ -225,11 +213,6 @@
       "description": "面向独立产品和互联网工具的导航站，帮助用户发现优质项目。",
       "status": "active",
       "dr": 55,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-22",
       "dr_update_enabled": true,
       "dr_status": "ok",
@@ -242,7 +225,11 @@
       "default_footer_display_mode": "logo_with_name",
       "links_page_included": true,
       "links_page_category": "导航站",
-      "dr_consecutive_errors": 0
+      "dr_consecutive_errors": 0,
+      "description_i18n": {
+        "en-US": "A directory for indie products and internet tools, helping users discover quality projects.",
+        "zh-CN": "面向独立产品和互联网工具的导航站，帮助用户发现优质项目。"
+      }
     },
     {
       "id": "xemvip",
@@ -256,11 +243,6 @@
       "description": "综合资源导航站，收录娱乐、工具和内容类网站。",
       "status": "active",
       "dr": 51,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
@@ -272,7 +254,11 @@
       ],
       "default_footer_display_mode": "logo_with_name",
       "links_page_included": true,
-      "links_page_category": "导航站"
+      "links_page_category": "导航站",
+      "description_i18n": {
+        "en-US": "A general resource directory listing entertainment, tools and content sites.",
+        "zh-CN": "综合资源导航站，收录娱乐、工具和内容类网站。"
+      }
     },
     {
       "id": "skachat",
@@ -286,11 +272,6 @@
       "description": "聚焦聊天、社交和在线工具的资源导航站。",
       "status": "active",
       "dr": 29,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
@@ -302,7 +283,11 @@
       ],
       "default_footer_display_mode": "logo_with_name",
       "links_page_included": true,
-      "links_page_category": "导航站"
+      "links_page_category": "导航站",
+      "description_i18n": {
+        "en-US": "A resource directory focused on chat, social and online tools.",
+        "zh-CN": "聚焦聊天、社交和在线工具的资源导航站。"
+      }
     },
     {
       "id": "nexablocks",
@@ -316,11 +301,6 @@
       "description": "收录开发组件、区块和数字产品资源的导航站。",
       "status": "active",
       "dr": 54,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
@@ -332,7 +312,11 @@
       ],
       "default_footer_display_mode": "logo_with_name",
       "links_page_included": true,
-      "links_page_category": "导航站"
+      "links_page_category": "导航站",
+      "description_i18n": {
+        "en-US": "A directory for development components, blocks and digital product resources.",
+        "zh-CN": "收录开发组件、区块和数字产品资源的导航站。"
+      }
     },
     {
       "id": "blackhawkgame",
@@ -346,11 +330,6 @@
       "description": "游戏与互动娱乐资源导航站，聚合相关站点和项目。",
       "status": "active",
       "dr": 72,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
@@ -362,7 +341,11 @@
       ],
       "default_footer_display_mode": "logo_with_name",
       "links_page_included": true,
-      "links_page_category": "导航站"
+      "links_page_category": "导航站",
+      "description_i18n": {
+        "en-US": "A games and interactive entertainment directory aggregating related sites and projects.",
+        "zh-CN": "游戏与互动娱乐资源导航站，聚合相关站点和项目。"
+      }
     },
     {
       "id": "hicyou",
@@ -376,11 +359,6 @@
       "description": "开源 SaaS 目录平台，帮助产品获得展示和反向链接。",
       "status": "active",
       "dr": 40,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
@@ -392,7 +370,11 @@
       ],
       "default_footer_display_mode": "logo_with_name",
       "links_page_included": true,
-      "links_page_category": "导航站"
+      "links_page_category": "导航站",
+      "description_i18n": {
+        "en-US": "An open-source SaaS directory platform that helps products gain exposure and backlinks.",
+        "zh-CN": "开源 SaaS 目录平台，帮助产品获得展示和反向链接。"
+      }
     },
     {
       "id": "bigkr",
@@ -406,11 +388,6 @@
       "description": "AI 工具、SaaS 和产品精选目录，面向创作者与企业用户。",
       "status": "active",
       "dr": 23,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
@@ -422,7 +399,11 @@
       ],
       "default_footer_display_mode": "logo_with_name",
       "links_page_included": true,
-      "links_page_category": "导航站"
+      "links_page_category": "导航站",
+      "description_i18n": {
+        "en-US": "A curated directory of AI tools, SaaS and products for creators and business users.",
+        "zh-CN": "AI 工具、SaaS 和产品精选目录，面向创作者与企业用户。"
+      }
     },
     {
       "id": "mf8",
@@ -436,11 +417,6 @@
       "description": "精选值得访问网站的导航目录。",
       "status": "active",
       "dr": 37,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
@@ -452,7 +428,11 @@
       ],
       "default_footer_display_mode": "logo_with_name",
       "links_page_included": true,
-      "links_page_category": "导航站"
+      "links_page_category": "导航站",
+      "description_i18n": {
+        "en-US": "A curated directory of websites worth visiting.",
+        "zh-CN": "精选值得访问网站的导航目录。"
+      }
     }
   ],
   "authority_documentation_sites": [
@@ -466,17 +446,18 @@
       "description": "Debian 13 中文入门指南与使用教程，适合从零开始学习 Debian。",
       "status": "active",
       "dr": 17,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
-      "links_page_included": true
+      "links_page_included": true,
+      "description_i18n": {
+        "en-US": "A Chinese getting-started guide and tutorials for Debian 13, ideal for learning Debian from scratch.",
+        "zh-CN": "Debian 13 中文入门指南与使用教程，适合从零开始学习 Debian。"
+      },
+      "logo_svg": "/assets/logos/debian-club.svg",
+      "logo_generated": true
     },
     {
       "id": "ubuntu-fan",
@@ -488,17 +469,18 @@
       "description": "Ubuntu 26.04 LTS 中文使用指南，覆盖安装、桌面、开发环境、服务器部署和系统管理。",
       "status": "active",
       "dr": 13,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
-      "links_page_included": true
+      "links_page_included": true,
+      "description_i18n": {
+        "en-US": "A Chinese guide to Ubuntu 26.04 LTS, covering installation, desktop, dev environment, server deployment and system administration.",
+        "zh-CN": "Ubuntu 26.04 LTS 中文使用指南，覆盖安装、桌面、开发环境、服务器部署和系统管理。"
+      },
+      "logo_svg": "/assets/logos/ubuntu-fan.svg",
+      "logo_source_url": "https://ubuntu.fan/favicon.svg"
     },
     {
       "id": "almalinux-com-cn",
@@ -510,17 +492,18 @@
       "description": "面向中文用户的 AlmaLinux 发行版文档与社区资源。",
       "status": "active",
       "dr": 15,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
-      "links_page_included": true
+      "links_page_included": true,
+      "description_i18n": {
+        "en-US": "AlmaLinux distribution documentation and community resources for Chinese users.",
+        "zh-CN": "面向中文用户的 AlmaLinux 发行版文档与社区资源。"
+      },
+      "logo_svg": "/assets/logos/almalinux-com-cn.svg",
+      "logo_generated": true
     },
     {
       "id": "runentlinux-com",
@@ -532,17 +515,18 @@
       "description": "面向 CentOS、AlmaLinux、Rocky Linux、Oracle Linux 等企业级 Linux 的学习与实战文档。",
       "status": "active",
       "dr": 13,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
-      "links_page_included": true
+      "links_page_included": true,
+      "description_i18n": {
+        "en-US": "Hands-on docs for enterprise Linux such as CentOS, AlmaLinux, Rocky Linux and Oracle Linux.",
+        "zh-CN": "面向 CentOS、AlmaLinux、Rocky Linux、Oracle Linux 等企业级 Linux 的学习与实战文档。"
+      },
+      "logo_svg": "/assets/logos/runentlinux-com.svg",
+      "logo_source_url": "https://runentlinux.com/favicon.svg"
     },
     {
       "id": "eol-wiki",
@@ -554,17 +538,18 @@
       "description": "查询软件、硬件和平台的生命周期、版本历史与支持状态。",
       "status": "active",
       "dr": 14,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
-      "links_page_included": true
+      "links_page_included": true,
+      "description_i18n": {
+        "en-US": "Look up lifecycle, version history and support status of software, hardware and platforms.",
+        "zh-CN": "查询软件、硬件和平台的生命周期、版本历史与支持状态。"
+      },
+      "logo_svg": "/assets/logos/eol-wiki.svg",
+      "logo_source_url": "https://eol.wiki/favicon.svg"
     },
     {
       "id": "litehttpd-com",
@@ -576,17 +561,18 @@
       "description": "围绕 LiteHTTPD、OpenLiteSpeed 与 Apache .htaccess 兼容能力的 Web 服务器文档。",
       "status": "active",
       "dr": 14,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
-      "links_page_included": true
+      "links_page_included": true,
+      "description_i18n": {
+        "en-US": "Web server documentation around LiteHTTPD, OpenLiteSpeed and Apache .htaccess compatibility.",
+        "zh-CN": "围绕 LiteHTTPD、OpenLiteSpeed 与 Apache .htaccess 兼容能力的 Web 服务器文档。"
+      },
+      "logo_svg": "/assets/logos/litehttpd-com.svg",
+      "logo_source_url": "https://litehttpd.com/favicon.svg"
     },
     {
       "id": "portcyou-com",
@@ -598,17 +584,18 @@
       "description": "端口号查询数据库，帮助开发者识别端口用途并避免端口冲突。",
       "status": "active",
       "dr": 18,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
-      "links_page_included": true
+      "links_page_included": true,
+      "description_i18n": {
+        "en-US": "A port-number lookup database helping developers identify port usage and avoid conflicts.",
+        "zh-CN": "端口号查询数据库，帮助开发者识别端口用途并避免端口冲突。"
+      },
+      "logo_svg": "/assets/logos/portcyou-com.svg",
+      "logo_source_url": "https://portcyou.com/icon-192.svg"
     },
     {
       "id": "rank-fan",
@@ -620,17 +607,18 @@
       "description": "提供 SEO、GEO、AIEO 报告与排名分析工具。",
       "status": "active",
       "dr": 16,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
-      "links_page_included": true
+      "links_page_included": true,
+      "description_i18n": {
+        "en-US": "SEO, GEO and AIEO reports and ranking analysis tools.",
+        "zh-CN": "提供 SEO、GEO、AIEO 报告与排名分析工具。"
+      },
+      "logo_svg": "/assets/logos/rank-fan.svg",
+      "logo_generated": true
     },
     {
       "id": "geo-fan",
@@ -642,17 +630,18 @@
       "description": "生成式引擎优化文档站，帮助内容更容易被 AI 搜索与问答引擎信任和引用。",
       "status": "active",
       "dr": 15,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
-      "links_page_included": true
+      "links_page_included": true,
+      "description_i18n": {
+        "en-US": "A generative-engine-optimization docs site helping content get trusted and cited by AI search and answer engines.",
+        "zh-CN": "生成式引擎优化文档站，帮助内容更容易被 AI 搜索与问答引擎信任和引用。"
+      },
+      "logo_svg": "/assets/logos/geo-fan.svg",
+      "logo_source_url": "https://geo.fan/icon.svg?629a9f8a6792701f"
     },
     {
       "id": "mariadb-edu-rich",
@@ -664,17 +653,18 @@
       "description": "面向新手、AI 开发者与云上用户的现代 MariaDB 知识库。",
       "status": "active",
       "dr": 0,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
-      "links_page_included": true
+      "links_page_included": true,
+      "description_i18n": {
+        "en-US": "A modern MariaDB knowledge base for beginners, AI developers and cloud users.",
+        "zh-CN": "面向新手、AI 开发者与云上用户的现代 MariaDB 知识库。"
+      },
+      "logo_svg": "/assets/logos/mariadb-edu-rich.svg",
+      "logo_generated": true
     },
     {
       "id": "valkey-edu-rich",
@@ -686,17 +676,18 @@
       "description": "Valkey 中文知识库，覆盖 Redis 迁移、向量检索、Agent 记忆、云托管与版本路线图。",
       "status": "active",
       "dr": 0,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
-      "links_page_included": true
+      "links_page_included": true,
+      "description_i18n": {
+        "en-US": "A Chinese Valkey knowledge base covering Redis migration, vector search, agent memory, managed cloud and the version roadmap.",
+        "zh-CN": "Valkey 中文知识库，覆盖 Redis 迁移、向量检索、Agent 记忆、云托管与版本路线图。"
+      },
+      "logo_svg": "/assets/logos/valkey-edu-rich.svg",
+      "logo_generated": true
     },
     {
       "id": "libmir-org",
@@ -708,17 +699,18 @@
       "description": "Mir 与 D 语言数值计算库生态的文档归档和参考资料。",
       "status": "active",
       "dr": 54,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
-      "links_page_included": true
+      "links_page_included": true,
+      "description_i18n": {
+        "en-US": "Documentation archive and references for Mir and the D-language numerical computing ecosystem.",
+        "zh-CN": "Mir 与 D 语言数值计算库生态的文档归档和参考资料。"
+      },
+      "logo_svg": "/assets/logos/libmir-org.svg",
+      "logo_generated": true
     },
     {
       "id": "mydll-wang",
@@ -730,17 +722,18 @@
       "description": "Windows DLL 缺失与损坏问题的官方安全修复指南。",
       "status": "active",
       "dr": 26,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
-      "links_page_included": true
+      "links_page_included": true,
+      "description_i18n": {
+        "en-US": "Official, safe repair guides for missing or corrupted Windows DLLs.",
+        "zh-CN": "Windows DLL 缺失与损坏问题的官方安全修复指南。"
+      },
+      "logo_svg": "/assets/logos/mydll-wang.svg",
+      "logo_source_url": "https://mydll.wang/favicon.svg"
     },
     {
       "id": "deepposekit-org",
@@ -752,17 +745,18 @@
       "description": "基于深度学习的 2D 姿态估计工具包文档与项目资料。",
       "status": "active",
       "dr": 35,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
-      "links_page_included": true
+      "links_page_included": true,
+      "description_i18n": {
+        "en-US": "Docs and project materials for a deep-learning 2D pose-estimation toolkit.",
+        "zh-CN": "基于深度学习的 2D 姿态估计工具包文档与项目资料。"
+      },
+      "logo_svg": "/assets/logos/deepposekit-org.svg",
+      "logo_generated": true
     },
     {
       "id": "asimovjs-org",
@@ -774,17 +768,18 @@
       "description": "用于通过插件、初始化器和命令行脚本组合应用的 Node.js 框架文档。",
       "status": "active",
       "dr": 36,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
-      "links_page_included": true
+      "links_page_included": true,
+      "description_i18n": {
+        "en-US": "Docs for a Node.js framework for composing apps via plugins, initializers and CLI scripts.",
+        "zh-CN": "用于通过插件、初始化器和命令行脚本组合应用的 Node.js 框架文档。"
+      },
+      "logo_svg": "/assets/logos/asimovjs-org.svg",
+      "logo_source_url": "https://asimovjs.org/favicon.svg"
     },
     {
       "id": "silverblog-org",
@@ -796,17 +791,18 @@
       "description": "面向 EmDash CMS 的快速深色博客模板，支持 Markdown 和 Cloudflare 或 Node 部署。",
       "status": "active",
       "dr": 34,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
-      "links_page_included": true
+      "links_page_included": true,
+      "description_i18n": {
+        "en-US": "A fast dark blog template for EmDash CMS, with Markdown support and Cloudflare or Node deployment.",
+        "zh-CN": "面向 EmDash CMS 的快速深色博客模板，支持 Markdown 和 Cloudflare 或 Node 部署。"
+      },
+      "logo_svg": "/assets/logos/silverblog-org.svg",
+      "logo_generated": true
     },
     {
       "id": "claygl-xyz",
@@ -818,17 +814,18 @@
       "description": "WebGL 图形库文档，提供浏览器 3D 场景的示例和 API 参考。",
       "status": "active",
       "dr": 31,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
-      "links_page_included": true
+      "links_page_included": true,
+      "description_i18n": {
+        "en-US": "WebGL graphics library docs, with examples and API reference for 3D scenes in the browser.",
+        "zh-CN": "WebGL 图形库文档，提供浏览器 3D 场景的示例和 API 参考。"
+      },
+      "logo_svg": "/assets/logos/claygl-xyz.svg",
+      "logo_source_url": "https://claygl.xyz/img/logo.svg"
     },
     {
       "id": "itoffers-online",
@@ -840,17 +837,18 @@
       "description": "面向 IT 招聘者和候选人的开源职位发布与求职信息平台。",
       "status": "active",
       "dr": 34,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
-      "links_page_included": true
+      "links_page_included": true,
+      "description_i18n": {
+        "en-US": "An open-source job-posting and job-search platform for IT recruiters and candidates.",
+        "zh-CN": "面向 IT 招聘者和候选人的开源职位发布与求职信息平台。"
+      },
+      "logo_svg": "/assets/logos/itoffers-online.svg",
+      "logo_source_url": "https://itoffers.online/favicon.svg"
     },
     {
       "id": "patet-xyz",
@@ -862,17 +860,18 @@
       "description": "面向 AI 与快速开发项目上线的指南、模板、清单和部署笔记。",
       "status": "active",
       "dr": 29,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
-      "links_page_included": true
+      "links_page_included": true,
+      "description_i18n": {
+        "en-US": "Guides, templates, checklists and deployment notes for shipping AI and rapid-development projects.",
+        "zh-CN": "面向 AI 与快速开发项目上线的指南、模板、清单和部署笔记。"
+      },
+      "logo_svg": "/assets/logos/patet-xyz.svg",
+      "logo_generated": true
     },
     {
       "id": "sabwap-xyz",
@@ -884,17 +883,18 @@
       "description": "将现代网站转换为轻量文本优先 WAP 页面的网站转换工具与实验项目。",
       "status": "active",
       "dr": 30,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
-      "links_page_included": true
+      "links_page_included": true,
+      "description_i18n": {
+        "en-US": "A site-conversion tool and experiment that turns modern websites into lightweight, text-first WAP pages.",
+        "zh-CN": "将现代网站转换为轻量文本优先 WAP 页面的网站转换工具与实验项目。"
+      },
+      "logo_svg": "/assets/logos/sabwap-xyz.svg",
+      "logo_generated": true
     },
     {
       "id": "thanktolaw-com",
@@ -906,17 +906,18 @@
       "description": "提供刑事案件、交通事故、青少年犯罪等法律与合规资讯。",
       "status": "active",
       "dr": 21,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
-      "links_page_included": true
+      "links_page_included": true,
+      "description_i18n": {
+        "en-US": "Legal and compliance information on criminal cases, traffic accidents, juvenile offenses and more.",
+        "zh-CN": "提供刑事案件、交通事故、青少年犯罪等法律与合规资讯。"
+      },
+      "logo_svg": "/assets/logos/thanktolaw-com.svg",
+      "logo_generated": true
     },
     {
       "id": "cms-joomla-help-com",
@@ -928,17 +929,18 @@
       "description": "Joomla 教程、错误修复、迁移清单、安全加固和在线工具。",
       "status": "active",
       "dr": 45,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
-      "links_page_included": true
+      "links_page_included": true,
+      "description_i18n": {
+        "en-US": "Joomla tutorials, bug fixes, migration checklists, security hardening and online tools.",
+        "zh-CN": "Joomla 教程、错误修复、迁移清单、安全加固和在线工具。"
+      },
+      "logo_svg": "/assets/logos/cms-joomla-help-com.svg",
+      "logo_source_url": "https://cms-joomla-help.com/favicon.svg"
     },
     {
       "id": "themescorners-com",
@@ -950,17 +952,18 @@
       "description": "提供免费和专业 WordPress 主题，覆盖响应式、SEO 与 WooCommerce 场景。",
       "status": "active",
       "dr": 44,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
-      "links_page_included": true
+      "links_page_included": true,
+      "description_i18n": {
+        "en-US": "Free and premium WordPress themes covering responsive, SEO and WooCommerce use cases.",
+        "zh-CN": "提供免费和专业 WordPress 主题，覆盖响应式、SEO 与 WooCommerce 场景。"
+      },
+      "logo_svg": "/assets/logos/themescorners-com.svg",
+      "logo_generated": true
     },
     {
       "id": "material-theme-dev",
@@ -972,17 +975,18 @@
       "description": "Material Theme 原始配色与主题资源文档。",
       "status": "active",
       "dr": 34,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
-      "links_page_included": true
+      "links_page_included": true,
+      "description_i18n": {
+        "en-US": "Documentation for the original Material Theme color palette and theme resources.",
+        "zh-CN": "Material Theme 原始配色与主题资源文档。"
+      },
+      "logo_svg": "/assets/logos/material-theme-dev.svg",
+      "logo_generated": true
     },
     {
       "id": "pastecode-xyz",
@@ -994,17 +998,18 @@
       "description": "面向 AI 编码代理的提示词、规则、清单和上下文片段库。",
       "status": "active",
       "dr": 30,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
-      "links_page_included": true
+      "links_page_included": true,
+      "description_i18n": {
+        "en-US": "A library of prompts, rules, checklists and context snippets for AI coding agents.",
+        "zh-CN": "面向 AI 编码代理的提示词、规则、清单和上下文片段库。"
+      },
+      "logo_svg": "/assets/logos/pastecode-xyz.svg",
+      "logo_source_url": "https://pastecode.xyz/favicon.svg"
     },
     {
       "id": "techvibeblog-org",
@@ -1016,17 +1021,18 @@
       "description": "覆盖应用、游戏、流媒体、移动端和现代 Web 的技术资讯、指南与评测。",
       "status": "active",
       "dr": 31,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
-      "links_page_included": true
+      "links_page_included": true,
+      "description_i18n": {
+        "en-US": "Tech news, guides and reviews covering apps, games, streaming, mobile and the modern web.",
+        "zh-CN": "覆盖应用、游戏、流媒体、移动端和现代 Web 的技术资讯、指南与评测。"
+      },
+      "logo_svg": "/assets/logos/techvibeblog-org.svg",
+      "logo_source_url": "https://techvibeblog.org/favicon.svg"
     },
     {
       "id": "jennaferscott-com",
@@ -1038,17 +1044,18 @@
       "description": "提供可下载打印的计划表、清单、预算追踪和生活整理模板。",
       "status": "active",
       "dr": 42,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
-      "links_page_included": true
+      "links_page_included": true,
+      "description_i18n": {
+        "en-US": "Downloadable printable planners, checklists, budget trackers and life-organization templates.",
+        "zh-CN": "提供可下载打印的计划表、清单、预算追踪和生活整理模板。"
+      },
+      "logo_svg": "/assets/logos/jennaferscott-com.svg",
+      "logo_source_url": "https://jennaferscott.com/favicon.svg"
     },
     {
       "id": "aquila-network",
@@ -1062,17 +1069,18 @@
       "dns_target": "aquila-network.pages.dev",
       "status_note": "CNAME 指向 aquila-network.pages.dev。",
       "dr": 35,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
-      "links_page_included": true
+      "links_page_included": true,
+      "description_i18n": {
+        "en-US": "An entry point to networking and technical resources related to Aquila Network.",
+        "zh-CN": "Aquila Network 相关的网络与技术资源入口。"
+      },
+      "logo_svg": "/assets/logos/aquila-network.svg",
+      "logo_source_url": "http://aquila.network/favicon.svg"
     },
     {
       "id": "onarm-net",
@@ -1087,15 +1095,16 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 0,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-21",
       "dr_update_enabled": true,
       "dr_status": "ok",
-      "dr_consecutive_errors": 0
+      "dr_consecutive_errors": 0,
+      "description_i18n": {
+        "en-US": "A Windows on Arm app and game compatibility database for native Arm64 and emulated status on Snapdragon and other Arm PCs.",
+        "zh-CN": "Windows on Arm 应用与游戏兼容性数据库，查询 Snapdragon 和其他 Arm PC 上的原生 Arm64 与模拟运行状态。"
+      },
+      "logo_svg": "/assets/logos/onarm-net.svg",
+      "logo_source_url": "https://onarm.net/favicon.svg"
     },
     {
       "id": "artemstar-com",
@@ -1110,15 +1119,16 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 34,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-21",
       "dr_update_enabled": true,
       "dr_status": "ok",
-      "dr_consecutive_errors": 0
+      "dr_consecutive_errors": 0,
+      "description_i18n": {
+        "en-US": "DevOps and infrastructure field notes covering Docker, Kubernetes, Terraform, Git and AWS.",
+        "zh-CN": "DevOps 与基础设施经验笔记，覆盖 Docker、Kubernetes、Terraform、Git 和 AWS 等工具与实践。"
+      },
+      "logo_svg": "/assets/logos/artemstar-com.svg",
+      "logo_source_url": "https://artemstar.com/favicon.svg"
     },
     {
       "id": "flag92-com",
@@ -1133,15 +1143,16 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 42,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-21",
       "dr_update_enabled": true,
       "dr_status": "ok",
-      "dr_consecutive_errors": 0
+      "dr_consecutive_errors": 0,
+      "description_i18n": {
+        "en-US": "A directory of open-source AI customer-service solutions, mapping projects, stacks and deployment for low-cost support bots.",
+        "zh-CN": "开源 AI 客服方案导航，梳理主流项目、组合方案与部署流程，帮助低成本搭建智能客服。"
+      },
+      "logo_svg": "/assets/logos/flag92-com.svg",
+      "logo_source_url": "https://flag92.com/logo.svg"
     },
     {
       "id": "llstack-com",
@@ -1156,15 +1167,16 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 21,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-21",
       "dr_update_enabled": true,
       "dr_status": "ok",
-      "dr_consecutive_errors": 0
+      "dr_consecutive_errors": 0,
+      "description_i18n": {
+        "en-US": "A high-performance open-source Linux server control panel built on LiteHttpd, compatible with Apache .htaccess.",
+        "zh-CN": "基于 LiteHttpd 的高性能开源 Linux 服务器管理面板，兼容 Apache .htaccess。"
+      },
+      "logo_svg": "/assets/logos/llstack-com.svg",
+      "logo_source_url": "https://www.llstack.com/favicon.svg"
     }
   ],
   "badges": [
@@ -1179,6 +1191,10 @@
       "category": "导航站",
       "placement": "footer",
       "description": "面向创业者和开发者的产品发现与发布平台，收录 AI 工具、SaaS 与新项目。",
+      "description_i18n": {
+        "en-US": "Product discovery and launch platform for founders and developers, listing AI tools, SaaS and new projects.",
+        "zh-CN": "面向创业者和开发者的产品发现与发布平台，收录 AI 工具、SaaS 与新项目。"
+      },
       "status": "active",
       "link_rel": "dofollow",
       "dofollow": true,
@@ -1190,11 +1206,6 @@
       "links_page_included": true,
       "links_page_category": "导航站",
       "dr": 34,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-21",
       "dr_update_enabled": true,
       "dr_status": "ok",
@@ -1213,6 +1224,10 @@
       "category": "导航站",
       "placement": "footer",
       "description": "面向站长和开发者的导航站，聚合实用网站与工具资源。",
+      "description_i18n": {
+        "en-US": "A directory for webmasters and developers, aggregating useful sites and tool resources.",
+        "zh-CN": "面向站长和开发者的导航站，聚合实用网站与工具资源。"
+      },
       "status": "active",
       "link_rel": "dofollow",
       "dofollow": true,
@@ -1224,11 +1239,6 @@
       "links_page_included": true,
       "links_page_category": "导航站",
       "dr": 2.7,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-21",
       "dr_update_enabled": true,
       "dr_status": "ok",
@@ -1247,6 +1257,10 @@
       "category": "导航站",
       "placement": "footer",
       "description": "AI 工具导航站，按生产力、创意、开发等场景收录工具。",
+      "description_i18n": {
+        "en-US": "AI tools directory, organizing tools by scenario such as productivity, creativity and development.",
+        "zh-CN": "AI 工具导航站，按生产力、创意、开发等场景收录工具。"
+      },
       "status": "active",
       "link_rel": "dofollow",
       "dofollow": true,
@@ -1258,11 +1272,6 @@
       "links_page_included": true,
       "links_page_category": "导航站",
       "dr": 14,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-21",
       "dr_update_enabled": true,
       "dr_status": "ok",
@@ -1281,6 +1290,10 @@
       "category": "导航站",
       "placement": "footer",
       "description": "快速收录和发现站点的导航平台，适合工具、产品和内容站曝光。",
+      "description_i18n": {
+        "en-US": "A directory platform for fast indexing and discovery, ideal for exposing tools, products and content sites.",
+        "zh-CN": "快速收录和发现站点的导航平台，适合工具、产品和内容站曝光。"
+      },
       "status": "active",
       "link_rel": "dofollow",
       "dofollow": true,
@@ -1292,11 +1305,6 @@
       "links_page_included": true,
       "links_page_category": "导航站",
       "dr": 30,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-22",
       "dr_update_enabled": true,
       "dr_status": "ok",
@@ -1315,6 +1323,10 @@
       "category": "导航站",
       "placement": "footer",
       "description": "面向设计和开发资源的导航站，聚合前端、产品与创意工具。",
+      "description_i18n": {
+        "en-US": "A directory for design and development resources, aggregating front-end, product and creative tools.",
+        "zh-CN": "面向设计和开发资源的导航站，聚合前端、产品与创意工具。"
+      },
       "status": "active",
       "link_rel": "dofollow",
       "dofollow": true,
@@ -1326,11 +1338,6 @@
       "links_page_included": true,
       "links_page_category": "导航站",
       "dr": 36,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-22",
       "dr_update_enabled": true,
       "dr_status": "ok",
@@ -1349,6 +1356,10 @@
       "category": "导航站",
       "placement": "footer",
       "description": "面向独立产品和互联网工具的导航站，帮助用户发现优质项目。",
+      "description_i18n": {
+        "en-US": "A directory for indie products and internet tools, helping users discover quality projects.",
+        "zh-CN": "面向独立产品和互联网工具的导航站，帮助用户发现优质项目。"
+      },
       "status": "active",
       "link_rel": "dofollow",
       "dofollow": true,
@@ -1360,11 +1371,6 @@
       "links_page_included": true,
       "links_page_category": "导航站",
       "dr": 55,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-22",
       "dr_update_enabled": true,
       "dr_status": "ok",
@@ -1383,6 +1389,10 @@
       "category": "导航站",
       "placement": "footer",
       "description": "综合资源导航站，收录娱乐、工具和内容类网站。",
+      "description_i18n": {
+        "en-US": "A general resource directory listing entertainment, tools and content sites.",
+        "zh-CN": "综合资源导航站，收录娱乐、工具和内容类网站。"
+      },
       "status": "active",
       "link_rel": "dofollow",
       "dofollow": true,
@@ -1394,11 +1404,6 @@
       "links_page_included": true,
       "links_page_category": "导航站",
       "dr": 51,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
@@ -1417,6 +1422,10 @@
       "category": "导航站",
       "placement": "footer",
       "description": "聚焦聊天、社交和在线工具的资源导航站。",
+      "description_i18n": {
+        "en-US": "A resource directory focused on chat, social and online tools.",
+        "zh-CN": "聚焦聊天、社交和在线工具的资源导航站。"
+      },
       "status": "active",
       "link_rel": "dofollow",
       "dofollow": true,
@@ -1428,11 +1437,6 @@
       "links_page_included": true,
       "links_page_category": "导航站",
       "dr": 29,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
@@ -1451,6 +1455,10 @@
       "category": "导航站",
       "placement": "footer",
       "description": "收录开发组件、区块和数字产品资源的导航站。",
+      "description_i18n": {
+        "en-US": "A directory for development components, blocks and digital product resources.",
+        "zh-CN": "收录开发组件、区块和数字产品资源的导航站。"
+      },
       "status": "active",
       "link_rel": "dofollow",
       "dofollow": true,
@@ -1462,11 +1470,6 @@
       "links_page_included": true,
       "links_page_category": "导航站",
       "dr": 54,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
@@ -1485,6 +1488,10 @@
       "category": "导航站",
       "placement": "footer",
       "description": "游戏与互动娱乐资源导航站，聚合相关站点和项目。",
+      "description_i18n": {
+        "en-US": "A games and interactive entertainment directory aggregating related sites and projects.",
+        "zh-CN": "游戏与互动娱乐资源导航站，聚合相关站点和项目。"
+      },
       "status": "active",
       "link_rel": "dofollow",
       "dofollow": true,
@@ -1496,11 +1503,6 @@
       "links_page_included": true,
       "links_page_category": "导航站",
       "dr": 72,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
@@ -1519,6 +1521,10 @@
       "category": "导航站",
       "placement": "footer",
       "description": "开源 SaaS 目录平台，帮助产品获得展示和反向链接。",
+      "description_i18n": {
+        "en-US": "An open-source SaaS directory platform that helps products gain exposure and backlinks.",
+        "zh-CN": "开源 SaaS 目录平台，帮助产品获得展示和反向链接。"
+      },
       "status": "active",
       "link_rel": "dofollow",
       "dofollow": true,
@@ -1530,11 +1536,6 @@
       "links_page_included": true,
       "links_page_category": "导航站",
       "dr": 40,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
@@ -1553,6 +1554,10 @@
       "category": "导航站",
       "placement": "footer",
       "description": "AI 工具、SaaS 和产品精选目录，面向创作者与企业用户。",
+      "description_i18n": {
+        "en-US": "A curated directory of AI tools, SaaS and products for creators and business users.",
+        "zh-CN": "AI 工具、SaaS 和产品精选目录，面向创作者与企业用户。"
+      },
       "status": "active",
       "link_rel": "dofollow",
       "dofollow": true,
@@ -1564,11 +1569,6 @@
       "links_page_included": true,
       "links_page_category": "导航站",
       "dr": 23,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
@@ -1587,6 +1587,10 @@
       "category": "导航站",
       "placement": "footer",
       "description": "精选值得访问网站的导航目录。",
+      "description_i18n": {
+        "en-US": "A curated directory of websites worth visiting.",
+        "zh-CN": "精选值得访问网站的导航目录。"
+      },
       "status": "active",
       "link_rel": "dofollow",
       "dofollow": true,
@@ -1598,11 +1602,6 @@
       "links_page_included": true,
       "links_page_category": "导航站",
       "dr": 37,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
@@ -1620,16 +1619,15 @@
       "category": "Debian Linux",
       "placement": "links_page",
       "description": "Debian 13 中文入门指南与使用教程，适合从零开始学习 Debian。",
+      "description_i18n": {
+        "en-US": "A Chinese getting-started guide and tutorials for Debian 13, ideal for learning Debian from scratch.",
+        "zh-CN": "Debian 13 中文入门指南与使用教程，适合从零开始学习 Debian。"
+      },
       "status": "active",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
       "dr": 17,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok"
@@ -1642,16 +1640,15 @@
       "category": "Ubuntu Linux",
       "placement": "links_page",
       "description": "Ubuntu 26.04 LTS 中文使用指南，覆盖安装、桌面、开发环境、服务器部署和系统管理。",
+      "description_i18n": {
+        "en-US": "A Chinese guide to Ubuntu 26.04 LTS, covering installation, desktop, dev environment, server deployment and system administration.",
+        "zh-CN": "Ubuntu 26.04 LTS 中文使用指南，覆盖安装、桌面、开发环境、服务器部署和系统管理。"
+      },
       "status": "active",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
       "dr": 13,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok"
@@ -1664,16 +1661,15 @@
       "category": "AlmaLinux",
       "placement": "links_page",
       "description": "面向中文用户的 AlmaLinux 发行版文档与社区资源。",
+      "description_i18n": {
+        "en-US": "AlmaLinux distribution documentation and community resources for Chinese users.",
+        "zh-CN": "面向中文用户的 AlmaLinux 发行版文档与社区资源。"
+      },
       "status": "active",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
       "dr": 15,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok"
@@ -1686,16 +1682,15 @@
       "category": "企业级 Linux",
       "placement": "links_page",
       "description": "面向 CentOS、AlmaLinux、Rocky Linux、Oracle Linux 等企业级 Linux 的学习与实战文档。",
+      "description_i18n": {
+        "en-US": "Hands-on docs for enterprise Linux such as CentOS, AlmaLinux, Rocky Linux and Oracle Linux.",
+        "zh-CN": "面向 CentOS、AlmaLinux、Rocky Linux、Oracle Linux 等企业级 Linux 的学习与实战文档。"
+      },
       "status": "active",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
       "dr": 13,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok"
@@ -1708,16 +1703,15 @@
       "category": "版本生命周期",
       "placement": "links_page",
       "description": "查询软件、硬件和平台的生命周期、版本历史与支持状态。",
+      "description_i18n": {
+        "en-US": "Look up lifecycle, version history and support status of software, hardware and platforms.",
+        "zh-CN": "查询软件、硬件和平台的生命周期、版本历史与支持状态。"
+      },
       "status": "active",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
       "dr": 14,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok"
@@ -1730,16 +1724,15 @@
       "category": "Web 服务器",
       "placement": "links_page",
       "description": "围绕 LiteHTTPD、OpenLiteSpeed 与 Apache .htaccess 兼容能力的 Web 服务器文档。",
+      "description_i18n": {
+        "en-US": "Web server documentation around LiteHTTPD, OpenLiteSpeed and Apache .htaccess compatibility.",
+        "zh-CN": "围绕 LiteHTTPD、OpenLiteSpeed 与 Apache .htaccess 兼容能力的 Web 服务器文档。"
+      },
       "status": "active",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
       "dr": 14,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok"
@@ -1752,16 +1745,15 @@
       "category": "端口与网络",
       "placement": "links_page",
       "description": "端口号查询数据库，帮助开发者识别端口用途并避免端口冲突。",
+      "description_i18n": {
+        "en-US": "A port-number lookup database helping developers identify port usage and avoid conflicts.",
+        "zh-CN": "端口号查询数据库，帮助开发者识别端口用途并避免端口冲突。"
+      },
       "status": "active",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
       "dr": 18,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok"
@@ -1774,16 +1766,15 @@
       "category": "SEO 与排名",
       "placement": "links_page",
       "description": "提供 SEO、GEO、AIEO 报告与排名分析工具。",
+      "description_i18n": {
+        "en-US": "SEO, GEO and AIEO reports and ranking analysis tools.",
+        "zh-CN": "提供 SEO、GEO、AIEO 报告与排名分析工具。"
+      },
       "status": "active",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
       "dr": 16,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok"
@@ -1796,16 +1787,15 @@
       "category": "GEO / AIEO",
       "placement": "links_page",
       "description": "生成式引擎优化文档站，帮助内容更容易被 AI 搜索与问答引擎信任和引用。",
+      "description_i18n": {
+        "en-US": "A generative-engine-optimization docs site helping content get trusted and cited by AI search and answer engines.",
+        "zh-CN": "生成式引擎优化文档站，帮助内容更容易被 AI 搜索与问答引擎信任和引用。"
+      },
       "status": "active",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
       "dr": 15,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok"
@@ -1818,16 +1808,15 @@
       "category": "MariaDB",
       "placement": "links_page",
       "description": "面向新手、AI 开发者与云上用户的现代 MariaDB 知识库。",
+      "description_i18n": {
+        "en-US": "A modern MariaDB knowledge base for beginners, AI developers and cloud users.",
+        "zh-CN": "面向新手、AI 开发者与云上用户的现代 MariaDB 知识库。"
+      },
       "status": "active",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
       "dr": 0,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok"
@@ -1840,16 +1829,15 @@
       "category": "Valkey / Redis",
       "placement": "links_page",
       "description": "Valkey 中文知识库，覆盖 Redis 迁移、向量检索、Agent 记忆、云托管与版本路线图。",
+      "description_i18n": {
+        "en-US": "A Chinese Valkey knowledge base covering Redis migration, vector search, agent memory, managed cloud and the version roadmap.",
+        "zh-CN": "Valkey 中文知识库，覆盖 Redis 迁移、向量检索、Agent 记忆、云托管与版本路线图。"
+      },
       "status": "active",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
       "dr": 0,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok"
@@ -1862,16 +1850,15 @@
       "category": "D 语言与数值计算",
       "placement": "links_page",
       "description": "Mir 与 D 语言数值计算库生态的文档归档和参考资料。",
+      "description_i18n": {
+        "en-US": "Documentation archive and references for Mir and the D-language numerical computing ecosystem.",
+        "zh-CN": "Mir 与 D 语言数值计算库生态的文档归档和参考资料。"
+      },
       "status": "active",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
       "dr": 54,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok"
@@ -1884,16 +1871,15 @@
       "category": "Windows DLL",
       "placement": "links_page",
       "description": "Windows DLL 缺失与损坏问题的官方安全修复指南。",
+      "description_i18n": {
+        "en-US": "Official, safe repair guides for missing or corrupted Windows DLLs.",
+        "zh-CN": "Windows DLL 缺失与损坏问题的官方安全修复指南。"
+      },
       "status": "active",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
       "dr": 26,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok"
@@ -1906,16 +1892,15 @@
       "category": "姿态估计 / 机器学习",
       "placement": "links_page",
       "description": "基于深度学习的 2D 姿态估计工具包文档与项目资料。",
+      "description_i18n": {
+        "en-US": "Docs and project materials for a deep-learning 2D pose-estimation toolkit.",
+        "zh-CN": "基于深度学习的 2D 姿态估计工具包文档与项目资料。"
+      },
       "status": "active",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
       "dr": 35,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok"
@@ -1928,16 +1913,15 @@
       "category": "JavaScript 框架",
       "placement": "links_page",
       "description": "用于通过插件、初始化器和命令行脚本组合应用的 Node.js 框架文档。",
+      "description_i18n": {
+        "en-US": "Docs for a Node.js framework for composing apps via plugins, initializers and CLI scripts.",
+        "zh-CN": "用于通过插件、初始化器和命令行脚本组合应用的 Node.js 框架文档。"
+      },
       "status": "active",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
       "dr": 36,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok"
@@ -1950,16 +1934,15 @@
       "category": "博客 / CMS",
       "placement": "links_page",
       "description": "面向 EmDash CMS 的快速深色博客模板，支持 Markdown 和 Cloudflare 或 Node 部署。",
+      "description_i18n": {
+        "en-US": "A fast dark blog template for EmDash CMS, with Markdown support and Cloudflare or Node deployment.",
+        "zh-CN": "面向 EmDash CMS 的快速深色博客模板，支持 Markdown 和 Cloudflare 或 Node 部署。"
+      },
       "status": "active",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
       "dr": 34,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok"
@@ -1972,16 +1955,15 @@
       "category": "WebGL 图形",
       "placement": "links_page",
       "description": "WebGL 图形库文档，提供浏览器 3D 场景的示例和 API 参考。",
+      "description_i18n": {
+        "en-US": "WebGL graphics library docs, with examples and API reference for 3D scenes in the browser.",
+        "zh-CN": "WebGL 图形库文档，提供浏览器 3D 场景的示例和 API 参考。"
+      },
       "status": "active",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
       "dr": 31,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok"
@@ -1994,16 +1976,15 @@
       "category": "IT 求职",
       "placement": "links_page",
       "description": "面向 IT 招聘者和候选人的开源职位发布与求职信息平台。",
+      "description_i18n": {
+        "en-US": "An open-source job-posting and job-search platform for IT recruiters and candidates.",
+        "zh-CN": "面向 IT 招聘者和候选人的开源职位发布与求职信息平台。"
+      },
       "status": "active",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
       "dr": 34,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok"
@@ -2016,16 +1997,15 @@
       "category": "开发笔记",
       "placement": "links_page",
       "description": "面向 AI 与快速开发项目上线的指南、模板、清单和部署笔记。",
+      "description_i18n": {
+        "en-US": "Guides, templates, checklists and deployment notes for shipping AI and rapid-development projects.",
+        "zh-CN": "面向 AI 与快速开发项目上线的指南、模板、清单和部署笔记。"
+      },
       "status": "active",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
       "dr": 29,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok"
@@ -2038,16 +2018,15 @@
       "category": "开发资源",
       "placement": "links_page",
       "description": "将现代网站转换为轻量文本优先 WAP 页面的网站转换工具与实验项目。",
+      "description_i18n": {
+        "en-US": "A site-conversion tool and experiment that turns modern websites into lightweight, text-first WAP pages.",
+        "zh-CN": "将现代网站转换为轻量文本优先 WAP 页面的网站转换工具与实验项目。"
+      },
       "status": "active",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
       "dr": 30,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok"
@@ -2060,16 +2039,15 @@
       "category": "法律与合规",
       "placement": "links_page",
       "description": "提供刑事案件、交通事故、青少年犯罪等法律与合规资讯。",
+      "description_i18n": {
+        "en-US": "Legal and compliance information on criminal cases, traffic accidents, juvenile offenses and more.",
+        "zh-CN": "提供刑事案件、交通事故、青少年犯罪等法律与合规资讯。"
+      },
       "status": "active",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
       "dr": 21,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok"
@@ -2082,16 +2060,15 @@
       "category": "Joomla CMS",
       "placement": "links_page",
       "description": "Joomla 教程、错误修复、迁移清单、安全加固和在线工具。",
+      "description_i18n": {
+        "en-US": "Joomla tutorials, bug fixes, migration checklists, security hardening and online tools.",
+        "zh-CN": "Joomla 教程、错误修复、迁移清单、安全加固和在线工具。"
+      },
       "status": "active",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
       "dr": 45,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok"
@@ -2104,16 +2081,15 @@
       "category": "主题与模板",
       "placement": "links_page",
       "description": "提供免费和专业 WordPress 主题，覆盖响应式、SEO 与 WooCommerce 场景。",
+      "description_i18n": {
+        "en-US": "Free and premium WordPress themes covering responsive, SEO and WooCommerce use cases.",
+        "zh-CN": "提供免费和专业 WordPress 主题，覆盖响应式、SEO 与 WooCommerce 场景。"
+      },
       "status": "active",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
       "dr": 44,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok"
@@ -2126,16 +2102,15 @@
       "category": "Material 设计",
       "placement": "links_page",
       "description": "Material Theme 原始配色与主题资源文档。",
+      "description_i18n": {
+        "en-US": "Documentation for the original Material Theme color palette and theme resources.",
+        "zh-CN": "Material Theme 原始配色与主题资源文档。"
+      },
       "status": "active",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
       "dr": 34,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok"
@@ -2148,16 +2123,15 @@
       "category": "代码片段",
       "placement": "links_page",
       "description": "面向 AI 编码代理的提示词、规则、清单和上下文片段库。",
+      "description_i18n": {
+        "en-US": "A library of prompts, rules, checklists and context snippets for AI coding agents.",
+        "zh-CN": "面向 AI 编码代理的提示词、规则、清单和上下文片段库。"
+      },
       "status": "active",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
       "dr": 30,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok"
@@ -2170,16 +2144,15 @@
       "category": "技术博客",
       "placement": "links_page",
       "description": "覆盖应用、游戏、流媒体、移动端和现代 Web 的技术资讯、指南与评测。",
+      "description_i18n": {
+        "en-US": "Tech news, guides and reviews covering apps, games, streaming, mobile and the modern web.",
+        "zh-CN": "覆盖应用、游戏、流媒体、移动端和现代 Web 的技术资讯、指南与评测。"
+      },
       "status": "active",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
       "dr": 31,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok"
@@ -2192,16 +2165,15 @@
       "category": "生活效率 / 模板",
       "placement": "links_page",
       "description": "提供可下载打印的计划表、清单、预算追踪和生活整理模板。",
+      "description_i18n": {
+        "en-US": "Downloadable printable planners, checklists, budget trackers and life-organization templates.",
+        "zh-CN": "提供可下载打印的计划表、清单、预算追踪和生活整理模板。"
+      },
       "status": "active",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
       "dr": 42,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok"
@@ -2214,6 +2186,10 @@
       "category": "网络与基础设施",
       "placement": "links_page",
       "description": "Aquila Network 相关的网络与技术资源入口。",
+      "description_i18n": {
+        "en-US": "An entry point to networking and technical resources related to Aquila Network.",
+        "zh-CN": "Aquila Network 相关的网络与技术资源入口。"
+      },
       "status": "active",
       "link_rel": "dofollow",
       "dofollow": true,
@@ -2221,11 +2197,6 @@
       "status_note": "CNAME 指向 aquila-network.pages.dev。",
       "links_page_included": true,
       "dr": 35,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok"
@@ -2238,16 +2209,15 @@
       "category": "Windows on Arm",
       "placement": "links_page",
       "description": "Windows on Arm 应用与游戏兼容性数据库，查询 Snapdragon 和其他 Arm PC 上的原生 Arm64 与模拟运行状态。",
+      "description_i18n": {
+        "en-US": "A Windows on Arm app and game compatibility database for native Arm64 and emulated status on Snapdragon and other Arm PCs.",
+        "zh-CN": "Windows on Arm 应用与游戏兼容性数据库，查询 Snapdragon 和其他 Arm PC 上的原生 Arm64 与模拟运行状态。"
+      },
       "status": "active",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
       "dr": 0,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-21",
       "dr_update_enabled": true,
       "dr_status": "ok",
@@ -2261,16 +2231,15 @@
       "category": "DevOps / 基础设施",
       "placement": "links_page",
       "description": "DevOps 与基础设施经验笔记，覆盖 Docker、Kubernetes、Terraform、Git 和 AWS 等工具与实践。",
+      "description_i18n": {
+        "en-US": "DevOps and infrastructure field notes covering Docker, Kubernetes, Terraform, Git and AWS.",
+        "zh-CN": "DevOps 与基础设施经验笔记，覆盖 Docker、Kubernetes、Terraform、Git 和 AWS 等工具与实践。"
+      },
       "status": "active",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
       "dr": 34,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-21",
       "dr_update_enabled": true,
       "dr_status": "ok",
@@ -2284,16 +2253,15 @@
       "category": "AI 客服 / 开源方案",
       "placement": "links_page",
       "description": "开源 AI 客服方案导航，梳理主流项目、组合方案与部署流程，帮助低成本搭建智能客服。",
+      "description_i18n": {
+        "en-US": "A directory of open-source AI customer-service solutions, mapping projects, stacks and deployment for low-cost support bots.",
+        "zh-CN": "开源 AI 客服方案导航，梳理主流项目、组合方案与部署流程，帮助低成本搭建智能客服。"
+      },
       "status": "active",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
       "dr": 42,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-21",
       "dr_update_enabled": true,
       "dr_status": "ok",
@@ -2307,16 +2275,15 @@
       "category": "服务器管理 / Web 面板",
       "placement": "links_page",
       "description": "基于 LiteHttpd 的高性能开源 Linux 服务器管理面板，兼容 Apache .htaccess。",
+      "description_i18n": {
+        "en-US": "A high-performance open-source Linux server control panel built on LiteHttpd, compatible with Apache .htaccess.",
+        "zh-CN": "基于 LiteHttpd 的高性能开源 Linux 服务器管理面板，兼容 Apache .htaccess。"
+      },
       "status": "active",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
       "dr": 21,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-21",
       "dr_update_enabled": true,
       "dr_status": "ok",
@@ -2439,11 +2406,6 @@
       "description": "面向创业者和开发者的产品发现与发布平台，收录 AI 工具、SaaS 与新项目。",
       "status": "active",
       "dr": 34,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-21",
       "dr_update_enabled": true,
       "dr_status": "ok",
@@ -2457,6 +2419,10 @@
       "links_page_included": true,
       "links_page_category": "导航站",
       "dr_consecutive_errors": 0,
+      "description_i18n": {
+        "en-US": "Product discovery and launch platform for founders and developers, listing AI tools, SaaS and new projects.",
+        "zh-CN": "面向创业者和开发者的产品发现与发布平台，收录 AI 工具、SaaS 与新项目。"
+      },
       "source_collection": "footer_navigation_sites"
     },
     {
@@ -2471,11 +2437,6 @@
       "description": "面向站长和开发者的导航站，聚合实用网站与工具资源。",
       "status": "active",
       "dr": 2.7,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-21",
       "dr_update_enabled": true,
       "dr_status": "ok",
@@ -2489,6 +2450,10 @@
       "links_page_included": true,
       "links_page_category": "导航站",
       "dr_consecutive_errors": 0,
+      "description_i18n": {
+        "en-US": "A directory for webmasters and developers, aggregating useful sites and tool resources.",
+        "zh-CN": "面向站长和开发者的导航站，聚合实用网站与工具资源。"
+      },
       "source_collection": "footer_navigation_sites"
     },
     {
@@ -2503,11 +2468,6 @@
       "description": "AI 工具导航站，按生产力、创意、开发等场景收录工具。",
       "status": "active",
       "dr": 14,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-21",
       "dr_update_enabled": true,
       "dr_status": "ok",
@@ -2521,6 +2481,10 @@
       "links_page_included": true,
       "links_page_category": "导航站",
       "dr_consecutive_errors": 0,
+      "description_i18n": {
+        "en-US": "AI tools directory, organizing tools by scenario such as productivity, creativity and development.",
+        "zh-CN": "AI 工具导航站，按生产力、创意、开发等场景收录工具。"
+      },
       "source_collection": "footer_navigation_sites"
     },
     {
@@ -2535,11 +2499,6 @@
       "description": "快速收录和发现站点的导航平台，适合工具、产品和内容站曝光。",
       "status": "active",
       "dr": 30,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-22",
       "dr_update_enabled": true,
       "dr_status": "ok",
@@ -2553,6 +2512,10 @@
       "links_page_included": true,
       "links_page_category": "导航站",
       "dr_consecutive_errors": 0,
+      "description_i18n": {
+        "en-US": "A directory platform for fast indexing and discovery, ideal for exposing tools, products and content sites.",
+        "zh-CN": "快速收录和发现站点的导航平台，适合工具、产品和内容站曝光。"
+      },
       "source_collection": "footer_navigation_sites"
     },
     {
@@ -2567,11 +2530,6 @@
       "description": "面向设计和开发资源的导航站，聚合前端、产品与创意工具。",
       "status": "active",
       "dr": 36,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-22",
       "dr_update_enabled": true,
       "dr_status": "ok",
@@ -2585,6 +2543,10 @@
       "links_page_included": true,
       "links_page_category": "导航站",
       "dr_consecutive_errors": 0,
+      "description_i18n": {
+        "en-US": "A directory for design and development resources, aggregating front-end, product and creative tools.",
+        "zh-CN": "面向设计和开发资源的导航站，聚合前端、产品与创意工具。"
+      },
       "source_collection": "footer_navigation_sites"
     },
     {
@@ -2599,11 +2561,6 @@
       "description": "面向独立产品和互联网工具的导航站，帮助用户发现优质项目。",
       "status": "active",
       "dr": 55,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-22",
       "dr_update_enabled": true,
       "dr_status": "ok",
@@ -2617,6 +2574,10 @@
       "links_page_included": true,
       "links_page_category": "导航站",
       "dr_consecutive_errors": 0,
+      "description_i18n": {
+        "en-US": "A directory for indie products and internet tools, helping users discover quality projects.",
+        "zh-CN": "面向独立产品和互联网工具的导航站，帮助用户发现优质项目。"
+      },
       "source_collection": "footer_navigation_sites"
     },
     {
@@ -2631,11 +2592,6 @@
       "description": "综合资源导航站，收录娱乐、工具和内容类网站。",
       "status": "active",
       "dr": 51,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
@@ -2648,6 +2604,10 @@
       "default_footer_display_mode": "logo_with_name",
       "links_page_included": true,
       "links_page_category": "导航站",
+      "description_i18n": {
+        "en-US": "A general resource directory listing entertainment, tools and content sites.",
+        "zh-CN": "综合资源导航站，收录娱乐、工具和内容类网站。"
+      },
       "source_collection": "footer_navigation_sites"
     },
     {
@@ -2662,11 +2622,6 @@
       "description": "聚焦聊天、社交和在线工具的资源导航站。",
       "status": "active",
       "dr": 29,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
@@ -2679,6 +2634,10 @@
       "default_footer_display_mode": "logo_with_name",
       "links_page_included": true,
       "links_page_category": "导航站",
+      "description_i18n": {
+        "en-US": "A resource directory focused on chat, social and online tools.",
+        "zh-CN": "聚焦聊天、社交和在线工具的资源导航站。"
+      },
       "source_collection": "footer_navigation_sites"
     },
     {
@@ -2693,11 +2652,6 @@
       "description": "收录开发组件、区块和数字产品资源的导航站。",
       "status": "active",
       "dr": 54,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
@@ -2710,6 +2664,10 @@
       "default_footer_display_mode": "logo_with_name",
       "links_page_included": true,
       "links_page_category": "导航站",
+      "description_i18n": {
+        "en-US": "A directory for development components, blocks and digital product resources.",
+        "zh-CN": "收录开发组件、区块和数字产品资源的导航站。"
+      },
       "source_collection": "footer_navigation_sites"
     },
     {
@@ -2724,11 +2682,6 @@
       "description": "游戏与互动娱乐资源导航站，聚合相关站点和项目。",
       "status": "active",
       "dr": 72,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
@@ -2741,6 +2694,10 @@
       "default_footer_display_mode": "logo_with_name",
       "links_page_included": true,
       "links_page_category": "导航站",
+      "description_i18n": {
+        "en-US": "A games and interactive entertainment directory aggregating related sites and projects.",
+        "zh-CN": "游戏与互动娱乐资源导航站，聚合相关站点和项目。"
+      },
       "source_collection": "footer_navigation_sites"
     },
     {
@@ -2755,11 +2712,6 @@
       "description": "开源 SaaS 目录平台，帮助产品获得展示和反向链接。",
       "status": "active",
       "dr": 40,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
@@ -2772,6 +2724,10 @@
       "default_footer_display_mode": "logo_with_name",
       "links_page_included": true,
       "links_page_category": "导航站",
+      "description_i18n": {
+        "en-US": "An open-source SaaS directory platform that helps products gain exposure and backlinks.",
+        "zh-CN": "开源 SaaS 目录平台，帮助产品获得展示和反向链接。"
+      },
       "source_collection": "footer_navigation_sites"
     },
     {
@@ -2786,11 +2742,6 @@
       "description": "AI 工具、SaaS 和产品精选目录，面向创作者与企业用户。",
       "status": "active",
       "dr": 23,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
@@ -2803,6 +2754,10 @@
       "default_footer_display_mode": "logo_with_name",
       "links_page_included": true,
       "links_page_category": "导航站",
+      "description_i18n": {
+        "en-US": "A curated directory of AI tools, SaaS and products for creators and business users.",
+        "zh-CN": "AI 工具、SaaS 和产品精选目录，面向创作者与企业用户。"
+      },
       "source_collection": "footer_navigation_sites"
     },
     {
@@ -2817,11 +2772,6 @@
       "description": "精选值得访问网站的导航目录。",
       "status": "active",
       "dr": 37,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
@@ -2834,6 +2784,10 @@
       "default_footer_display_mode": "logo_with_name",
       "links_page_included": true,
       "links_page_category": "导航站",
+      "description_i18n": {
+        "en-US": "A curated directory of websites worth visiting.",
+        "zh-CN": "精选值得访问网站的导航目录。"
+      },
       "source_collection": "footer_navigation_sites"
     },
     {
@@ -2846,17 +2800,18 @@
       "description": "Debian 13 中文入门指南与使用教程，适合从零开始学习 Debian。",
       "status": "active",
       "dr": 17,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
+      "description_i18n": {
+        "en-US": "A Chinese getting-started guide and tutorials for Debian 13, ideal for learning Debian from scratch.",
+        "zh-CN": "Debian 13 中文入门指南与使用教程，适合从零开始学习 Debian。"
+      },
+      "logo_svg": "/assets/logos/debian-club.svg",
+      "logo_generated": true,
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -2869,17 +2824,18 @@
       "description": "Ubuntu 26.04 LTS 中文使用指南，覆盖安装、桌面、开发环境、服务器部署和系统管理。",
       "status": "active",
       "dr": 13,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
+      "description_i18n": {
+        "en-US": "A Chinese guide to Ubuntu 26.04 LTS, covering installation, desktop, dev environment, server deployment and system administration.",
+        "zh-CN": "Ubuntu 26.04 LTS 中文使用指南，覆盖安装、桌面、开发环境、服务器部署和系统管理。"
+      },
+      "logo_svg": "/assets/logos/ubuntu-fan.svg",
+      "logo_source_url": "https://ubuntu.fan/favicon.svg",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -2892,17 +2848,18 @@
       "description": "面向中文用户的 AlmaLinux 发行版文档与社区资源。",
       "status": "active",
       "dr": 15,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
+      "description_i18n": {
+        "en-US": "AlmaLinux distribution documentation and community resources for Chinese users.",
+        "zh-CN": "面向中文用户的 AlmaLinux 发行版文档与社区资源。"
+      },
+      "logo_svg": "/assets/logos/almalinux-com-cn.svg",
+      "logo_generated": true,
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -2915,17 +2872,18 @@
       "description": "面向 CentOS、AlmaLinux、Rocky Linux、Oracle Linux 等企业级 Linux 的学习与实战文档。",
       "status": "active",
       "dr": 13,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
+      "description_i18n": {
+        "en-US": "Hands-on docs for enterprise Linux such as CentOS, AlmaLinux, Rocky Linux and Oracle Linux.",
+        "zh-CN": "面向 CentOS、AlmaLinux、Rocky Linux、Oracle Linux 等企业级 Linux 的学习与实战文档。"
+      },
+      "logo_svg": "/assets/logos/runentlinux-com.svg",
+      "logo_source_url": "https://runentlinux.com/favicon.svg",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -2938,17 +2896,18 @@
       "description": "查询软件、硬件和平台的生命周期、版本历史与支持状态。",
       "status": "active",
       "dr": 14,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
+      "description_i18n": {
+        "en-US": "Look up lifecycle, version history and support status of software, hardware and platforms.",
+        "zh-CN": "查询软件、硬件和平台的生命周期、版本历史与支持状态。"
+      },
+      "logo_svg": "/assets/logos/eol-wiki.svg",
+      "logo_source_url": "https://eol.wiki/favicon.svg",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -2961,17 +2920,18 @@
       "description": "围绕 LiteHTTPD、OpenLiteSpeed 与 Apache .htaccess 兼容能力的 Web 服务器文档。",
       "status": "active",
       "dr": 14,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
+      "description_i18n": {
+        "en-US": "Web server documentation around LiteHTTPD, OpenLiteSpeed and Apache .htaccess compatibility.",
+        "zh-CN": "围绕 LiteHTTPD、OpenLiteSpeed 与 Apache .htaccess 兼容能力的 Web 服务器文档。"
+      },
+      "logo_svg": "/assets/logos/litehttpd-com.svg",
+      "logo_source_url": "https://litehttpd.com/favicon.svg",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -2984,17 +2944,18 @@
       "description": "端口号查询数据库，帮助开发者识别端口用途并避免端口冲突。",
       "status": "active",
       "dr": 18,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
+      "description_i18n": {
+        "en-US": "A port-number lookup database helping developers identify port usage and avoid conflicts.",
+        "zh-CN": "端口号查询数据库，帮助开发者识别端口用途并避免端口冲突。"
+      },
+      "logo_svg": "/assets/logos/portcyou-com.svg",
+      "logo_source_url": "https://portcyou.com/icon-192.svg",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -3007,17 +2968,18 @@
       "description": "提供 SEO、GEO、AIEO 报告与排名分析工具。",
       "status": "active",
       "dr": 16,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
+      "description_i18n": {
+        "en-US": "SEO, GEO and AIEO reports and ranking analysis tools.",
+        "zh-CN": "提供 SEO、GEO、AIEO 报告与排名分析工具。"
+      },
+      "logo_svg": "/assets/logos/rank-fan.svg",
+      "logo_generated": true,
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -3030,17 +2992,18 @@
       "description": "生成式引擎优化文档站，帮助内容更容易被 AI 搜索与问答引擎信任和引用。",
       "status": "active",
       "dr": 15,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
+      "description_i18n": {
+        "en-US": "A generative-engine-optimization docs site helping content get trusted and cited by AI search and answer engines.",
+        "zh-CN": "生成式引擎优化文档站，帮助内容更容易被 AI 搜索与问答引擎信任和引用。"
+      },
+      "logo_svg": "/assets/logos/geo-fan.svg",
+      "logo_source_url": "https://geo.fan/icon.svg?629a9f8a6792701f",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -3053,17 +3016,18 @@
       "description": "面向新手、AI 开发者与云上用户的现代 MariaDB 知识库。",
       "status": "active",
       "dr": 0,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
+      "description_i18n": {
+        "en-US": "A modern MariaDB knowledge base for beginners, AI developers and cloud users.",
+        "zh-CN": "面向新手、AI 开发者与云上用户的现代 MariaDB 知识库。"
+      },
+      "logo_svg": "/assets/logos/mariadb-edu-rich.svg",
+      "logo_generated": true,
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -3076,17 +3040,18 @@
       "description": "Valkey 中文知识库，覆盖 Redis 迁移、向量检索、Agent 记忆、云托管与版本路线图。",
       "status": "active",
       "dr": 0,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
+      "description_i18n": {
+        "en-US": "A Chinese Valkey knowledge base covering Redis migration, vector search, agent memory, managed cloud and the version roadmap.",
+        "zh-CN": "Valkey 中文知识库，覆盖 Redis 迁移、向量检索、Agent 记忆、云托管与版本路线图。"
+      },
+      "logo_svg": "/assets/logos/valkey-edu-rich.svg",
+      "logo_generated": true,
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -3099,17 +3064,18 @@
       "description": "Mir 与 D 语言数值计算库生态的文档归档和参考资料。",
       "status": "active",
       "dr": 54,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
+      "description_i18n": {
+        "en-US": "Documentation archive and references for Mir and the D-language numerical computing ecosystem.",
+        "zh-CN": "Mir 与 D 语言数值计算库生态的文档归档和参考资料。"
+      },
+      "logo_svg": "/assets/logos/libmir-org.svg",
+      "logo_generated": true,
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -3122,17 +3088,18 @@
       "description": "Windows DLL 缺失与损坏问题的官方安全修复指南。",
       "status": "active",
       "dr": 26,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
+      "description_i18n": {
+        "en-US": "Official, safe repair guides for missing or corrupted Windows DLLs.",
+        "zh-CN": "Windows DLL 缺失与损坏问题的官方安全修复指南。"
+      },
+      "logo_svg": "/assets/logos/mydll-wang.svg",
+      "logo_source_url": "https://mydll.wang/favicon.svg",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -3145,17 +3112,18 @@
       "description": "基于深度学习的 2D 姿态估计工具包文档与项目资料。",
       "status": "active",
       "dr": 35,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
+      "description_i18n": {
+        "en-US": "Docs and project materials for a deep-learning 2D pose-estimation toolkit.",
+        "zh-CN": "基于深度学习的 2D 姿态估计工具包文档与项目资料。"
+      },
+      "logo_svg": "/assets/logos/deepposekit-org.svg",
+      "logo_generated": true,
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -3168,17 +3136,18 @@
       "description": "用于通过插件、初始化器和命令行脚本组合应用的 Node.js 框架文档。",
       "status": "active",
       "dr": 36,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
+      "description_i18n": {
+        "en-US": "Docs for a Node.js framework for composing apps via plugins, initializers and CLI scripts.",
+        "zh-CN": "用于通过插件、初始化器和命令行脚本组合应用的 Node.js 框架文档。"
+      },
+      "logo_svg": "/assets/logos/asimovjs-org.svg",
+      "logo_source_url": "https://asimovjs.org/favicon.svg",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -3191,17 +3160,18 @@
       "description": "面向 EmDash CMS 的快速深色博客模板，支持 Markdown 和 Cloudflare 或 Node 部署。",
       "status": "active",
       "dr": 34,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
+      "description_i18n": {
+        "en-US": "A fast dark blog template for EmDash CMS, with Markdown support and Cloudflare or Node deployment.",
+        "zh-CN": "面向 EmDash CMS 的快速深色博客模板，支持 Markdown 和 Cloudflare 或 Node 部署。"
+      },
+      "logo_svg": "/assets/logos/silverblog-org.svg",
+      "logo_generated": true,
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -3214,17 +3184,18 @@
       "description": "WebGL 图形库文档，提供浏览器 3D 场景的示例和 API 参考。",
       "status": "active",
       "dr": 31,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
+      "description_i18n": {
+        "en-US": "WebGL graphics library docs, with examples and API reference for 3D scenes in the browser.",
+        "zh-CN": "WebGL 图形库文档，提供浏览器 3D 场景的示例和 API 参考。"
+      },
+      "logo_svg": "/assets/logos/claygl-xyz.svg",
+      "logo_source_url": "https://claygl.xyz/img/logo.svg",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -3237,17 +3208,18 @@
       "description": "面向 IT 招聘者和候选人的开源职位发布与求职信息平台。",
       "status": "active",
       "dr": 34,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
+      "description_i18n": {
+        "en-US": "An open-source job-posting and job-search platform for IT recruiters and candidates.",
+        "zh-CN": "面向 IT 招聘者和候选人的开源职位发布与求职信息平台。"
+      },
+      "logo_svg": "/assets/logos/itoffers-online.svg",
+      "logo_source_url": "https://itoffers.online/favicon.svg",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -3260,17 +3232,18 @@
       "description": "面向 AI 与快速开发项目上线的指南、模板、清单和部署笔记。",
       "status": "active",
       "dr": 29,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
+      "description_i18n": {
+        "en-US": "Guides, templates, checklists and deployment notes for shipping AI and rapid-development projects.",
+        "zh-CN": "面向 AI 与快速开发项目上线的指南、模板、清单和部署笔记。"
+      },
+      "logo_svg": "/assets/logos/patet-xyz.svg",
+      "logo_generated": true,
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -3283,17 +3256,18 @@
       "description": "将现代网站转换为轻量文本优先 WAP 页面的网站转换工具与实验项目。",
       "status": "active",
       "dr": 30,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
+      "description_i18n": {
+        "en-US": "A site-conversion tool and experiment that turns modern websites into lightweight, text-first WAP pages.",
+        "zh-CN": "将现代网站转换为轻量文本优先 WAP 页面的网站转换工具与实验项目。"
+      },
+      "logo_svg": "/assets/logos/sabwap-xyz.svg",
+      "logo_generated": true,
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -3306,17 +3280,18 @@
       "description": "提供刑事案件、交通事故、青少年犯罪等法律与合规资讯。",
       "status": "active",
       "dr": 21,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
+      "description_i18n": {
+        "en-US": "Legal and compliance information on criminal cases, traffic accidents, juvenile offenses and more.",
+        "zh-CN": "提供刑事案件、交通事故、青少年犯罪等法律与合规资讯。"
+      },
+      "logo_svg": "/assets/logos/thanktolaw-com.svg",
+      "logo_generated": true,
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -3329,17 +3304,18 @@
       "description": "Joomla 教程、错误修复、迁移清单、安全加固和在线工具。",
       "status": "active",
       "dr": 45,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
+      "description_i18n": {
+        "en-US": "Joomla tutorials, bug fixes, migration checklists, security hardening and online tools.",
+        "zh-CN": "Joomla 教程、错误修复、迁移清单、安全加固和在线工具。"
+      },
+      "logo_svg": "/assets/logos/cms-joomla-help-com.svg",
+      "logo_source_url": "https://cms-joomla-help.com/favicon.svg",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -3352,17 +3328,18 @@
       "description": "提供免费和专业 WordPress 主题，覆盖响应式、SEO 与 WooCommerce 场景。",
       "status": "active",
       "dr": 44,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
+      "description_i18n": {
+        "en-US": "Free and premium WordPress themes covering responsive, SEO and WooCommerce use cases.",
+        "zh-CN": "提供免费和专业 WordPress 主题，覆盖响应式、SEO 与 WooCommerce 场景。"
+      },
+      "logo_svg": "/assets/logos/themescorners-com.svg",
+      "logo_generated": true,
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -3375,17 +3352,18 @@
       "description": "Material Theme 原始配色与主题资源文档。",
       "status": "active",
       "dr": 34,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
+      "description_i18n": {
+        "en-US": "Documentation for the original Material Theme color palette and theme resources.",
+        "zh-CN": "Material Theme 原始配色与主题资源文档。"
+      },
+      "logo_svg": "/assets/logos/material-theme-dev.svg",
+      "logo_generated": true,
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -3398,17 +3376,18 @@
       "description": "面向 AI 编码代理的提示词、规则、清单和上下文片段库。",
       "status": "active",
       "dr": 30,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
+      "description_i18n": {
+        "en-US": "A library of prompts, rules, checklists and context snippets for AI coding agents.",
+        "zh-CN": "面向 AI 编码代理的提示词、规则、清单和上下文片段库。"
+      },
+      "logo_svg": "/assets/logos/pastecode-xyz.svg",
+      "logo_source_url": "https://pastecode.xyz/favicon.svg",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -3421,17 +3400,18 @@
       "description": "覆盖应用、游戏、流媒体、移动端和现代 Web 的技术资讯、指南与评测。",
       "status": "active",
       "dr": 31,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
+      "description_i18n": {
+        "en-US": "Tech news, guides and reviews covering apps, games, streaming, mobile and the modern web.",
+        "zh-CN": "覆盖应用、游戏、流媒体、移动端和现代 Web 的技术资讯、指南与评测。"
+      },
+      "logo_svg": "/assets/logos/techvibeblog-org.svg",
+      "logo_source_url": "https://techvibeblog.org/favicon.svg",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -3444,17 +3424,18 @@
       "description": "提供可下载打印的计划表、清单、预算追踪和生活整理模板。",
       "status": "active",
       "dr": 42,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
+      "description_i18n": {
+        "en-US": "Downloadable printable planners, checklists, budget trackers and life-organization templates.",
+        "zh-CN": "提供可下载打印的计划表、清单、预算追踪和生活整理模板。"
+      },
+      "logo_svg": "/assets/logos/jennaferscott-com.svg",
+      "logo_source_url": "https://jennaferscott.com/favicon.svg",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -3469,17 +3450,18 @@
       "dns_target": "aquila-network.pages.dev",
       "status_note": "CNAME 指向 aquila-network.pages.dev。",
       "dr": 35,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-20",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
+      "description_i18n": {
+        "en-US": "An entry point to networking and technical resources related to Aquila Network.",
+        "zh-CN": "Aquila Network 相关的网络与技术资源入口。"
+      },
+      "logo_svg": "/assets/logos/aquila-network.svg",
+      "logo_source_url": "http://aquila.network/favicon.svg",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -3495,15 +3477,16 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 0,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-21",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0,
+      "description_i18n": {
+        "en-US": "A Windows on Arm app and game compatibility database for native Arm64 and emulated status on Snapdragon and other Arm PCs.",
+        "zh-CN": "Windows on Arm 应用与游戏兼容性数据库，查询 Snapdragon 和其他 Arm PC 上的原生 Arm64 与模拟运行状态。"
+      },
+      "logo_svg": "/assets/logos/onarm-net.svg",
+      "logo_source_url": "https://onarm.net/favicon.svg",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -3519,15 +3502,16 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 34,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-21",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0,
+      "description_i18n": {
+        "en-US": "DevOps and infrastructure field notes covering Docker, Kubernetes, Terraform, Git and AWS.",
+        "zh-CN": "DevOps 与基础设施经验笔记，覆盖 Docker、Kubernetes、Terraform、Git 和 AWS 等工具与实践。"
+      },
+      "logo_svg": "/assets/logos/artemstar-com.svg",
+      "logo_source_url": "https://artemstar.com/favicon.svg",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -3543,15 +3527,16 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 42,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-21",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0,
+      "description_i18n": {
+        "en-US": "A directory of open-source AI customer-service solutions, mapping projects, stacks and deployment for low-cost support bots.",
+        "zh-CN": "开源 AI 客服方案导航，梳理主流项目、组合方案与部署流程，帮助低成本搭建智能客服。"
+      },
+      "logo_svg": "/assets/logos/flag92-com.svg",
+      "logo_source_url": "https://flag92.com/logo.svg",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -3567,15 +3552,16 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 21,
-      "dr_source": "Ahrefs Domain Rating",
-      "dr_source_url": "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free",
-      "dr_api_endpoint": "https://api.ahrefs.com/v3/public/domain-rating-free",
-      "dr_license_url": "http://ahrefs.com/legal/domain-rating-license",
-      "dr_attribution": "Domain Rating by Ahrefs",
       "dr_last_checked_at": "2026-06-21",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0,
+      "description_i18n": {
+        "en-US": "A high-performance open-source Linux server control panel built on LiteHttpd, compatible with Apache .htaccess.",
+        "zh-CN": "基于 LiteHttpd 的高性能开源 Linux 服务器管理面板，兼容 Apache .htaccess。"
+      },
+      "logo_svg": "/assets/logos/llstack-com.svg",
+      "logo_source_url": "https://www.llstack.com/favicon.svg",
       "source_collection": "authority_documentation_sites"
     }
   ]

@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/yeagoo/directories-links/schema.json",
+  "title": "directories-links link.json",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "footer_navigation_sites",
+    "authority_documentation_sites",
+    "all_friend_links"
+  ],
+  "properties": {
+    "schema_version": { "type": "integer", "const": 2 },
+    "footer_navigation_sites": { "type": "array", "items": { "$ref": "#/$defs/site" } },
+    "authority_documentation_sites": { "type": "array", "items": { "$ref": "#/$defs/site" } },
+    "all_friend_links": { "type": "array", "items": { "$ref": "#/$defs/site" } },
+    "badges": { "type": "array" },
+    "friend_links": { "type": "array" }
+  },
+  "$defs": {
+    "site": {
+      "type": "object",
+      "required": ["id", "name", "domain", "url", "category", "status", "dofollow", "description_i18n"],
+      "additionalProperties": true,
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+        "name": { "type": "string", "minLength": 1 },
+        "domain": { "type": "string", "minLength": 1 },
+        "url": {
+          "type": "string",
+          "pattern": "^https?://",
+          "format": "uri"
+        },
+        "category": { "type": "string", "minLength": 1 },
+        "status": {
+          "type": "string",
+          "enum": ["active", "pending_dns", "unreachable", "archived"]
+        },
+        "dofollow": { "const": true },
+        "link_rel": { "const": "dofollow" },
+        "dr": { "type": ["number", "null"] },
+        "logo_svg": {
+          "type": ["string", "null"],
+          "pattern": "^/assets/logos/[A-Za-z0-9._-]+\\.svg$"
+        },
+        "description": { "type": ["string", "null"] },
+        "description_i18n": {
+          "type": "object",
+          "required": ["en-US", "zh-CN"],
+          "properties": {
+            "en-US": { "type": "string", "minLength": 1 },
+            "zh-CN": { "type": "string", "minLength": 1 }
+          },
+          "additionalProperties": { "type": "string" }
+        }
+      }
+    }
+  }
+}

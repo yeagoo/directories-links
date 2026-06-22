@@ -213,6 +213,21 @@
       overflow: hidden;
     }
 
+    .doc-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .doc-logo {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+      border-radius: 4px;
+      background: #fff;
+      flex: 0 0 auto;
+    }
+
     .logo-box img {
       max-width: 25px;
       max-height: 25px;
@@ -663,7 +678,19 @@
         topLine.append(category, dr, status);
 
         const title = document.createElement("h3");
-        title.textContent = item.name;
+        title.className = "doc-title";
+        if (item.logo_svg || item.image) {
+          const logo = document.createElement("img");
+          logo.className = "doc-logo";
+          logo.src = item.logo_svg || item.image;
+          logo.alt = "";
+          logo.loading = "lazy";
+          logo.onerror = () => logo.remove();
+          title.append(logo);
+        }
+        const titleName = document.createElement("span");
+        titleName.textContent = item.name;
+        title.append(titleName);
 
         const desc = document.createElement("p");
         desc.textContent = item.description;
