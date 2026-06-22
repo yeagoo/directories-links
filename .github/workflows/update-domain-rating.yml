@@ -26,7 +26,7 @@ jobs:
           python-version: "3.x"
 
       - name: Update three Domain Ratings
-        run: python scripts/update_domain_rating.py --file link.json --limit 3
+        run: python scripts/update_domain_rating.py --file link.json --limit 6
 
       - name: Commit updated ratings
         run: |

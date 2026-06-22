@@ -5,9 +5,12 @@ This repository stores structured friend-link data for directory sites and autho
 ## Files
 
 - `link.json`: Main data source.
+- `schema.json`: JSON Schema for `link.json` (consumers can validate against it).
 - `assets/logos/`: Local SVG logos for footer navigation sites.
-- `scripts/update_domain_rating.py`: Updates Ahrefs Domain Rating values.
-- `.github/workflows/update-domain-rating.yml`: Daily GitHub Actions workflow that updates 3 sites per run.
+- `scripts/update_domain_rating.py`: Updates Domain Rating (DR) values.
+- `scripts/validate_link.py`: Validates `link.json` against `schema.json` plus cross-field invariants.
+- `.github/workflows/update-domain-rating.yml`: Daily GitHub Actions workflow that refreshes DR for 6 sites per run.
+- `.github/workflows/validate.yml`: Validates `link.json` on every push / pull request.
 - `preview.html`: Local preview page for checking how both link groups render.
 
 ## Data Groups
@@ -27,35 +30,31 @@ This repository stores structured friend-link data for directory sites and autho
 - The dedicated friend-links page should render `all_friend_links`.
 - All outbound links are dofollow links. Do not add `nofollow`, `ugc`, or `sponsored`.
 - Use `logo_svg` for local logo rendering and keep `logo_source_url` as the original upstream source.
+- Hide entries with `status: "archived"`; you may de-emphasize `pending_dns` / `unreachable`.
+
+## Localized descriptions
+
+Each entry carries `description_i18n` with at least `en-US` and `zh-CN`. Render
+`description_i18n[locale]` and fall back to `en-US` (or the legacy `description`)
+when a locale is missing.
 
 ## Domain Rating
 
-DR means Ahrefs Domain Rating.
+`dr` is a Domain Rating (domain authority) number maintained automatically by
+`scripts/update_domain_rating.py`; treat it as opaque data and read it straight
+from the `dr` field. Per-entry bookkeeping (`dr_status`, `dr_last_checked_at`,
+`dr_consecutive_errors`, …) lets a renderer show freshness if desired.
 
-The updater uses the free public Ahrefs endpoint:
-
-```text
-https://api.ahrefs.com/v3/public/domain-rating-free?target={domain}&output=json
-```
-
-API docs:
-
-```text
-https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free
-```
-
-Attribution required when showing DR:
-
-```text
-Domain Rating by Ahrefs
-```
-
-The daily workflow updates 3 sites per run in JSON order. Failed DR updates are retried first with backoff, then the normal rotation continues.
+The daily workflow refreshes 6 sites per run in JSON order. Failed updates are
+retried first with exponential backoff (capped at `retry_backoff_max_days`);
+after `unreachable_after` (5) consecutive failures a site is auto-flagged
+`status: "unreachable"` and restored to `active` on the next success. Failures
+surface as GitHub Actions warnings + a job summary.
 
 Manual dry run:
 
 ```bash
-PYTHONDONTWRITEBYTECODE=1 python3 scripts/update_domain_rating.py --file link.json --limit 3 --dry-run
+PYTHONDONTWRITEBYTECODE=1 python3 scripts/update_domain_rating.py --file link.json --limit 6 --dry-run
 ```
 
 Update all sites locally:
@@ -63,6 +62,18 @@ Update all sites locally:
 ```bash
 PYTHONDONTWRITEBYTECODE=1 python3 scripts/update_domain_rating.py --file link.json --all
 ```
+
+## Validation
+
+```bash
+pip install jsonschema
+python3 scripts/validate_link.py
+```
+
+This validates `link.json` against `schema.json` and checks: compatibility
+mirrors stay in sync, every entry has `description_i18n` (en-US + zh-CN), URLs
+are http(s), `logo_svg` paths are safe, and no third-party DR branding leaks
+into the data.
 
 ## Preview
 
@@ -76,13 +87,4 @@ Open:
 
 ```text
 http://127.0.0.1:4173/preview.html
-```
-
-## Validation
-
-Basic checks:
-
-```bash
-python3 -m json.tool link.json >/dev/null
-PYTHONDONTWRITEBYTECODE=1 python3 -m py_compile scripts/update_domain_rating.py
 ```
