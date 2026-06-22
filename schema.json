@@ -20,7 +20,7 @@
   "$defs": {
     "site": {
       "type": "object",
-      "required": ["id", "name", "domain", "url", "category", "status", "dofollow"],
+      "required": ["id", "name", "domain", "url", "category", "status", "dofollow", "description_i18n"],
       "additionalProperties": true,
       "properties": {
         "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },

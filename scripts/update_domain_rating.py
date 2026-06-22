@@ -326,6 +326,11 @@ def main() -> int:
     # Drop any legacy third-party metadata so it never reappears in the data.
     for legacy in ("source", "api_docs", "api_endpoint", "attribution", "license_url"):
         meta.pop(legacy, None)
+    # Strip legacy branding from EVERY entry (not only the ones updated this run)
+    # so it can never linger on disabled / unselected sites.
+    for collection_key in COLLECTION_KEYS:
+        for item in data.get(collection_key, []):
+            strip_legacy_fields(item)
     start_index = int(meta.get("next_index", 0) or 0)
 
     if args.all:

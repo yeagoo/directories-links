@@ -25,8 +25,13 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Update three Domain Ratings
+      - name: Update Domain Ratings
         run: python scripts/update_domain_rating.py --file link.json --limit 6
+
+      - name: Validate link.json
+        run: |
+          pip install jsonschema
+          python scripts/validate_link.py
 
       - name: Commit updated ratings
         run: |
