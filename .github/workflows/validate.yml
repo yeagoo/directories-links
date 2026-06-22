@@ -1,0 +1,21 @@
+name: Validate link.json
+
+"on":
+  push:
+    branches: [main]
+    paths: ["link.json", "schema.json", "scripts/validate_link.py", ".github/workflows/validate.yml"]
+  pull_request:
+    paths: ["link.json", "schema.json", "scripts/validate_link.py", ".github/workflows/validate.yml"]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Install jsonschema
+        run: pip install jsonschema
+      - name: Validate link.json
+        run: python scripts/validate_link.py
