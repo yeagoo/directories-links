@@ -1,15 +1,19 @@
 #!/usr/bin/env python3
-"""Update Domain Rating values in link.json.
+"""Update Domain Rating (DR) values in link.json.
 
-The Ahrefs public endpoint is free and does not require an API key. This script
-updates the semantic collections first, then refreshes the legacy compatibility
-arrays so older renderers keep working.
+DR is fetched from a free public Domain Rating endpoint (no API key required).
+Only the DR value and bookkeeping fields are written to link.json — no
+third-party branding, attribution or license text is stored in the data.
+
+The script updates the semantic collections first, then refreshes the legacy
+compatibility arrays so older renderers keep working.
 """
 
 from __future__ import annotations
 
 import argparse
 import json
+import os
 import sys
 import time
 import urllib.error
@@ -21,13 +25,21 @@ from typing import Any
 
 
 COLLECTION_KEYS = ("footer_navigation_sites", "authority_documentation_sites")
-API_ENDPOINT = "https://api.ahrefs.com/v3/public/domain-rating-free"
-API_DOCS = "https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free"
-LICENSE_URL = "http://ahrefs.com/legal/domain-rating-license"
-DR_SOURCE = "Ahrefs Domain Rating"
-DR_ATTRIBUTION = "Domain Rating by Ahrefs"
-DEFAULT_DAILY_LIMIT = 3
+# Free, key-less public Domain Rating endpoint used only to fetch the number.
+DR_ENDPOINT = "https://api.ahrefs.com/v3/public/domain-rating-free"
+DEFAULT_DAILY_LIMIT = 6
 MAX_RETRY_BACKOFF_DAYS = 7
+# After this many consecutive failures a site is auto-flagged status=unreachable
+# (and restored to active on the next successful fetch).
+UNREACHABLE_AFTER = 5
+# Legacy third-party DR metadata that must never be written back into the data.
+LEGACY_DR_FIELDS = (
+    "dr_source",
+    "dr_source_url",
+    "dr_api_endpoint",
+    "dr_license_url",
+    "dr_attribution",
+)
 Target = tuple[str, int, dict[str, Any]]
 SelectedTarget = tuple[int, str, int, dict[str, Any]]
 FETCH_ERRORS = (
@@ -39,32 +51,12 @@ FETCH_ERRORS = (
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(
-        description="Update Ahrefs Domain Rating values in link.json.",
-    )
+    parser = argparse.ArgumentParser(description="Update Domain Rating values in link.json.")
     parser.add_argument("--file", default="link.json", help="Path to link.json.")
-    parser.add_argument(
-        "--limit",
-        type=int,
-        default=DEFAULT_DAILY_LIMIT,
-        help="Number of sites to update.",
-    )
-    parser.add_argument(
-        "--all",
-        action="store_true",
-        help="Update every enabled site and reset the cursor.",
-    )
-    parser.add_argument(
-        "--dry-run",
-        action="store_true",
-        help="Fetch values but do not write changes.",
-    )
-    parser.add_argument(
-        "--sleep",
-        type=float,
-        default=0.4,
-        help="Delay between API requests in seconds.",
-    )
+    parser.add_argument("--limit", type=int, default=DEFAULT_DAILY_LIMIT, help="Number of sites to update.")
+    parser.add_argument("--all", action="store_true", help="Update every enabled site and reset the cursor.")
+    parser.add_argument("--dry-run", action="store_true", help="Fetch values but do not write changes.")
+    parser.add_argument("--sleep", type=float, default=0.4, help="Delay between requests in seconds.")
     return parser.parse_args()
 
 
@@ -84,17 +76,17 @@ def current_date() -> str:
 
 
 def current_timestamp() -> str:
-    return (
-        datetime.now(timezone.utc)
-        .replace(microsecond=0)
-        .isoformat()
-        .replace("+00:00", "Z")
-    )
+    return datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
 
 
 def normalize_rating(value: Any) -> int | float:
     rating = float(value)
     return int(rating) if rating.is_integer() else round(rating, 1)
+
+
+def strip_legacy_fields(item: dict[str, Any]) -> None:
+    for field in LEGACY_DR_FIELDS:
+        item.pop(field, None)
 
 
 def should_retry_error(item: dict[str, Any], today: str) -> bool:
@@ -160,10 +152,10 @@ def select_targets(
     return selected, next_index
 
 
-def fetch_domain_rating(domain: str) -> tuple[int | float, str | None]:
+def fetch_domain_rating(domain: str) -> int | float:
     query = urllib.parse.urlencode({"target": domain, "output": "json"})
     request = urllib.request.Request(
-        f"{API_ENDPOINT}?{query}",
+        f"{DR_ENDPOINT}?{query}",
         headers={
             "Accept": "application/json",
             "User-Agent": "github-actions-link-dr-updater/1.0",
@@ -175,38 +167,29 @@ def fetch_domain_rating(domain: str) -> tuple[int | float, str | None]:
 
     domain_rating = payload.get("domain_rating")
     if not isinstance(domain_rating, dict) or "domain_rating" not in domain_rating:
-        raise ValueError(f"Unexpected Ahrefs response for {domain}: {payload!r}")
+        raise ValueError(f"Unexpected DR response for {domain}: {payload!r}")
 
-    return normalize_rating(domain_rating["domain_rating"]), domain_rating.get("license")
+    return normalize_rating(domain_rating["domain_rating"])
 
 
-def update_item_success(
-    item: dict[str, Any],
-    rating: int | float,
-    license_url: str | None,
-    checked_at: str,
-) -> None:
+def update_item_success(item: dict[str, Any], rating: int | float, checked_at: str) -> None:
+    strip_legacy_fields(item)
     item["dr"] = rating
-    item["dr_source"] = DR_SOURCE
-    item["dr_source_url"] = API_DOCS
-    item["dr_api_endpoint"] = API_ENDPOINT
-    item["dr_license_url"] = license_url or item.get("dr_license_url") or LICENSE_URL
-    item["dr_attribution"] = DR_ATTRIBUTION
     item["dr_last_checked_at"] = checked_at
     item["dr_update_enabled"] = item.get("dr_update_enabled", True)
     item["dr_status"] = "ok"
     item["dr_consecutive_errors"] = 0
+    # Recover a site that had been auto-flagged unreachable.
+    if item.get("status") == "unreachable":
+        item["status"] = "active"
     item.pop("dr_error", None)
     item.pop("dr_last_error_at", None)
     item.pop("dr_retry_after", None)
 
 
 def update_item_error(item: dict[str, Any], error: Exception, checked_at: str) -> None:
+    strip_legacy_fields(item)
     consecutive_errors = int(item.get("dr_consecutive_errors", 0) or 0) + 1
-    item["dr_source"] = DR_SOURCE
-    item["dr_source_url"] = API_DOCS
-    item["dr_api_endpoint"] = API_ENDPOINT
-    item["dr_attribution"] = DR_ATTRIBUTION
     item["dr_last_checked_at"] = checked_at
     item["dr_update_enabled"] = item.get("dr_update_enabled", True)
     item["dr_status"] = "error"
@@ -214,10 +197,13 @@ def update_item_error(item: dict[str, Any], error: Exception, checked_at: str) -
     item["dr_last_error_at"] = checked_at
     item["dr_consecutive_errors"] = consecutive_errors
     item["dr_retry_after"] = retry_after_date(consecutive_errors, checked_at)
+    # Auto-flag persistently failing sites so the front end can de-emphasize them.
+    if consecutive_errors >= UNREACHABLE_AFTER and item.get("status") == "active":
+        item["status"] = "unreachable"
 
 
 def compatibility_badge(item: dict[str, Any]) -> dict[str, Any]:
-    result = {
+    return {
         "id": item.get("id"),
         "name": item.get("name"),
         "domain": item.get("domain"),
@@ -228,6 +214,7 @@ def compatibility_badge(item: dict[str, Any]) -> dict[str, Any]:
         "category": item.get("category"),
         "placement": item.get("placement"),
         "description": item.get("description"),
+        "description_i18n": item.get("description_i18n"),
         "status": item.get("status"),
         "link_rel": item.get("link_rel"),
         "dofollow": item.get("dofollow"),
@@ -236,21 +223,14 @@ def compatibility_badge(item: dict[str, Any]) -> dict[str, Any]:
         "links_page_included": item.get("links_page_included"),
         "links_page_category": item.get("links_page_category"),
         "dr": item.get("dr"),
-        "dr_source": item.get("dr_source"),
-        "dr_source_url": item.get("dr_source_url"),
-        "dr_api_endpoint": item.get("dr_api_endpoint"),
-        "dr_license_url": item.get("dr_license_url"),
-        "dr_attribution": item.get("dr_attribution"),
         "dr_last_checked_at": item.get("dr_last_checked_at"),
         "dr_update_enabled": item.get("dr_update_enabled"),
         "dr_status": item.get("dr_status"),
         "dr_consecutive_errors": item.get("dr_consecutive_errors"),
         "dr_last_error_at": item.get("dr_last_error_at"),
         "dr_retry_after": item.get("dr_retry_after"),
+        **({"dr_error": item["dr_error"]} if item.get("dr_error") else {}),
     }
-    if item.get("dr_error"):
-        result["dr_error"] = item.get("dr_error")
-    return result
 
 
 def compatibility_friend(item: dict[str, Any]) -> dict[str, Any]:
@@ -262,6 +242,7 @@ def compatibility_friend(item: dict[str, Any]) -> dict[str, Any]:
         "category",
         "placement",
         "description",
+        "description_i18n",
         "status",
         "link_rel",
         "dofollow",
@@ -269,11 +250,6 @@ def compatibility_friend(item: dict[str, Any]) -> dict[str, Any]:
         "status_note",
         "links_page_included",
         "dr",
-        "dr_source",
-        "dr_source_url",
-        "dr_api_endpoint",
-        "dr_license_url",
-        "dr_attribution",
         "dr_last_checked_at",
         "dr_update_enabled",
         "dr_status",
@@ -285,11 +261,7 @@ def compatibility_friend(item: dict[str, Any]) -> dict[str, Any]:
     return {key: item.get(key) for key in keys if key in item}
 
 
-def all_friend_link_entry(
-    item: dict[str, Any],
-    source_collection: str,
-    placement: str,
-) -> dict[str, Any]:
+def all_friend_link_entry(item: dict[str, Any], source_collection: str, placement: str) -> dict[str, Any]:
     result = dict(item)
     result["source_collection"] = source_collection
     result["placement"] = placement
@@ -297,18 +269,45 @@ def all_friend_link_entry(
 
 
 def sync_compatibility_arrays(data: dict[str, Any]) -> None:
-    data["badges"] = [compatibility_badge(item) for item in data.get("footer_navigation_sites", [])]
-    data["friend_links"] = [
-        compatibility_friend(item) for item in data.get("authority_documentation_sites", [])
-    ]
+    footer = data.get("footer_navigation_sites", [])
+    authority = data.get("authority_documentation_sites", [])
+    data["badges"] = [compatibility_badge(item) for item in footer]
+    data["friend_links"] = [compatibility_friend(item) for item in authority]
     data["all_friend_links"] = [
-        all_friend_link_entry(item, "footer_navigation_sites", "footer_and_links_page")
-        for item in data.get("footer_navigation_sites", [])
+        all_friend_link_entry(item, "footer_navigation_sites", "footer_and_links_page") for item in footer
     ]
     data["all_friend_links"].extend(
-        all_friend_link_entry(item, "authority_documentation_sites", "links_page")
-        for item in data.get("authority_documentation_sites", [])
+        all_friend_link_entry(item, "authority_documentation_sites", "links_page") for item in authority
     )
+
+
+def report_health(data: dict[str, Any]) -> None:
+    """Emit GitHub Actions annotations + a step summary for failing sites."""
+    errors = []
+    unreachable = []
+    for key in COLLECTION_KEYS:
+        for item in data.get(key, []):
+            if item.get("dr_status") == "error":
+                errors.append(item)
+            if item.get("status") == "unreachable":
+                unreachable.append(item)
+
+    for item in errors:
+        ident = item.get("id") or item.get("domain")
+        n = item.get("dr_consecutive_errors", 0)
+        print(f"::warning title=DR update failing::{ident} has failed {n} time(s): {item.get('dr_error', '')}")
+    for item in unreachable:
+        ident = item.get("id") or item.get("domain")
+        print(f"::warning title=Site unreachable::{ident} auto-flagged status=unreachable")
+
+    summary_path = os.environ.get("GITHUB_STEP_SUMMARY")
+    if summary_path:
+        with open(summary_path, "a", encoding="utf-8") as handle:
+            handle.write("### Domain Rating update\n")
+            handle.write(f"- Sites with DR errors: **{len(errors)}**\n")
+            handle.write(f"- Sites flagged unreachable: **{len(unreachable)}**\n")
+            if unreachable:
+                handle.write("  - " + ", ".join(i.get("id") or i.get("domain") for i in unreachable) + "\n")
 
 
 def main() -> int:
@@ -324,6 +323,9 @@ def main() -> int:
         return 0
 
     meta = data.setdefault("_dr_update_meta", {})
+    # Drop any legacy third-party metadata so it never reappears in the data.
+    for legacy in ("source", "api_docs", "api_endpoint", "attribution", "license_url"):
+        meta.pop(legacy, None)
     start_index = int(meta.get("next_index", 0) or 0)
 
     if args.all:
@@ -333,12 +335,7 @@ def main() -> int:
         ]
         next_index = 0
     else:
-        selected, next_index = select_targets(
-            targets,
-            start_index,
-            args.limit,
-            current_date(),
-        )
+        selected, next_index = select_targets(targets, start_index, args.limit, current_date())
 
     checked_at = current_date()
     updated_ids: list[str] = []
@@ -347,37 +344,27 @@ def main() -> int:
         domain = item["domain"]
         label = f"{item.get('id', domain)} ({domain})"
         try:
-            rating, license_url = fetch_domain_rating(domain)
-            update_item_success(item, rating, license_url, checked_at)
-            message = (
-                f"[{sequence}/{len(selected)}] "
-                f"{collection_key}[{item_index}] {label}: DR {rating}"
-            )
-            print(message)
+            rating = fetch_domain_rating(domain)
+            update_item_success(item, rating, checked_at)
+            print(f"[{sequence}/{len(selected)}] {collection_key}[{item_index}] {label}: DR {rating}")
         except FETCH_ERRORS as error:
             update_item_error(item, error, checked_at)
-            message = (
-                f"[{sequence}/{len(selected)}] "
-                f"{collection_key}[{item_index}] {label}: ERROR {error}"
-            )
-            print(message)
+            print(f"[{sequence}/{len(selected)}] {collection_key}[{item_index}] {label}: ERROR {error}")
         updated_ids.append(str(item.get("id", domain)))
         if sequence < len(selected) and args.sleep > 0:
             time.sleep(args.sleep)
 
-    meta["source"] = DR_SOURCE
-    meta["api_docs"] = API_DOCS
-    meta["api_endpoint"] = API_ENDPOINT
-    meta["attribution"] = DR_ATTRIBUTION
     meta["daily_limit"] = args.limit
     meta["retry_failed_first"] = True
     meta["retry_backoff_max_days"] = MAX_RETRY_BACKOFF_DAYS
+    meta["unreachable_after"] = UNREACHABLE_AFTER
     meta["rotation_scope"] = list(COLLECTION_KEYS)
     meta["next_index"] = next_index
     meta["last_run_at"] = current_timestamp()
     meta["last_updated_ids"] = updated_ids
 
     sync_compatibility_arrays(data)
+    report_health(data)
 
     if args.dry_run:
         print("Dry run complete; no files written.")
