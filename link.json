@@ -41,14 +41,18 @@
       "footer_navigation_sites",
       "authority_documentation_sites"
     ],
-    "next_index": 6,
-    "last_run_at": "2026-06-22T07:43:49Z",
+    "next_index": 12,
+    "last_run_at": "2026-06-23T06:29:30Z",
     "last_updated_ids": [
-      "fastd",
-      "xlayers",
-      "upperstory"
+      "xemvip",
+      "skachat",
+      "nexablocks",
+      "blackhawkgame",
+      "hicyou",
+      "bigkr"
     ],
-    "retry_backoff_max_days": 7
+    "retry_backoff_max_days": 7,
+    "unreachable_after": 5
   },
   "footer_navigation_sites": [
     {
@@ -243,7 +247,7 @@
       "description": "综合资源导航站，收录娱乐、工具和内容类网站。",
       "status": "active",
       "dr": 51,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-23",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -258,7 +262,8 @@
       "description_i18n": {
         "en-US": "A general resource directory listing entertainment, tools and content sites.",
         "zh-CN": "综合资源导航站，收录娱乐、工具和内容类网站。"
-      }
+      },
+      "dr_consecutive_errors": 0
     },
     {
       "id": "skachat",
@@ -272,7 +277,7 @@
       "description": "聚焦聊天、社交和在线工具的资源导航站。",
       "status": "active",
       "dr": 29,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-23",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -287,7 +292,8 @@
       "description_i18n": {
         "en-US": "A resource directory focused on chat, social and online tools.",
         "zh-CN": "聚焦聊天、社交和在线工具的资源导航站。"
-      }
+      },
+      "dr_consecutive_errors": 0
     },
     {
       "id": "nexablocks",
@@ -301,7 +307,7 @@
       "description": "收录开发组件、区块和数字产品资源的导航站。",
       "status": "active",
       "dr": 54,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-23",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -316,7 +322,8 @@
       "description_i18n": {
         "en-US": "A directory for development components, blocks and digital product resources.",
         "zh-CN": "收录开发组件、区块和数字产品资源的导航站。"
-      }
+      },
+      "dr_consecutive_errors": 0
     },
     {
       "id": "blackhawkgame",
@@ -330,7 +337,7 @@
       "description": "游戏与互动娱乐资源导航站，聚合相关站点和项目。",
       "status": "active",
       "dr": 72,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-23",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -345,7 +352,8 @@
       "description_i18n": {
         "en-US": "A games and interactive entertainment directory aggregating related sites and projects.",
         "zh-CN": "游戏与互动娱乐资源导航站，聚合相关站点和项目。"
-      }
+      },
+      "dr_consecutive_errors": 0
     },
     {
       "id": "hicyou",
@@ -359,7 +367,7 @@
       "description": "开源 SaaS 目录平台，帮助产品获得展示和反向链接。",
       "status": "active",
       "dr": 40,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-23",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -374,7 +382,8 @@
       "description_i18n": {
         "en-US": "An open-source SaaS directory platform that helps products gain exposure and backlinks.",
         "zh-CN": "开源 SaaS 目录平台，帮助产品获得展示和反向链接。"
-      }
+      },
+      "dr_consecutive_errors": 0
     },
     {
       "id": "bigkr",
@@ -387,8 +396,8 @@
       "placement": "footer",
       "description": "AI 工具、SaaS 和产品精选目录，面向创作者与企业用户。",
       "status": "active",
-      "dr": 23,
-      "dr_last_checked_at": "2026-06-20",
+      "dr": 24,
+      "dr_last_checked_at": "2026-06-23",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -403,7 +412,8 @@
       "description_i18n": {
         "en-US": "A curated directory of AI tools, SaaS and products for creators and business users.",
         "zh-CN": "AI 工具、SaaS 和产品精选目录，面向创作者与企业用户。"
-      }
+      },
+      "dr_consecutive_errors": 0
     },
     {
       "id": "mf8",
@@ -1404,10 +1414,10 @@
       "links_page_included": true,
       "links_page_category": "导航站",
       "dr": 51,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-23",
       "dr_update_enabled": true,
       "dr_status": "ok",
-      "dr_consecutive_errors": null,
+      "dr_consecutive_errors": 0,
       "dr_last_error_at": null,
       "dr_retry_after": null
     },
@@ -1437,10 +1447,10 @@
       "links_page_included": true,
       "links_page_category": "导航站",
       "dr": 29,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-23",
       "dr_update_enabled": true,
       "dr_status": "ok",
-      "dr_consecutive_errors": null,
+      "dr_consecutive_errors": 0,
       "dr_last_error_at": null,
       "dr_retry_after": null
     },
@@ -1470,10 +1480,10 @@
       "links_page_included": true,
       "links_page_category": "导航站",
       "dr": 54,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-23",
       "dr_update_enabled": true,
       "dr_status": "ok",
-      "dr_consecutive_errors": null,
+      "dr_consecutive_errors": 0,
       "dr_last_error_at": null,
       "dr_retry_after": null
     },
@@ -1503,10 +1513,10 @@
       "links_page_included": true,
       "links_page_category": "导航站",
       "dr": 72,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-23",
       "dr_update_enabled": true,
       "dr_status": "ok",
-      "dr_consecutive_errors": null,
+      "dr_consecutive_errors": 0,
       "dr_last_error_at": null,
       "dr_retry_after": null
     },
@@ -1536,10 +1546,10 @@
       "links_page_included": true,
       "links_page_category": "导航站",
       "dr": 40,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-23",
       "dr_update_enabled": true,
       "dr_status": "ok",
-      "dr_consecutive_errors": null,
+      "dr_consecutive_errors": 0,
       "dr_last_error_at": null,
       "dr_retry_after": null
     },
@@ -1568,11 +1578,11 @@
       "default_footer_display_mode": "logo_with_name",
       "links_page_included": true,
       "links_page_category": "导航站",
-      "dr": 23,
-      "dr_last_checked_at": "2026-06-20",
+      "dr": 24,
+      "dr_last_checked_at": "2026-06-23",
       "dr_update_enabled": true,
       "dr_status": "ok",
-      "dr_consecutive_errors": null,
+      "dr_consecutive_errors": 0,
       "dr_last_error_at": null,
       "dr_retry_after": null
     },
@@ -2592,7 +2602,7 @@
       "description": "综合资源导航站，收录娱乐、工具和内容类网站。",
       "status": "active",
       "dr": 51,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-23",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -2608,6 +2618,7 @@
         "en-US": "A general resource directory listing entertainment, tools and content sites.",
         "zh-CN": "综合资源导航站，收录娱乐、工具和内容类网站。"
       },
+      "dr_consecutive_errors": 0,
       "source_collection": "footer_navigation_sites"
     },
     {
@@ -2622,7 +2633,7 @@
       "description": "聚焦聊天、社交和在线工具的资源导航站。",
       "status": "active",
       "dr": 29,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-23",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -2638,6 +2649,7 @@
         "en-US": "A resource directory focused on chat, social and online tools.",
         "zh-CN": "聚焦聊天、社交和在线工具的资源导航站。"
       },
+      "dr_consecutive_errors": 0,
       "source_collection": "footer_navigation_sites"
     },
     {
@@ -2652,7 +2664,7 @@
       "description": "收录开发组件、区块和数字产品资源的导航站。",
       "status": "active",
       "dr": 54,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-23",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -2668,6 +2680,7 @@
         "en-US": "A directory for development components, blocks and digital product resources.",
         "zh-CN": "收录开发组件、区块和数字产品资源的导航站。"
       },
+      "dr_consecutive_errors": 0,
       "source_collection": "footer_navigation_sites"
     },
     {
@@ -2682,7 +2695,7 @@
       "description": "游戏与互动娱乐资源导航站，聚合相关站点和项目。",
       "status": "active",
       "dr": 72,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-23",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -2698,6 +2711,7 @@
         "en-US": "A games and interactive entertainment directory aggregating related sites and projects.",
         "zh-CN": "游戏与互动娱乐资源导航站，聚合相关站点和项目。"
       },
+      "dr_consecutive_errors": 0,
       "source_collection": "footer_navigation_sites"
     },
     {
@@ -2712,7 +2726,7 @@
       "description": "开源 SaaS 目录平台，帮助产品获得展示和反向链接。",
       "status": "active",
       "dr": 40,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-23",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -2728,6 +2742,7 @@
         "en-US": "An open-source SaaS directory platform that helps products gain exposure and backlinks.",
         "zh-CN": "开源 SaaS 目录平台，帮助产品获得展示和反向链接。"
       },
+      "dr_consecutive_errors": 0,
       "source_collection": "footer_navigation_sites"
     },
     {
@@ -2741,8 +2756,8 @@
       "placement": "footer_and_links_page",
       "description": "AI 工具、SaaS 和产品精选目录，面向创作者与企业用户。",
       "status": "active",
-      "dr": 23,
-      "dr_last_checked_at": "2026-06-20",
+      "dr": 24,
+      "dr_last_checked_at": "2026-06-23",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -2758,6 +2773,7 @@
         "en-US": "A curated directory of AI tools, SaaS and products for creators and business users.",
         "zh-CN": "AI 工具、SaaS 和产品精选目录，面向创作者与企业用户。"
       },
+      "dr_consecutive_errors": 0,
       "source_collection": "footer_navigation_sites"
     },
     {
