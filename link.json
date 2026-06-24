@@ -41,15 +41,15 @@
       "footer_navigation_sites",
       "authority_documentation_sites"
     ],
-    "next_index": 12,
-    "last_run_at": "2026-06-23T06:29:30Z",
+    "next_index": 18,
+    "last_run_at": "2026-06-24T06:17:08Z",
     "last_updated_ids": [
-      "xemvip",
-      "skachat",
-      "nexablocks",
-      "blackhawkgame",
-      "hicyou",
-      "bigkr"
+      "mf8",
+      "debian-club",
+      "ubuntu-fan",
+      "almalinux-com-cn",
+      "runentlinux-com",
+      "eol-wiki"
     ],
     "retry_backoff_max_days": 7,
     "unreachable_after": 5
@@ -427,7 +427,7 @@
       "description": "精选值得访问网站的导航目录。",
       "status": "active",
       "dr": 37,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-24",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -442,7 +442,8 @@
       "description_i18n": {
         "en-US": "A curated directory of websites worth visiting.",
         "zh-CN": "精选值得访问网站的导航目录。"
-      }
+      },
+      "dr_consecutive_errors": 0
     }
   ],
   "authority_documentation_sites": [
@@ -455,8 +456,8 @@
       "placement": "links_page",
       "description": "Debian 13 中文入门指南与使用教程，适合从零开始学习 Debian。",
       "status": "active",
-      "dr": 17,
-      "dr_last_checked_at": "2026-06-20",
+      "dr": 18,
+      "dr_last_checked_at": "2026-06-24",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -467,7 +468,8 @@
         "zh-CN": "Debian 13 中文入门指南与使用教程，适合从零开始学习 Debian。"
       },
       "logo_svg": "/assets/logos/debian-club.svg",
-      "logo_generated": true
+      "logo_generated": true,
+      "dr_consecutive_errors": 0
     },
     {
       "id": "ubuntu-fan",
@@ -479,7 +481,7 @@
       "description": "Ubuntu 26.04 LTS 中文使用指南，覆盖安装、桌面、开发环境、服务器部署和系统管理。",
       "status": "active",
       "dr": 13,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-24",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -490,7 +492,8 @@
         "zh-CN": "Ubuntu 26.04 LTS 中文使用指南，覆盖安装、桌面、开发环境、服务器部署和系统管理。"
       },
       "logo_svg": "/assets/logos/ubuntu-fan.svg",
-      "logo_source_url": "https://ubuntu.fan/favicon.svg"
+      "logo_source_url": "https://ubuntu.fan/favicon.svg",
+      "dr_consecutive_errors": 0
     },
     {
       "id": "almalinux-com-cn",
@@ -501,8 +504,8 @@
       "placement": "links_page",
       "description": "面向中文用户的 AlmaLinux 发行版文档与社区资源。",
       "status": "active",
-      "dr": 15,
-      "dr_last_checked_at": "2026-06-20",
+      "dr": 14,
+      "dr_last_checked_at": "2026-06-24",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -513,7 +516,8 @@
         "zh-CN": "面向中文用户的 AlmaLinux 发行版文档与社区资源。"
       },
       "logo_svg": "/assets/logos/almalinux-com-cn.svg",
-      "logo_generated": true
+      "logo_generated": true,
+      "dr_consecutive_errors": 0
     },
     {
       "id": "runentlinux-com",
@@ -524,8 +528,8 @@
       "placement": "links_page",
       "description": "面向 CentOS、AlmaLinux、Rocky Linux、Oracle Linux 等企业级 Linux 的学习与实战文档。",
       "status": "active",
-      "dr": 13,
-      "dr_last_checked_at": "2026-06-20",
+      "dr": 12,
+      "dr_last_checked_at": "2026-06-24",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -536,7 +540,8 @@
         "zh-CN": "面向 CentOS、AlmaLinux、Rocky Linux、Oracle Linux 等企业级 Linux 的学习与实战文档。"
       },
       "logo_svg": "/assets/logos/runentlinux-com.svg",
-      "logo_source_url": "https://runentlinux.com/favicon.svg"
+      "logo_source_url": "https://runentlinux.com/favicon.svg",
+      "dr_consecutive_errors": 0
     },
     {
       "id": "eol-wiki",
@@ -548,7 +553,7 @@
       "description": "查询软件、硬件和平台的生命周期、版本历史与支持状态。",
       "status": "active",
       "dr": 14,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-24",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -559,7 +564,8 @@
         "zh-CN": "查询软件、硬件和平台的生命周期、版本历史与支持状态。"
       },
       "logo_svg": "/assets/logos/eol-wiki.svg",
-      "logo_source_url": "https://eol.wiki/favicon.svg"
+      "logo_source_url": "https://eol.wiki/favicon.svg",
+      "dr_consecutive_errors": 0
     },
     {
       "id": "litehttpd-com",
@@ -1612,10 +1618,10 @@
       "links_page_included": true,
       "links_page_category": "导航站",
       "dr": 37,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-24",
       "dr_update_enabled": true,
       "dr_status": "ok",
-      "dr_consecutive_errors": null,
+      "dr_consecutive_errors": 0,
       "dr_last_error_at": null,
       "dr_retry_after": null
     }
@@ -1637,10 +1643,11 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 17,
-      "dr_last_checked_at": "2026-06-20",
+      "dr": 18,
+      "dr_last_checked_at": "2026-06-24",
       "dr_update_enabled": true,
-      "dr_status": "ok"
+      "dr_status": "ok",
+      "dr_consecutive_errors": 0
     },
     {
       "id": "ubuntu-fan",
@@ -1659,9 +1666,10 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 13,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-24",
       "dr_update_enabled": true,
-      "dr_status": "ok"
+      "dr_status": "ok",
+      "dr_consecutive_errors": 0
     },
     {
       "id": "almalinux-com-cn",
@@ -1679,10 +1687,11 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 15,
-      "dr_last_checked_at": "2026-06-20",
+      "dr": 14,
+      "dr_last_checked_at": "2026-06-24",
       "dr_update_enabled": true,
-      "dr_status": "ok"
+      "dr_status": "ok",
+      "dr_consecutive_errors": 0
     },
     {
       "id": "runentlinux-com",
@@ -1700,10 +1709,11 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 13,
-      "dr_last_checked_at": "2026-06-20",
+      "dr": 12,
+      "dr_last_checked_at": "2026-06-24",
       "dr_update_enabled": true,
-      "dr_status": "ok"
+      "dr_status": "ok",
+      "dr_consecutive_errors": 0
     },
     {
       "id": "eol-wiki",
@@ -1722,9 +1732,10 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 14,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-24",
       "dr_update_enabled": true,
-      "dr_status": "ok"
+      "dr_status": "ok",
+      "dr_consecutive_errors": 0
     },
     {
       "id": "litehttpd-com",
@@ -2788,7 +2799,7 @@
       "description": "精选值得访问网站的导航目录。",
       "status": "active",
       "dr": 37,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-24",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -2804,6 +2815,7 @@
         "en-US": "A curated directory of websites worth visiting.",
         "zh-CN": "精选值得访问网站的导航目录。"
       },
+      "dr_consecutive_errors": 0,
       "source_collection": "footer_navigation_sites"
     },
     {
@@ -2815,8 +2827,8 @@
       "placement": "links_page",
       "description": "Debian 13 中文入门指南与使用教程，适合从零开始学习 Debian。",
       "status": "active",
-      "dr": 17,
-      "dr_last_checked_at": "2026-06-20",
+      "dr": 18,
+      "dr_last_checked_at": "2026-06-24",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -2828,6 +2840,7 @@
       },
       "logo_svg": "/assets/logos/debian-club.svg",
       "logo_generated": true,
+      "dr_consecutive_errors": 0,
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -2840,7 +2853,7 @@
       "description": "Ubuntu 26.04 LTS 中文使用指南，覆盖安装、桌面、开发环境、服务器部署和系统管理。",
       "status": "active",
       "dr": 13,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-24",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -2852,6 +2865,7 @@
       },
       "logo_svg": "/assets/logos/ubuntu-fan.svg",
       "logo_source_url": "https://ubuntu.fan/favicon.svg",
+      "dr_consecutive_errors": 0,
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -2863,8 +2877,8 @@
       "placement": "links_page",
       "description": "面向中文用户的 AlmaLinux 发行版文档与社区资源。",
       "status": "active",
-      "dr": 15,
-      "dr_last_checked_at": "2026-06-20",
+      "dr": 14,
+      "dr_last_checked_at": "2026-06-24",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -2876,6 +2890,7 @@
       },
       "logo_svg": "/assets/logos/almalinux-com-cn.svg",
       "logo_generated": true,
+      "dr_consecutive_errors": 0,
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -2887,8 +2902,8 @@
       "placement": "links_page",
       "description": "面向 CentOS、AlmaLinux、Rocky Linux、Oracle Linux 等企业级 Linux 的学习与实战文档。",
       "status": "active",
-      "dr": 13,
-      "dr_last_checked_at": "2026-06-20",
+      "dr": 12,
+      "dr_last_checked_at": "2026-06-24",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -2900,6 +2915,7 @@
       },
       "logo_svg": "/assets/logos/runentlinux-com.svg",
       "logo_source_url": "https://runentlinux.com/favicon.svg",
+      "dr_consecutive_errors": 0,
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -2912,7 +2928,7 @@
       "description": "查询软件、硬件和平台的生命周期、版本历史与支持状态。",
       "status": "active",
       "dr": 14,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-24",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -2924,6 +2940,7 @@
       },
       "logo_svg": "/assets/logos/eol-wiki.svg",
       "logo_source_url": "https://eol.wiki/favicon.svg",
+      "dr_consecutive_errors": 0,
       "source_collection": "authority_documentation_sites"
     },
     {
