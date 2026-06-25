@@ -1367,6 +1367,30 @@
       "dr_consecutive_errors": 0,
       "logo_svg": "/assets/logos/screenhello-com.svg",
       "logo_generated": true
+    },
+    {
+      "id": "tratra-travel",
+      "name": "Tratra Travel",
+      "domain": "tratra.travel",
+      "url": "https://tratra.travel/",
+      "category": "AI 旅行规划 / Travel Intelligence",
+      "placement": "links_page",
+      "description": "中立的 AI 全球旅行规划与目的地决策指南，聚焦真实行程、路线取舍、风险提示和避坑信息，不做旅行社推荐或付费导流。",
+      "description_i18n": {
+        "en-US": "A neutral AI-assisted global travel planning and destination-intelligence guide focused on realistic itineraries, route trade-offs, risk notes and traveler-first anti-trap advice, without agency recommendations or paid referrals.",
+        "zh-CN": "中立的 AI 全球旅行规划与目的地决策指南，聚焦真实行程、路线取舍、风险提示和避坑信息，不做旅行社推荐或付费导流。"
+      },
+      "status": "active",
+      "link_rel": "dofollow",
+      "dofollow": true,
+      "links_page_included": true,
+      "dr": null,
+      "dr_update_enabled": true,
+      "dr_status": "pending",
+      "dr_consecutive_errors": 0,
+      "logo_svg": "/assets/logos/tratra-travel.svg",
+      "logo_source_url": null,
+      "logo_generated": true
     }
   ],
   "badges": [
@@ -2642,6 +2666,27 @@
       "dr_last_checked_at": "2026-06-24",
       "dr_update_enabled": true,
       "dr_status": "ok",
+      "dr_consecutive_errors": 0
+    },
+    {
+      "id": "tratra-travel",
+      "name": "Tratra Travel",
+      "domain": "tratra.travel",
+      "url": "https://tratra.travel/",
+      "category": "AI 旅行规划 / Travel Intelligence",
+      "placement": "links_page",
+      "description": "中立的 AI 全球旅行规划与目的地决策指南，聚焦真实行程、路线取舍、风险提示和避坑信息，不做旅行社推荐或付费导流。",
+      "description_i18n": {
+        "en-US": "A neutral AI-assisted global travel planning and destination-intelligence guide focused on realistic itineraries, route trade-offs, risk notes and traveler-first anti-trap advice, without agency recommendations or paid referrals.",
+        "zh-CN": "中立的 AI 全球旅行规划与目的地决策指南，聚焦真实行程、路线取舍、风险提示和避坑信息，不做旅行社推荐或付费导流。"
+      },
+      "status": "active",
+      "link_rel": "dofollow",
+      "dofollow": true,
+      "links_page_included": true,
+      "dr": null,
+      "dr_update_enabled": true,
+      "dr_status": "pending",
       "dr_consecutive_errors": 0
     }
   ],
@@ -4109,6 +4154,31 @@
       "dr_status": "ok",
       "dr_consecutive_errors": 0,
       "logo_svg": "/assets/logos/screenhello-com.svg",
+      "logo_generated": true,
+      "source_collection": "authority_documentation_sites"
+    },
+    {
+      "id": "tratra-travel",
+      "name": "Tratra Travel",
+      "domain": "tratra.travel",
+      "url": "https://tratra.travel/",
+      "category": "AI 旅行规划 / Travel Intelligence",
+      "placement": "links_page",
+      "description": "中立的 AI 全球旅行规划与目的地决策指南，聚焦真实行程、路线取舍、风险提示和避坑信息，不做旅行社推荐或付费导流。",
+      "description_i18n": {
+        "en-US": "A neutral AI-assisted global travel planning and destination-intelligence guide focused on realistic itineraries, route trade-offs, risk notes and traveler-first anti-trap advice, without agency recommendations or paid referrals.",
+        "zh-CN": "中立的 AI 全球旅行规划与目的地决策指南，聚焦真实行程、路线取舍、风险提示和避坑信息，不做旅行社推荐或付费导流。"
+      },
+      "status": "active",
+      "link_rel": "dofollow",
+      "dofollow": true,
+      "links_page_included": true,
+      "dr": null,
+      "dr_update_enabled": true,
+      "dr_status": "pending",
+      "dr_consecutive_errors": 0,
+      "logo_svg": "/assets/logos/tratra-travel.svg",
+      "logo_source_url": null,
       "logo_generated": true,
       "source_collection": "authority_documentation_sites"
     }
