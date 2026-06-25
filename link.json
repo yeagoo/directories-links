@@ -41,15 +41,15 @@
       "footer_navigation_sites",
       "authority_documentation_sites"
     ],
-    "next_index": 18,
-    "last_run_at": "2026-06-24T06:17:08Z",
+    "next_index": 24,
+    "last_run_at": "2026-06-25T06:28:45Z",
     "last_updated_ids": [
-      "mf8",
-      "debian-club",
-      "ubuntu-fan",
-      "almalinux-com-cn",
-      "runentlinux-com",
-      "eol-wiki"
+      "litehttpd-com",
+      "portcyou-com",
+      "rank-fan",
+      "geo-fan",
+      "mariadb-edu-rich",
+      "valkey-edu-rich"
     ],
     "retry_backoff_max_days": 7,
     "unreachable_after": 5
@@ -576,8 +576,8 @@
       "placement": "links_page",
       "description": "围绕 LiteHTTPD、OpenLiteSpeed 与 Apache .htaccess 兼容能力的 Web 服务器文档。",
       "status": "active",
-      "dr": 14,
-      "dr_last_checked_at": "2026-06-20",
+      "dr": 13,
+      "dr_last_checked_at": "2026-06-25",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -588,7 +588,8 @@
         "zh-CN": "围绕 LiteHTTPD、OpenLiteSpeed 与 Apache .htaccess 兼容能力的 Web 服务器文档。"
       },
       "logo_svg": "/assets/logos/litehttpd-com.svg",
-      "logo_source_url": "https://litehttpd.com/favicon.svg"
+      "logo_source_url": "https://litehttpd.com/favicon.svg",
+      "dr_consecutive_errors": 0
     },
     {
       "id": "portcyou-com",
@@ -599,8 +600,8 @@
       "placement": "links_page",
       "description": "端口号查询数据库，帮助开发者识别端口用途并避免端口冲突。",
       "status": "active",
-      "dr": 18,
-      "dr_last_checked_at": "2026-06-20",
+      "dr": 17,
+      "dr_last_checked_at": "2026-06-25",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -611,7 +612,8 @@
         "zh-CN": "端口号查询数据库，帮助开发者识别端口用途并避免端口冲突。"
       },
       "logo_svg": "/assets/logos/portcyou-com.svg",
-      "logo_source_url": "https://portcyou.com/icon-192.svg"
+      "logo_source_url": "https://portcyou.com/icon-192.svg",
+      "dr_consecutive_errors": 0
     },
     {
       "id": "rank-fan",
@@ -622,8 +624,8 @@
       "placement": "links_page",
       "description": "提供 SEO、GEO、AIEO 报告与排名分析工具。",
       "status": "active",
-      "dr": 16,
-      "dr_last_checked_at": "2026-06-20",
+      "dr": 15,
+      "dr_last_checked_at": "2026-06-25",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -634,7 +636,8 @@
         "zh-CN": "提供 SEO、GEO、AIEO 报告与排名分析工具。"
       },
       "logo_svg": "/assets/logos/rank-fan.svg",
-      "logo_generated": true
+      "logo_generated": true,
+      "dr_consecutive_errors": 0
     },
     {
       "id": "geo-fan",
@@ -646,7 +649,7 @@
       "description": "生成式引擎优化文档站，帮助内容更容易被 AI 搜索与问答引擎信任和引用。",
       "status": "active",
       "dr": 15,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-25",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -657,7 +660,8 @@
         "zh-CN": "生成式引擎优化文档站，帮助内容更容易被 AI 搜索与问答引擎信任和引用。"
       },
       "logo_svg": "/assets/logos/geo-fan.svg",
-      "logo_source_url": "https://geo.fan/icon.svg?629a9f8a6792701f"
+      "logo_source_url": "https://geo.fan/icon.svg?629a9f8a6792701f",
+      "dr_consecutive_errors": 0
     },
     {
       "id": "mariadb-edu-rich",
@@ -668,8 +672,8 @@
       "placement": "links_page",
       "description": "面向新手、AI 开发者与云上用户的现代 MariaDB 知识库。",
       "status": "active",
-      "dr": 0,
-      "dr_last_checked_at": "2026-06-20",
+      "dr": 0.8,
+      "dr_last_checked_at": "2026-06-25",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -680,7 +684,8 @@
         "zh-CN": "面向新手、AI 开发者与云上用户的现代 MariaDB 知识库。"
       },
       "logo_svg": "/assets/logos/mariadb-edu-rich.svg",
-      "logo_generated": true
+      "logo_generated": true,
+      "dr_consecutive_errors": 0
     },
     {
       "id": "valkey-edu-rich",
@@ -691,8 +696,8 @@
       "placement": "links_page",
       "description": "Valkey 中文知识库，覆盖 Redis 迁移、向量检索、Agent 记忆、云托管与版本路线图。",
       "status": "active",
-      "dr": 0,
-      "dr_last_checked_at": "2026-06-20",
+      "dr": 0.8,
+      "dr_last_checked_at": "2026-06-25",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -703,7 +708,8 @@
         "zh-CN": "Valkey 中文知识库，覆盖 Redis 迁移、向量检索、Agent 记忆、云托管与版本路线图。"
       },
       "logo_svg": "/assets/logos/valkey-edu-rich.svg",
-      "logo_generated": true
+      "logo_generated": true,
+      "dr_consecutive_errors": 0
     },
     {
       "id": "libmir-org",
@@ -1921,10 +1927,11 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 14,
-      "dr_last_checked_at": "2026-06-20",
+      "dr": 13,
+      "dr_last_checked_at": "2026-06-25",
       "dr_update_enabled": true,
-      "dr_status": "ok"
+      "dr_status": "ok",
+      "dr_consecutive_errors": 0
     },
     {
       "id": "portcyou-com",
@@ -1942,10 +1949,11 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 18,
-      "dr_last_checked_at": "2026-06-20",
+      "dr": 17,
+      "dr_last_checked_at": "2026-06-25",
       "dr_update_enabled": true,
-      "dr_status": "ok"
+      "dr_status": "ok",
+      "dr_consecutive_errors": 0
     },
     {
       "id": "rank-fan",
@@ -1963,10 +1971,11 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 16,
-      "dr_last_checked_at": "2026-06-20",
+      "dr": 15,
+      "dr_last_checked_at": "2026-06-25",
       "dr_update_enabled": true,
-      "dr_status": "ok"
+      "dr_status": "ok",
+      "dr_consecutive_errors": 0
     },
     {
       "id": "geo-fan",
@@ -1985,9 +1994,10 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 15,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-25",
       "dr_update_enabled": true,
-      "dr_status": "ok"
+      "dr_status": "ok",
+      "dr_consecutive_errors": 0
     },
     {
       "id": "mariadb-edu-rich",
@@ -2005,10 +2015,11 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 0,
-      "dr_last_checked_at": "2026-06-20",
+      "dr": 0.8,
+      "dr_last_checked_at": "2026-06-25",
       "dr_update_enabled": true,
-      "dr_status": "ok"
+      "dr_status": "ok",
+      "dr_consecutive_errors": 0
     },
     {
       "id": "valkey-edu-rich",
@@ -2026,10 +2037,11 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 0,
-      "dr_last_checked_at": "2026-06-20",
+      "dr": 0.8,
+      "dr_last_checked_at": "2026-06-25",
       "dr_update_enabled": true,
-      "dr_status": "ok"
+      "dr_status": "ok",
+      "dr_consecutive_errors": 0
     },
     {
       "id": "libmir-org",
@@ -3274,8 +3286,8 @@
       "placement": "links_page",
       "description": "围绕 LiteHTTPD、OpenLiteSpeed 与 Apache .htaccess 兼容能力的 Web 服务器文档。",
       "status": "active",
-      "dr": 14,
-      "dr_last_checked_at": "2026-06-20",
+      "dr": 13,
+      "dr_last_checked_at": "2026-06-25",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -3287,6 +3299,7 @@
       },
       "logo_svg": "/assets/logos/litehttpd-com.svg",
       "logo_source_url": "https://litehttpd.com/favicon.svg",
+      "dr_consecutive_errors": 0,
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -3298,8 +3311,8 @@
       "placement": "links_page",
       "description": "端口号查询数据库，帮助开发者识别端口用途并避免端口冲突。",
       "status": "active",
-      "dr": 18,
-      "dr_last_checked_at": "2026-06-20",
+      "dr": 17,
+      "dr_last_checked_at": "2026-06-25",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -3311,6 +3324,7 @@
       },
       "logo_svg": "/assets/logos/portcyou-com.svg",
       "logo_source_url": "https://portcyou.com/icon-192.svg",
+      "dr_consecutive_errors": 0,
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -3322,8 +3336,8 @@
       "placement": "links_page",
       "description": "提供 SEO、GEO、AIEO 报告与排名分析工具。",
       "status": "active",
-      "dr": 16,
-      "dr_last_checked_at": "2026-06-20",
+      "dr": 15,
+      "dr_last_checked_at": "2026-06-25",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -3335,6 +3349,7 @@
       },
       "logo_svg": "/assets/logos/rank-fan.svg",
       "logo_generated": true,
+      "dr_consecutive_errors": 0,
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -3347,7 +3362,7 @@
       "description": "生成式引擎优化文档站，帮助内容更容易被 AI 搜索与问答引擎信任和引用。",
       "status": "active",
       "dr": 15,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-25",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -3359,6 +3374,7 @@
       },
       "logo_svg": "/assets/logos/geo-fan.svg",
       "logo_source_url": "https://geo.fan/icon.svg?629a9f8a6792701f",
+      "dr_consecutive_errors": 0,
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -3370,8 +3386,8 @@
       "placement": "links_page",
       "description": "面向新手、AI 开发者与云上用户的现代 MariaDB 知识库。",
       "status": "active",
-      "dr": 0,
-      "dr_last_checked_at": "2026-06-20",
+      "dr": 0.8,
+      "dr_last_checked_at": "2026-06-25",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -3383,6 +3399,7 @@
       },
       "logo_svg": "/assets/logos/mariadb-edu-rich.svg",
       "logo_generated": true,
+      "dr_consecutive_errors": 0,
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -3394,8 +3411,8 @@
       "placement": "links_page",
       "description": "Valkey 中文知识库，覆盖 Redis 迁移、向量检索、Agent 记忆、云托管与版本路线图。",
       "status": "active",
-      "dr": 0,
-      "dr_last_checked_at": "2026-06-20",
+      "dr": 0.8,
+      "dr_last_checked_at": "2026-06-25",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -3407,6 +3424,7 @@
       },
       "logo_svg": "/assets/logos/valkey-edu-rich.svg",
       "logo_generated": true,
+      "dr_consecutive_errors": 0,
       "source_collection": "authority_documentation_sites"
     },
     {
