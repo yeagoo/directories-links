@@ -41,15 +41,15 @@
       "footer_navigation_sites",
       "authority_documentation_sites"
     ],
-    "next_index": 24,
-    "last_run_at": "2026-06-25T06:28:45Z",
+    "next_index": 30,
+    "last_run_at": "2026-06-26T06:30:53Z",
     "last_updated_ids": [
-      "litehttpd-com",
-      "portcyou-com",
-      "rank-fan",
-      "geo-fan",
-      "mariadb-edu-rich",
-      "valkey-edu-rich"
+      "libmir-org",
+      "mydll-wang",
+      "deepposekit-org",
+      "asimovjs-org",
+      "silverblog-org",
+      "claygl-xyz"
     ],
     "retry_backoff_max_days": 7,
     "unreachable_after": 5
@@ -721,7 +721,7 @@
       "description": "Mir 与 D 语言数值计算库生态的文档归档和参考资料。",
       "status": "active",
       "dr": 54,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-26",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -732,7 +732,8 @@
         "zh-CN": "Mir 与 D 语言数值计算库生态的文档归档和参考资料。"
       },
       "logo_svg": "/assets/logos/libmir-org.svg",
-      "logo_generated": true
+      "logo_generated": true,
+      "dr_consecutive_errors": 0
     },
     {
       "id": "mydll-wang",
@@ -743,8 +744,8 @@
       "placement": "links_page",
       "description": "Windows DLL 缺失与损坏问题的官方安全修复指南。",
       "status": "active",
-      "dr": 26,
-      "dr_last_checked_at": "2026-06-20",
+      "dr": 27,
+      "dr_last_checked_at": "2026-06-26",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -755,7 +756,8 @@
         "zh-CN": "Windows DLL 缺失与损坏问题的官方安全修复指南。"
       },
       "logo_svg": "/assets/logos/mydll-wang.svg",
-      "logo_source_url": "https://mydll.wang/favicon.svg"
+      "logo_source_url": "https://mydll.wang/favicon.svg",
+      "dr_consecutive_errors": 0
     },
     {
       "id": "deepposekit-org",
@@ -767,7 +769,7 @@
       "description": "基于深度学习的 2D 姿态估计工具包文档与项目资料。",
       "status": "active",
       "dr": 35,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-26",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -778,7 +780,8 @@
         "zh-CN": "基于深度学习的 2D 姿态估计工具包文档与项目资料。"
       },
       "logo_svg": "/assets/logos/deepposekit-org.svg",
-      "logo_generated": true
+      "logo_generated": true,
+      "dr_consecutive_errors": 0
     },
     {
       "id": "asimovjs-org",
@@ -790,7 +793,7 @@
       "description": "用于通过插件、初始化器和命令行脚本组合应用的 Node.js 框架文档。",
       "status": "active",
       "dr": 36,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-26",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -801,7 +804,8 @@
         "zh-CN": "用于通过插件、初始化器和命令行脚本组合应用的 Node.js 框架文档。"
       },
       "logo_svg": "/assets/logos/asimovjs-org.svg",
-      "logo_source_url": "https://asimovjs.org/favicon.svg"
+      "logo_source_url": "https://asimovjs.org/favicon.svg",
+      "dr_consecutive_errors": 0
     },
     {
       "id": "silverblog-org",
@@ -813,7 +817,7 @@
       "description": "面向 EmDash CMS 的快速深色博客模板，支持 Markdown 和 Cloudflare 或 Node 部署。",
       "status": "active",
       "dr": 34,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-26",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -824,7 +828,8 @@
         "zh-CN": "面向 EmDash CMS 的快速深色博客模板，支持 Markdown 和 Cloudflare 或 Node 部署。"
       },
       "logo_svg": "/assets/logos/silverblog-org.svg",
-      "logo_generated": true
+      "logo_generated": true,
+      "dr_consecutive_errors": 0
     },
     {
       "id": "claygl-xyz",
@@ -836,7 +841,7 @@
       "description": "WebGL 图形库文档，提供浏览器 3D 场景的示例和 API 参考。",
       "status": "active",
       "dr": 31,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-26",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -847,7 +852,8 @@
         "zh-CN": "WebGL 图形库文档，提供浏览器 3D 场景的示例和 API 参考。"
       },
       "logo_svg": "/assets/logos/claygl-xyz.svg",
-      "logo_source_url": "https://claygl.xyz/img/logo.svg"
+      "logo_source_url": "https://claygl.xyz/img/logo.svg",
+      "dr_consecutive_errors": 0
     },
     {
       "id": "itoffers-online",
@@ -2084,9 +2090,10 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 54,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-26",
       "dr_update_enabled": true,
-      "dr_status": "ok"
+      "dr_status": "ok",
+      "dr_consecutive_errors": 0
     },
     {
       "id": "mydll-wang",
@@ -2104,10 +2111,11 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 26,
-      "dr_last_checked_at": "2026-06-20",
+      "dr": 27,
+      "dr_last_checked_at": "2026-06-26",
       "dr_update_enabled": true,
-      "dr_status": "ok"
+      "dr_status": "ok",
+      "dr_consecutive_errors": 0
     },
     {
       "id": "deepposekit-org",
@@ -2126,9 +2134,10 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 35,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-26",
       "dr_update_enabled": true,
-      "dr_status": "ok"
+      "dr_status": "ok",
+      "dr_consecutive_errors": 0
     },
     {
       "id": "asimovjs-org",
@@ -2147,9 +2156,10 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 36,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-26",
       "dr_update_enabled": true,
-      "dr_status": "ok"
+      "dr_status": "ok",
+      "dr_consecutive_errors": 0
     },
     {
       "id": "silverblog-org",
@@ -2168,9 +2178,10 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 34,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-26",
       "dr_update_enabled": true,
-      "dr_status": "ok"
+      "dr_status": "ok",
+      "dr_consecutive_errors": 0
     },
     {
       "id": "claygl-xyz",
@@ -2189,9 +2200,10 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 31,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-26",
       "dr_update_enabled": true,
-      "dr_status": "ok"
+      "dr_status": "ok",
+      "dr_consecutive_errors": 0
     },
     {
       "id": "itoffers-online",
@@ -3482,7 +3494,7 @@
       "description": "Mir 与 D 语言数值计算库生态的文档归档和参考资料。",
       "status": "active",
       "dr": 54,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-26",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -3494,6 +3506,7 @@
       },
       "logo_svg": "/assets/logos/libmir-org.svg",
       "logo_generated": true,
+      "dr_consecutive_errors": 0,
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -3505,8 +3518,8 @@
       "placement": "links_page",
       "description": "Windows DLL 缺失与损坏问题的官方安全修复指南。",
       "status": "active",
-      "dr": 26,
-      "dr_last_checked_at": "2026-06-20",
+      "dr": 27,
+      "dr_last_checked_at": "2026-06-26",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -3518,6 +3531,7 @@
       },
       "logo_svg": "/assets/logos/mydll-wang.svg",
       "logo_source_url": "https://mydll.wang/favicon.svg",
+      "dr_consecutive_errors": 0,
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -3530,7 +3544,7 @@
       "description": "基于深度学习的 2D 姿态估计工具包文档与项目资料。",
       "status": "active",
       "dr": 35,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-26",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -3542,6 +3556,7 @@
       },
       "logo_svg": "/assets/logos/deepposekit-org.svg",
       "logo_generated": true,
+      "dr_consecutive_errors": 0,
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -3554,7 +3569,7 @@
       "description": "用于通过插件、初始化器和命令行脚本组合应用的 Node.js 框架文档。",
       "status": "active",
       "dr": 36,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-26",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -3566,6 +3581,7 @@
       },
       "logo_svg": "/assets/logos/asimovjs-org.svg",
       "logo_source_url": "https://asimovjs.org/favicon.svg",
+      "dr_consecutive_errors": 0,
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -3578,7 +3594,7 @@
       "description": "面向 EmDash CMS 的快速深色博客模板，支持 Markdown 和 Cloudflare 或 Node 部署。",
       "status": "active",
       "dr": 34,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-26",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -3590,6 +3606,7 @@
       },
       "logo_svg": "/assets/logos/silverblog-org.svg",
       "logo_generated": true,
+      "dr_consecutive_errors": 0,
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -3602,7 +3619,7 @@
       "description": "WebGL 图形库文档，提供浏览器 3D 场景的示例和 API 参考。",
       "status": "active",
       "dr": 31,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-26",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -3614,6 +3631,7 @@
       },
       "logo_svg": "/assets/logos/claygl-xyz.svg",
       "logo_source_url": "https://claygl.xyz/img/logo.svg",
+      "dr_consecutive_errors": 0,
       "source_collection": "authority_documentation_sites"
     },
     {
