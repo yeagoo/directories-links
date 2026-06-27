@@ -41,15 +41,15 @@
       "footer_navigation_sites",
       "authority_documentation_sites"
     ],
-    "next_index": 30,
-    "last_run_at": "2026-06-26T06:30:53Z",
+    "next_index": 36,
+    "last_run_at": "2026-06-27T06:03:43Z",
     "last_updated_ids": [
-      "libmir-org",
-      "mydll-wang",
-      "deepposekit-org",
-      "asimovjs-org",
-      "silverblog-org",
-      "claygl-xyz"
+      "itoffers-online",
+      "patet-xyz",
+      "sabwap-xyz",
+      "thanktolaw-com",
+      "cms-joomla-help-com",
+      "themescorners-com"
     ],
     "retry_backoff_max_days": 7,
     "unreachable_after": 5
@@ -865,7 +865,7 @@
       "description": "面向 IT 招聘者和候选人的开源职位发布与求职信息平台。",
       "status": "active",
       "dr": 34,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-27",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -876,7 +876,8 @@
         "zh-CN": "面向 IT 招聘者和候选人的开源职位发布与求职信息平台。"
       },
       "logo_svg": "/assets/logos/itoffers-online.svg",
-      "logo_source_url": "https://itoffers.online/favicon.svg"
+      "logo_source_url": "https://itoffers.online/favicon.svg",
+      "dr_consecutive_errors": 0
     },
     {
       "id": "patet-xyz",
@@ -888,7 +889,7 @@
       "description": "面向 AI 与快速开发项目上线的指南、模板、清单和部署笔记。",
       "status": "active",
       "dr": 29,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-27",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -899,7 +900,8 @@
         "zh-CN": "面向 AI 与快速开发项目上线的指南、模板、清单和部署笔记。"
       },
       "logo_svg": "/assets/logos/patet-xyz.svg",
-      "logo_generated": true
+      "logo_generated": true,
+      "dr_consecutive_errors": 0
     },
     {
       "id": "sabwap-xyz",
@@ -910,8 +912,8 @@
       "placement": "links_page",
       "description": "将现代网站转换为轻量文本优先 WAP 页面的网站转换工具与实验项目。",
       "status": "active",
-      "dr": 30,
-      "dr_last_checked_at": "2026-06-20",
+      "dr": 31,
+      "dr_last_checked_at": "2026-06-27",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -922,7 +924,8 @@
         "zh-CN": "将现代网站转换为轻量文本优先 WAP 页面的网站转换工具与实验项目。"
       },
       "logo_svg": "/assets/logos/sabwap-xyz.svg",
-      "logo_generated": true
+      "logo_generated": true,
+      "dr_consecutive_errors": 0
     },
     {
       "id": "thanktolaw-com",
@@ -933,8 +936,8 @@
       "placement": "links_page",
       "description": "提供刑事案件、交通事故、青少年犯罪等法律与合规资讯。",
       "status": "active",
-      "dr": 21,
-      "dr_last_checked_at": "2026-06-20",
+      "dr": 23,
+      "dr_last_checked_at": "2026-06-27",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -945,7 +948,8 @@
         "zh-CN": "提供刑事案件、交通事故、青少年犯罪等法律与合规资讯。"
       },
       "logo_svg": "/assets/logos/thanktolaw-com.svg",
-      "logo_generated": true
+      "logo_generated": true,
+      "dr_consecutive_errors": 0
     },
     {
       "id": "cms-joomla-help-com",
@@ -957,7 +961,7 @@
       "description": "Joomla 教程、错误修复、迁移清单、安全加固和在线工具。",
       "status": "active",
       "dr": 45,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-27",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -968,7 +972,8 @@
         "zh-CN": "Joomla 教程、错误修复、迁移清单、安全加固和在线工具。"
       },
       "logo_svg": "/assets/logos/cms-joomla-help-com.svg",
-      "logo_source_url": "https://cms-joomla-help.com/favicon.svg"
+      "logo_source_url": "https://cms-joomla-help.com/favicon.svg",
+      "dr_consecutive_errors": 0
     },
     {
       "id": "themescorners-com",
@@ -980,7 +985,7 @@
       "description": "提供免费和专业 WordPress 主题，覆盖响应式、SEO 与 WooCommerce 场景。",
       "status": "active",
       "dr": 44,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-27",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -991,7 +996,8 @@
         "zh-CN": "提供免费和专业 WordPress 主题，覆盖响应式、SEO 与 WooCommerce 场景。"
       },
       "logo_svg": "/assets/logos/themescorners-com.svg",
-      "logo_generated": true
+      "logo_generated": true,
+      "dr_consecutive_errors": 0
     },
     {
       "id": "material-theme-dev",
@@ -2222,9 +2228,10 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 34,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-27",
       "dr_update_enabled": true,
-      "dr_status": "ok"
+      "dr_status": "ok",
+      "dr_consecutive_errors": 0
     },
     {
       "id": "patet-xyz",
@@ -2243,9 +2250,10 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 29,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-27",
       "dr_update_enabled": true,
-      "dr_status": "ok"
+      "dr_status": "ok",
+      "dr_consecutive_errors": 0
     },
     {
       "id": "sabwap-xyz",
@@ -2263,10 +2271,11 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 30,
-      "dr_last_checked_at": "2026-06-20",
+      "dr": 31,
+      "dr_last_checked_at": "2026-06-27",
       "dr_update_enabled": true,
-      "dr_status": "ok"
+      "dr_status": "ok",
+      "dr_consecutive_errors": 0
     },
     {
       "id": "thanktolaw-com",
@@ -2284,10 +2293,11 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 21,
-      "dr_last_checked_at": "2026-06-20",
+      "dr": 23,
+      "dr_last_checked_at": "2026-06-27",
       "dr_update_enabled": true,
-      "dr_status": "ok"
+      "dr_status": "ok",
+      "dr_consecutive_errors": 0
     },
     {
       "id": "cms-joomla-help-com",
@@ -2306,9 +2316,10 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 45,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-27",
       "dr_update_enabled": true,
-      "dr_status": "ok"
+      "dr_status": "ok",
+      "dr_consecutive_errors": 0
     },
     {
       "id": "themescorners-com",
@@ -2327,9 +2338,10 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 44,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-27",
       "dr_update_enabled": true,
-      "dr_status": "ok"
+      "dr_status": "ok",
+      "dr_consecutive_errors": 0
     },
     {
       "id": "material-theme-dev",
@@ -3644,7 +3656,7 @@
       "description": "面向 IT 招聘者和候选人的开源职位发布与求职信息平台。",
       "status": "active",
       "dr": 34,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-27",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -3656,6 +3668,7 @@
       },
       "logo_svg": "/assets/logos/itoffers-online.svg",
       "logo_source_url": "https://itoffers.online/favicon.svg",
+      "dr_consecutive_errors": 0,
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -3668,7 +3681,7 @@
       "description": "面向 AI 与快速开发项目上线的指南、模板、清单和部署笔记。",
       "status": "active",
       "dr": 29,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-27",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -3680,6 +3693,7 @@
       },
       "logo_svg": "/assets/logos/patet-xyz.svg",
       "logo_generated": true,
+      "dr_consecutive_errors": 0,
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -3691,8 +3705,8 @@
       "placement": "links_page",
       "description": "将现代网站转换为轻量文本优先 WAP 页面的网站转换工具与实验项目。",
       "status": "active",
-      "dr": 30,
-      "dr_last_checked_at": "2026-06-20",
+      "dr": 31,
+      "dr_last_checked_at": "2026-06-27",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -3704,6 +3718,7 @@
       },
       "logo_svg": "/assets/logos/sabwap-xyz.svg",
       "logo_generated": true,
+      "dr_consecutive_errors": 0,
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -3715,8 +3730,8 @@
       "placement": "links_page",
       "description": "提供刑事案件、交通事故、青少年犯罪等法律与合规资讯。",
       "status": "active",
-      "dr": 21,
-      "dr_last_checked_at": "2026-06-20",
+      "dr": 23,
+      "dr_last_checked_at": "2026-06-27",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -3728,6 +3743,7 @@
       },
       "logo_svg": "/assets/logos/thanktolaw-com.svg",
       "logo_generated": true,
+      "dr_consecutive_errors": 0,
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -3740,7 +3756,7 @@
       "description": "Joomla 教程、错误修复、迁移清单、安全加固和在线工具。",
       "status": "active",
       "dr": 45,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-27",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -3752,6 +3768,7 @@
       },
       "logo_svg": "/assets/logos/cms-joomla-help-com.svg",
       "logo_source_url": "https://cms-joomla-help.com/favicon.svg",
+      "dr_consecutive_errors": 0,
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -3764,7 +3781,7 @@
       "description": "提供免费和专业 WordPress 主题，覆盖响应式、SEO 与 WooCommerce 场景。",
       "status": "active",
       "dr": 44,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-27",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -3776,6 +3793,7 @@
       },
       "logo_svg": "/assets/logos/themescorners-com.svg",
       "logo_generated": true,
+      "dr_consecutive_errors": 0,
       "source_collection": "authority_documentation_sites"
     },
     {
