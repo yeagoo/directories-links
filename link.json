@@ -41,15 +41,15 @@
       "footer_navigation_sites",
       "authority_documentation_sites"
     ],
-    "next_index": 36,
-    "last_run_at": "2026-06-27T06:03:43Z",
+    "next_index": 42,
+    "last_run_at": "2026-06-28T06:38:19Z",
     "last_updated_ids": [
-      "itoffers-online",
-      "patet-xyz",
-      "sabwap-xyz",
-      "thanktolaw-com",
-      "cms-joomla-help-com",
-      "themescorners-com"
+      "material-theme-dev",
+      "pastecode-xyz",
+      "techvibeblog-org",
+      "jennaferscott-com",
+      "aquila-network",
+      "onarm-net"
     ],
     "retry_backoff_max_days": 7,
     "unreachable_after": 5
@@ -1008,8 +1008,8 @@
       "placement": "links_page",
       "description": "Material Theme 原始配色与主题资源文档。",
       "status": "active",
-      "dr": 34,
-      "dr_last_checked_at": "2026-06-20",
+      "dr": 35,
+      "dr_last_checked_at": "2026-06-28",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -1020,7 +1020,8 @@
         "zh-CN": "Material Theme 原始配色与主题资源文档。"
       },
       "logo_svg": "/assets/logos/material-theme-dev.svg",
-      "logo_generated": true
+      "logo_generated": true,
+      "dr_consecutive_errors": 0
     },
     {
       "id": "pastecode-xyz",
@@ -1032,7 +1033,7 @@
       "description": "面向 AI 编码代理的提示词、规则、清单和上下文片段库。",
       "status": "active",
       "dr": 30,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-28",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -1043,7 +1044,8 @@
         "zh-CN": "面向 AI 编码代理的提示词、规则、清单和上下文片段库。"
       },
       "logo_svg": "/assets/logos/pastecode-xyz.svg",
-      "logo_source_url": "https://pastecode.xyz/favicon.svg"
+      "logo_source_url": "https://pastecode.xyz/favicon.svg",
+      "dr_consecutive_errors": 0
     },
     {
       "id": "techvibeblog-org",
@@ -1055,7 +1057,7 @@
       "description": "覆盖应用、游戏、流媒体、移动端和现代 Web 的技术资讯、指南与评测。",
       "status": "active",
       "dr": 31,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-28",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -1066,7 +1068,8 @@
         "zh-CN": "覆盖应用、游戏、流媒体、移动端和现代 Web 的技术资讯、指南与评测。"
       },
       "logo_svg": "/assets/logos/techvibeblog-org.svg",
-      "logo_source_url": "https://techvibeblog.org/favicon.svg"
+      "logo_source_url": "https://techvibeblog.org/favicon.svg",
+      "dr_consecutive_errors": 0
     },
     {
       "id": "jennaferscott-com",
@@ -1078,7 +1081,7 @@
       "description": "提供可下载打印的计划表、清单、预算追踪和生活整理模板。",
       "status": "active",
       "dr": 42,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-28",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -1089,7 +1092,8 @@
         "zh-CN": "提供可下载打印的计划表、清单、预算追踪和生活整理模板。"
       },
       "logo_svg": "/assets/logos/jennaferscott-com.svg",
-      "logo_source_url": "https://jennaferscott.com/favicon.svg"
+      "logo_source_url": "https://jennaferscott.com/favicon.svg",
+      "dr_consecutive_errors": 0
     },
     {
       "id": "aquila-network",
@@ -1103,7 +1107,7 @@
       "dns_target": "aquila-network.pages.dev",
       "status_note": "CNAME 指向 aquila-network.pages.dev。",
       "dr": 35,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-28",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -1114,7 +1118,8 @@
         "zh-CN": "Aquila Network 相关的网络与技术资源入口。"
       },
       "logo_svg": "/assets/logos/aquila-network.svg",
-      "logo_source_url": "http://aquila.network/favicon.svg"
+      "logo_source_url": "http://aquila.network/favicon.svg",
+      "dr_consecutive_errors": 0
     },
     {
       "id": "onarm-net",
@@ -1128,8 +1133,8 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 0,
-      "dr_last_checked_at": "2026-06-21",
+      "dr": 2.4,
+      "dr_last_checked_at": "2026-06-28",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0,
@@ -2407,10 +2412,11 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 34,
-      "dr_last_checked_at": "2026-06-20",
+      "dr": 35,
+      "dr_last_checked_at": "2026-06-28",
       "dr_update_enabled": true,
-      "dr_status": "ok"
+      "dr_status": "ok",
+      "dr_consecutive_errors": 0
     },
     {
       "id": "pastecode-xyz",
@@ -2429,9 +2435,10 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 30,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-28",
       "dr_update_enabled": true,
-      "dr_status": "ok"
+      "dr_status": "ok",
+      "dr_consecutive_errors": 0
     },
     {
       "id": "techvibeblog-org",
@@ -2450,9 +2457,10 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 31,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-28",
       "dr_update_enabled": true,
-      "dr_status": "ok"
+      "dr_status": "ok",
+      "dr_consecutive_errors": 0
     },
     {
       "id": "jennaferscott-com",
@@ -2471,9 +2479,10 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 42,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-28",
       "dr_update_enabled": true,
-      "dr_status": "ok"
+      "dr_status": "ok",
+      "dr_consecutive_errors": 0
     },
     {
       "id": "aquila-network",
@@ -2494,9 +2503,10 @@
       "status_note": "CNAME 指向 aquila-network.pages.dev。",
       "links_page_included": true,
       "dr": 35,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-28",
       "dr_update_enabled": true,
-      "dr_status": "ok"
+      "dr_status": "ok",
+      "dr_consecutive_errors": 0
     },
     {
       "id": "onarm-net",
@@ -2514,8 +2524,8 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 0,
-      "dr_last_checked_at": "2026-06-21",
+      "dr": 2.4,
+      "dr_last_checked_at": "2026-06-28",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -3903,8 +3913,8 @@
       "placement": "links_page",
       "description": "Material Theme 原始配色与主题资源文档。",
       "status": "active",
-      "dr": 34,
-      "dr_last_checked_at": "2026-06-20",
+      "dr": 35,
+      "dr_last_checked_at": "2026-06-28",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -3916,6 +3926,7 @@
       },
       "logo_svg": "/assets/logos/material-theme-dev.svg",
       "logo_generated": true,
+      "dr_consecutive_errors": 0,
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -3928,7 +3939,7 @@
       "description": "面向 AI 编码代理的提示词、规则、清单和上下文片段库。",
       "status": "active",
       "dr": 30,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-28",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -3940,6 +3951,7 @@
       },
       "logo_svg": "/assets/logos/pastecode-xyz.svg",
       "logo_source_url": "https://pastecode.xyz/favicon.svg",
+      "dr_consecutive_errors": 0,
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -3952,7 +3964,7 @@
       "description": "覆盖应用、游戏、流媒体、移动端和现代 Web 的技术资讯、指南与评测。",
       "status": "active",
       "dr": 31,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-28",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -3964,6 +3976,7 @@
       },
       "logo_svg": "/assets/logos/techvibeblog-org.svg",
       "logo_source_url": "https://techvibeblog.org/favicon.svg",
+      "dr_consecutive_errors": 0,
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -3976,7 +3989,7 @@
       "description": "提供可下载打印的计划表、清单、预算追踪和生活整理模板。",
       "status": "active",
       "dr": 42,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-28",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -3988,6 +4001,7 @@
       },
       "logo_svg": "/assets/logos/jennaferscott-com.svg",
       "logo_source_url": "https://jennaferscott.com/favicon.svg",
+      "dr_consecutive_errors": 0,
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -4002,7 +4016,7 @@
       "dns_target": "aquila-network.pages.dev",
       "status_note": "CNAME 指向 aquila-network.pages.dev。",
       "dr": 35,
-      "dr_last_checked_at": "2026-06-20",
+      "dr_last_checked_at": "2026-06-28",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -4014,6 +4028,7 @@
       },
       "logo_svg": "/assets/logos/aquila-network.svg",
       "logo_source_url": "http://aquila.network/favicon.svg",
+      "dr_consecutive_errors": 0,
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -4028,8 +4043,8 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 0,
-      "dr_last_checked_at": "2026-06-21",
+      "dr": 2.4,
+      "dr_last_checked_at": "2026-06-28",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0,
