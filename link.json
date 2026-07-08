@@ -544,6 +544,30 @@
       "dr_consecutive_errors": 0
     },
     {
+      "id": "vm-fyi",
+      "name": "VM.FYI",
+      "domain": "vm.fyi",
+      "url": "https://vm.fyi/",
+      "category": "虚拟化 / Virtualization",
+      "placement": "links_page",
+      "description": "面向开发者、运维和 Homelab 用户的虚拟化实践指南，覆盖 Proxmox、KVM、Docker/LXC、存储、网络、备份与恢复。",
+      "status": "active",
+      "dr": 0,
+      "dr_last_checked_at": "2026-07-08",
+      "dr_update_enabled": true,
+      "dr_status": "ok",
+      "link_rel": "dofollow",
+      "dofollow": true,
+      "links_page_included": true,
+      "description_i18n": {
+        "en-US": "A virtualization field guide for developers, operators and homelab users, covering Proxmox, KVM, Docker/LXC, storage, networking, backup and recovery.",
+        "zh-CN": "面向开发者、运维和 Homelab 用户的虚拟化实践指南，覆盖 Proxmox、KVM、Docker/LXC、存储、网络、备份与恢复。"
+      },
+      "logo_svg": "/assets/logos/vm-fyi.svg",
+      "logo_generated": true,
+      "dr_consecutive_errors": 0
+    },
+    {
       "id": "eol-wiki",
       "name": "EOL.Wiki",
       "domain": "eol.wiki",
@@ -1977,6 +2001,28 @@
       "links_page_included": true,
       "dr": 12,
       "dr_last_checked_at": "2026-07-01",
+      "dr_update_enabled": true,
+      "dr_status": "ok",
+      "dr_consecutive_errors": 0
+    },
+    {
+      "id": "vm-fyi",
+      "name": "VM.FYI",
+      "domain": "vm.fyi",
+      "url": "https://vm.fyi/",
+      "category": "虚拟化 / Virtualization",
+      "placement": "links_page",
+      "description": "面向开发者、运维和 Homelab 用户的虚拟化实践指南，覆盖 Proxmox、KVM、Docker/LXC、存储、网络、备份与恢复。",
+      "description_i18n": {
+        "en-US": "A virtualization field guide for developers, operators and homelab users, covering Proxmox, KVM, Docker/LXC, storage, networking, backup and recovery.",
+        "zh-CN": "面向开发者、运维和 Homelab 用户的虚拟化实践指南，覆盖 Proxmox、KVM、Docker/LXC、存储、网络、备份与恢复。"
+      },
+      "status": "active",
+      "link_rel": "dofollow",
+      "dofollow": true,
+      "links_page_included": true,
+      "dr": 0,
+      "dr_last_checked_at": "2026-07-08",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -3432,6 +3478,31 @@
       },
       "logo_svg": "/assets/logos/runentlinux-com.svg",
       "logo_source_url": "https://runentlinux.com/favicon.svg",
+      "dr_consecutive_errors": 0,
+      "source_collection": "authority_documentation_sites"
+    },
+    {
+      "id": "vm-fyi",
+      "name": "VM.FYI",
+      "domain": "vm.fyi",
+      "url": "https://vm.fyi/",
+      "category": "虚拟化 / Virtualization",
+      "placement": "links_page",
+      "description": "面向开发者、运维和 Homelab 用户的虚拟化实践指南，覆盖 Proxmox、KVM、Docker/LXC、存储、网络、备份与恢复。",
+      "status": "active",
+      "dr": 0,
+      "dr_last_checked_at": "2026-07-08",
+      "dr_update_enabled": true,
+      "dr_status": "ok",
+      "link_rel": "dofollow",
+      "dofollow": true,
+      "links_page_included": true,
+      "description_i18n": {
+        "en-US": "A virtualization field guide for developers, operators and homelab users, covering Proxmox, KVM, Docker/LXC, storage, networking, backup and recovery.",
+        "zh-CN": "面向开发者、运维和 Homelab 用户的虚拟化实践指南，覆盖 Proxmox、KVM、Docker/LXC、存储、网络、备份与恢复。"
+      },
+      "logo_svg": "/assets/logos/vm-fyi.svg",
+      "logo_generated": true,
       "dr_consecutive_errors": 0,
       "source_collection": "authority_documentation_sites"
     },

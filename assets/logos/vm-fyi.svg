@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="VM.FYI logo">
+  <defs>
+    <linearGradient id="bg" x1="8" y1="4" x2="56" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#b8c4ee"/>
+      <stop offset=".55" stop-color="#6f7192"/>
+      <stop offset="1" stop-color="#8f641d"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#11101a"/>
+  <rect x="5" y="5" width="54" height="54" rx="11" fill="url(#bg)" opacity=".22"/>
+  <path d="M16 20h6.4l5.1 15.1L32.6 20H39l-8.3 24h-6.4L16 20Zm25 0h7v24h-7V20Z" fill="#f2f1f6"/>
+  <path d="M14 48h36" stroke="#d9b25e" stroke-width="3" stroke-linecap="round"/>
+</svg>
