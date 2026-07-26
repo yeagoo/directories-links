@@ -41,15 +41,15 @@
       "footer_navigation_sites",
       "authority_documentation_sites"
     ],
-    "next_index": 51,
-    "last_run_at": "2026-07-25T05:25:14Z",
+    "next_index": 1,
+    "last_run_at": "2026-07-26T05:42:38Z",
     "last_updated_ids": [
-      "llstack-com",
-      "cloud-fan",
-      "hestiacp-cn",
-      "hiemdash-com",
-      "p-cafe",
-      "web-casa"
+      "apponarm-com",
+      "screenhello-com",
+      "tratra-travel",
+      "pkgseek",
+      "linux-band",
+      "aat-ee"
     ],
     "retry_backoff_max_days": 7,
     "unreachable_after": 5
@@ -67,7 +67,7 @@
       "description": "面向创业者和开发者的产品发现与发布平台，收录 AI 工具、SaaS 与新项目。",
       "status": "active",
       "dr": 48,
-      "dr_last_checked_at": "2026-07-17",
+      "dr_last_checked_at": "2026-07-26",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -1377,8 +1377,8 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 17,
-      "dr_last_checked_at": "2026-07-16",
+      "dr": 15,
+      "dr_last_checked_at": "2026-07-26",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0,
@@ -1401,8 +1401,8 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 15,
-      "dr_last_checked_at": "2026-07-16",
+      "dr": 13,
+      "dr_last_checked_at": "2026-07-26",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0,
@@ -1432,7 +1432,7 @@
       "logo_svg": "/assets/logos/tratra-travel.svg",
       "logo_source_url": null,
       "logo_generated": true,
-      "dr_last_checked_at": "2026-07-17"
+      "dr_last_checked_at": "2026-07-26"
     },
     {
       "id": "pkgseek",
@@ -1450,14 +1450,14 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 6,
+      "dr": 12,
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0,
       "logo_svg": "/assets/logos/pkgseek.svg",
       "logo_source_url": null,
       "logo_generated": true,
-      "dr_last_checked_at": "2026-07-17"
+      "dr_last_checked_at": "2026-07-26"
     },
     {
       "id": "linux-band",
@@ -1475,14 +1475,14 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 6,
+      "dr": 8,
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0,
       "logo_svg": "/assets/logos/linux-band.svg",
       "logo_source_url": null,
       "logo_generated": true,
-      "dr_last_checked_at": "2026-07-17"
+      "dr_last_checked_at": "2026-07-26"
     }
   ],
   "badges": [
@@ -1512,7 +1512,7 @@
       "links_page_included": true,
       "links_page_category": "导航站",
       "dr": 48,
-      "dr_last_checked_at": "2026-07-17",
+      "dr_last_checked_at": "2026-07-26",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0,
@@ -2771,8 +2771,8 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 17,
-      "dr_last_checked_at": "2026-07-16",
+      "dr": 15,
+      "dr_last_checked_at": "2026-07-26",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -2793,8 +2793,8 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 15,
-      "dr_last_checked_at": "2026-07-16",
+      "dr": 13,
+      "dr_last_checked_at": "2026-07-26",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -2816,7 +2816,7 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 34,
-      "dr_last_checked_at": "2026-07-17",
+      "dr_last_checked_at": "2026-07-26",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -2837,8 +2837,8 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 6,
-      "dr_last_checked_at": "2026-07-17",
+      "dr": 12,
+      "dr_last_checked_at": "2026-07-26",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -2859,8 +2859,8 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 6,
-      "dr_last_checked_at": "2026-07-17",
+      "dr": 8,
+      "dr_last_checked_at": "2026-07-26",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -2990,7 +2990,7 @@
       "description": "面向创业者和开发者的产品发现与发布平台，收录 AI 工具、SaaS 与新项目。",
       "status": "active",
       "dr": 48,
-      "dr_last_checked_at": "2026-07-17",
+      "dr_last_checked_at": "2026-07-26",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -4349,8 +4349,8 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 17,
-      "dr_last_checked_at": "2026-07-16",
+      "dr": 15,
+      "dr_last_checked_at": "2026-07-26",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0,
@@ -4374,8 +4374,8 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 15,
-      "dr_last_checked_at": "2026-07-16",
+      "dr": 13,
+      "dr_last_checked_at": "2026-07-26",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0,
@@ -4406,7 +4406,7 @@
       "logo_svg": "/assets/logos/tratra-travel.svg",
       "logo_source_url": null,
       "logo_generated": true,
-      "dr_last_checked_at": "2026-07-17",
+      "dr_last_checked_at": "2026-07-26",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -4425,14 +4425,14 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 6,
+      "dr": 12,
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0,
       "logo_svg": "/assets/logos/pkgseek.svg",
       "logo_source_url": null,
       "logo_generated": true,
-      "dr_last_checked_at": "2026-07-17",
+      "dr_last_checked_at": "2026-07-26",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -4451,14 +4451,14 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 6,
+      "dr": 8,
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0,
       "logo_svg": "/assets/logos/linux-band.svg",
       "logo_source_url": null,
       "logo_generated": true,
-      "dr_last_checked_at": "2026-07-17",
+      "dr_last_checked_at": "2026-07-26",
       "source_collection": "authority_documentation_sites"
     }
   ]
