@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 72 56" role="img" aria-labelledby="title description">
+  <title id="title">SteamOS.Club logo</title>
+  <desc id="description">A generic game controller combined with a documentation page.</desc>
+  <path fill="#121721" d="M15 14C8.7 14 4.5 18.3 3 24.5L.7 39.3C-.4 46.3 3.5 51 8.4 51c3.5 0 6.2-2.8 9.3-7.2l4.2-6h28.2l4.2 6c3.1 4.4 5.8 7.2 9.3 7.2 4.9 0 8.8-4.7 7.7-11.7L69 24.5C67.5 18.3 63.3 14 57 14H15Z"/>
+  <path fill="#f7f4ec" d="M12 24h4v4h4v4h-4v4h-4v-4H8v-4h4v-4Z"/>
+  <circle cx="58" cy="26" r="2.5" fill="#f7f4ec"/>
+  <circle cx="63" cy="31" r="2.5" fill="#f7f4ec"/>
+  <circle cx="53" cy="31" r="2.5" fill="#f7f4ec"/>
+  <circle cx="58" cy="36" r="2.5" fill="#20b8d0"/>
+  <path fill="#f7f4ec" d="M27 4h14l8 8v21.5a4.5 4.5 0 0 1-4.5 4.5h-17a4.5 4.5 0 0 1-4.5-4.5v-25A4.5 4.5 0 0 1 27.5 4H27Z"/>
+  <path fill="#20b8d0" d="M41 4v8h8l-8-8Z"/>
+  <path fill="#121721" d="M29 20h14v3H29zm0 7h14v3H29z"/>
+</svg>

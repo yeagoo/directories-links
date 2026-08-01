@@ -1,13 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="VM.FYI logo">
-  <defs>
-    <linearGradient id="bg" x1="8" y1="4" x2="56" y2="60" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#b8c4ee"/>
-      <stop offset=".55" stop-color="#6f7192"/>
-      <stop offset="1" stop-color="#8f641d"/>
-    </linearGradient>
-  </defs>
-  <rect width="64" height="64" rx="14" fill="#11101a"/>
-  <rect x="5" y="5" width="54" height="54" rx="11" fill="url(#bg)" opacity=".22"/>
-  <path d="M16 20h6.4l5.1 15.1L32.6 20H39l-8.3 24h-6.4L16 20Zm25 0h7v24h-7V20Z" fill="#f2f1f6"/>
-  <path d="M14 48h36" stroke="#d9b25e" stroke-width="3" stroke-linecap="round"/>
+  <rect width="64" height="64" rx="14" fill="#0b0f0d"/>
+  <rect x="10" y="10" width="44" height="44" rx="10" fill="#0f766e"/>
+  <path d="M18 22 25 42 32 22" fill="none" stroke="#f8f6f2" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M36 42V22l5 10 5-10v20" fill="none" stroke="#f8f6f2" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
