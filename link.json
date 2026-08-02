@@ -41,15 +41,15 @@
       "footer_navigation_sites",
       "authority_documentation_sites"
     ],
-    "next_index": 37,
-    "last_run_at": "2026-08-01T05:37:20Z",
+    "next_index": 43,
+    "last_run_at": "2026-08-02T05:38:04Z",
     "last_updated_ids": [
-      "itoffers-online",
-      "patet-xyz",
-      "sabwap-xyz",
-      "thanktolaw-com",
-      "cms-joomla-help-com",
-      "themescorners-com"
+      "pastecode-xyz",
+      "techvibeblog-org",
+      "jennaferscott-com",
+      "aquila-network",
+      "onarm-net",
+      "artemstar-com"
     ],
     "retry_backoff_max_days": 7,
     "unreachable_after": 5
@@ -1033,7 +1033,7 @@
       "description": "面向 AI 编码代理的提示词、规则、清单和上下文片段库。",
       "status": "active",
       "dr": 34,
-      "dr_last_checked_at": "2026-07-23",
+      "dr_last_checked_at": "2026-08-02",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -1057,7 +1057,7 @@
       "description": "覆盖应用、游戏、流媒体、移动端和现代 Web 的技术资讯、指南与评测。",
       "status": "active",
       "dr": 34,
-      "dr_last_checked_at": "2026-07-24",
+      "dr_last_checked_at": "2026-08-02",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -1081,7 +1081,7 @@
       "description": "提供可下载打印的计划表、清单、预算追踪和生活整理模板。",
       "status": "active",
       "dr": 46,
-      "dr_last_checked_at": "2026-07-24",
+      "dr_last_checked_at": "2026-08-02",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -1107,7 +1107,7 @@
       "dns_target": "aquila-network.pages.dev",
       "status_note": "CNAME 指向 aquila-network.pages.dev。",
       "dr": 38,
-      "dr_last_checked_at": "2026-07-24",
+      "dr_last_checked_at": "2026-08-02",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -1133,8 +1133,8 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 20,
-      "dr_last_checked_at": "2026-07-24",
+      "dr": 19,
+      "dr_last_checked_at": "2026-08-02",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0,
@@ -1158,7 +1158,7 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 38,
-      "dr_last_checked_at": "2026-07-24",
+      "dr_last_checked_at": "2026-08-02",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0,
@@ -2655,7 +2655,7 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 34,
-      "dr_last_checked_at": "2026-07-23",
+      "dr_last_checked_at": "2026-08-02",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -2677,7 +2677,7 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 34,
-      "dr_last_checked_at": "2026-07-24",
+      "dr_last_checked_at": "2026-08-02",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -2699,7 +2699,7 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 46,
-      "dr_last_checked_at": "2026-07-24",
+      "dr_last_checked_at": "2026-08-02",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -2723,7 +2723,7 @@
       "status_note": "CNAME 指向 aquila-network.pages.dev。",
       "links_page_included": true,
       "dr": 38,
-      "dr_last_checked_at": "2026-07-24",
+      "dr_last_checked_at": "2026-08-02",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -2744,8 +2744,8 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 20,
-      "dr_last_checked_at": "2026-07-24",
+      "dr": 19,
+      "dr_last_checked_at": "2026-08-02",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -2767,7 +2767,7 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 38,
-      "dr_last_checked_at": "2026-07-24",
+      "dr_last_checked_at": "2026-08-02",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -2987,10 +2987,10 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 34,
+      "dr_last_checked_at": "2026-07-26",
       "dr_update_enabled": true,
       "dr_status": "ok",
-      "dr_consecutive_errors": 0,
-      "dr_last_checked_at": "2026-07-26"
+      "dr_consecutive_errors": 0
     },
     {
       "id": "pkgseek",
@@ -3009,10 +3009,10 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 12,
+      "dr_last_checked_at": "2026-07-26",
       "dr_update_enabled": true,
       "dr_status": "ok",
-      "dr_consecutive_errors": 0,
-      "dr_last_checked_at": "2026-07-26"
+      "dr_consecutive_errors": 0
     },
     {
       "id": "linux-band",
@@ -3031,10 +3031,10 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 8,
+      "dr_last_checked_at": "2026-07-26",
       "dr_update_enabled": true,
       "dr_status": "ok",
-      "dr_consecutive_errors": 0,
-      "dr_last_checked_at": "2026-07-26"
+      "dr_consecutive_errors": 0
     },
     {
       "id": "astro-docs",
@@ -3179,10 +3179,10 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 0.9,
+      "dr_last_checked_at": "2026-07-29",
       "dr_update_enabled": true,
       "dr_status": "ok",
-      "dr_consecutive_errors": 0,
-      "dr_last_checked_at": "2026-07-29"
+      "dr_consecutive_errors": 0
     },
     {
       "id": "yunqianyi",
@@ -4339,8 +4339,8 @@
       },
       "logo_svg": "/assets/logos/material-theme-dev.svg",
       "logo_generated": true,
-      "source_collection": "authority_documentation_sites",
-      "dr_consecutive_errors": 0
+      "dr_consecutive_errors": 0,
+      "source_collection": "authority_documentation_sites"
     },
     {
       "id": "pastecode-xyz",
@@ -4352,7 +4352,7 @@
       "description": "面向 AI 编码代理的提示词、规则、清单和上下文片段库。",
       "status": "active",
       "dr": 34,
-      "dr_last_checked_at": "2026-07-23",
+      "dr_last_checked_at": "2026-08-02",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -4364,8 +4364,8 @@
       },
       "logo_svg": "/assets/logos/pastecode-xyz.svg",
       "logo_source_url": "https://pastecode.xyz/favicon.svg",
-      "source_collection": "authority_documentation_sites",
-      "dr_consecutive_errors": 0
+      "dr_consecutive_errors": 0,
+      "source_collection": "authority_documentation_sites"
     },
     {
       "id": "techvibeblog-org",
@@ -4377,7 +4377,7 @@
       "description": "覆盖应用、游戏、流媒体、移动端和现代 Web 的技术资讯、指南与评测。",
       "status": "active",
       "dr": 34,
-      "dr_last_checked_at": "2026-07-24",
+      "dr_last_checked_at": "2026-08-02",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -4389,8 +4389,8 @@
       },
       "logo_svg": "/assets/logos/techvibeblog-org.svg",
       "logo_source_url": "https://techvibeblog.org/favicon.svg",
-      "source_collection": "authority_documentation_sites",
-      "dr_consecutive_errors": 0
+      "dr_consecutive_errors": 0,
+      "source_collection": "authority_documentation_sites"
     },
     {
       "id": "jennaferscott-com",
@@ -4402,7 +4402,7 @@
       "description": "提供可下载打印的计划表、清单、预算追踪和生活整理模板。",
       "status": "active",
       "dr": 46,
-      "dr_last_checked_at": "2026-07-24",
+      "dr_last_checked_at": "2026-08-02",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -4414,8 +4414,8 @@
       },
       "logo_svg": "/assets/logos/jennaferscott-com.svg",
       "logo_source_url": "https://jennaferscott.com/favicon.svg",
-      "source_collection": "authority_documentation_sites",
-      "dr_consecutive_errors": 0
+      "dr_consecutive_errors": 0,
+      "source_collection": "authority_documentation_sites"
     },
     {
       "id": "aquila-network",
@@ -4429,7 +4429,7 @@
       "dns_target": "aquila-network.pages.dev",
       "status_note": "CNAME 指向 aquila-network.pages.dev。",
       "dr": 38,
-      "dr_last_checked_at": "2026-07-24",
+      "dr_last_checked_at": "2026-08-02",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -4441,8 +4441,8 @@
       },
       "logo_svg": "/assets/logos/aquila-network.svg",
       "logo_source_url": "https://aquila.network/favicon.svg",
-      "source_collection": "authority_documentation_sites",
-      "dr_consecutive_errors": 0
+      "dr_consecutive_errors": 0,
+      "source_collection": "authority_documentation_sites"
     },
     {
       "id": "onarm-net",
@@ -4456,8 +4456,8 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 20,
-      "dr_last_checked_at": "2026-07-24",
+      "dr": 19,
+      "dr_last_checked_at": "2026-08-02",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0,
@@ -4482,7 +4482,7 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 38,
-      "dr_last_checked_at": "2026-07-24",
+      "dr_last_checked_at": "2026-08-02",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0,
@@ -4742,8 +4742,8 @@
       "logo_svg": "/assets/logos/tratra-travel.svg",
       "logo_source_url": null,
       "logo_generated": true,
-      "source_collection": "authority_documentation_sites",
-      "dr_last_checked_at": "2026-07-26"
+      "dr_last_checked_at": "2026-07-26",
+      "source_collection": "authority_documentation_sites"
     },
     {
       "id": "pkgseek",
@@ -4768,8 +4768,8 @@
       "logo_svg": "/assets/logos/pkgseek.svg",
       "logo_source_url": null,
       "logo_generated": true,
-      "source_collection": "authority_documentation_sites",
-      "dr_last_checked_at": "2026-07-26"
+      "dr_last_checked_at": "2026-07-26",
+      "source_collection": "authority_documentation_sites"
     },
     {
       "id": "linux-band",
@@ -4794,8 +4794,8 @@
       "logo_svg": "/assets/logos/linux-band.svg",
       "logo_source_url": null,
       "logo_generated": true,
-      "source_collection": "authority_documentation_sites",
-      "dr_last_checked_at": "2026-07-26"
+      "dr_last_checked_at": "2026-07-26",
+      "source_collection": "authority_documentation_sites"
     },
     {
       "id": "astro-docs",
@@ -4970,8 +4970,8 @@
       "logo_svg": "/assets/logos/vm-fyi.svg",
       "logo_source_url": null,
       "logo_generated": true,
-      "source_collection": "authority_documentation_sites",
-      "dr_last_checked_at": "2026-07-29"
+      "dr_last_checked_at": "2026-07-29",
+      "source_collection": "authority_documentation_sites"
     },
     {
       "id": "yunqianyi",
