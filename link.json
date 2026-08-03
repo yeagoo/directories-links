@@ -688,6 +688,54 @@
       "dr_consecutive_errors": 0
     },
     {
+      "id": "pg-edu-rich",
+      "name": "PostgreSQL Field Guide",
+      "domain": "pg.edu.rich",
+      "url": "https://pg.edu.rich/",
+      "category": "PostgreSQL 中英双语文档",
+      "placement": "links_page",
+      "description": "面向 PostgreSQL 新手、生产工程师与 AI Agent 的中英双语知识库，覆盖安装连接、性能优化、云数据库、版本升级、pgvector 与 RAG。",
+      "status": "active",
+      "dr": null,
+      "dr_update_enabled": true,
+      "dr_status": "pending",
+      "link_rel": "dofollow",
+      "dofollow": true,
+      "links_page_included": true,
+      "description_i18n": {
+        "en-US": "A bilingual PostgreSQL knowledge base for beginners, production engineers, and AI agents, covering setup, performance, managed cloud, upgrades, pgvector, and RAG.",
+        "zh-CN": "面向 PostgreSQL 新手、生产工程师与 AI Agent 的中英双语知识库，覆盖安装连接、性能优化、云数据库、版本升级、pgvector 与 RAG。"
+      },
+      "logo_svg": "/assets/logos/pg-edu-rich.svg",
+      "logo_source_url": "https://pg.edu.rich/icon.svg",
+      "logo_generated": false,
+      "dr_consecutive_errors": 0
+    },
+    {
+      "id": "bun-edu-rich",
+      "name": "Bun Docs",
+      "domain": "bun.edu.rich",
+      "url": "https://bun.edu.rich/",
+      "category": "Bun 中英双语文档",
+      "placement": "links_page",
+      "description": "面向 Bun 新手、生产工程师与 AI Agent 的中英双语实用文档，覆盖运行时、包管理、测试、打包、云部署与 AI 应用开发。",
+      "status": "active",
+      "dr": null,
+      "dr_update_enabled": true,
+      "dr_status": "pending",
+      "link_rel": "dofollow",
+      "dofollow": true,
+      "links_page_included": true,
+      "description_i18n": {
+        "en-US": "A bilingual practical Bun knowledge base for newcomers, production engineers, and AI agents, covering the runtime, package manager, testing, bundling, cloud deployment, and AI app development.",
+        "zh-CN": "面向 Bun 新手、生产工程师与 AI Agent 的中英双语实用文档，覆盖运行时、包管理、测试、打包、云部署与 AI 应用开发。"
+      },
+      "logo_svg": "/assets/logos/bun-edu-rich.svg",
+      "logo_source_url": "https://bun.edu.rich/icon.svg",
+      "logo_generated": false,
+      "dr_consecutive_errors": 0
+    },
+    {
       "id": "valkey-edu-rich",
       "name": "Valkey 中文社区",
       "domain": "valkey.edu.rich",
@@ -2328,6 +2376,48 @@
       "dr_last_checked_at": "2026-07-30",
       "dr_update_enabled": true,
       "dr_status": "ok",
+      "dr_consecutive_errors": 0
+    },
+    {
+      "id": "pg-edu-rich",
+      "name": "PostgreSQL Field Guide",
+      "domain": "pg.edu.rich",
+      "url": "https://pg.edu.rich/",
+      "category": "PostgreSQL 中英双语文档",
+      "placement": "links_page",
+      "description": "面向 PostgreSQL 新手、生产工程师与 AI Agent 的中英双语知识库，覆盖安装连接、性能优化、云数据库、版本升级、pgvector 与 RAG。",
+      "description_i18n": {
+        "en-US": "A bilingual PostgreSQL knowledge base for beginners, production engineers, and AI agents, covering setup, performance, managed cloud, upgrades, pgvector, and RAG.",
+        "zh-CN": "面向 PostgreSQL 新手、生产工程师与 AI Agent 的中英双语知识库，覆盖安装连接、性能优化、云数据库、版本升级、pgvector 与 RAG。"
+      },
+      "status": "active",
+      "link_rel": "dofollow",
+      "dofollow": true,
+      "links_page_included": true,
+      "dr": null,
+      "dr_update_enabled": true,
+      "dr_status": "pending",
+      "dr_consecutive_errors": 0
+    },
+    {
+      "id": "bun-edu-rich",
+      "name": "Bun Docs",
+      "domain": "bun.edu.rich",
+      "url": "https://bun.edu.rich/",
+      "category": "Bun 中英双语文档",
+      "placement": "links_page",
+      "description": "面向 Bun 新手、生产工程师与 AI Agent 的中英双语实用文档，覆盖运行时、包管理、测试、打包、云部署与 AI 应用开发。",
+      "description_i18n": {
+        "en-US": "A bilingual practical Bun knowledge base for newcomers, production engineers, and AI agents, covering the runtime, package manager, testing, bundling, cloud deployment, and AI app development.",
+        "zh-CN": "面向 Bun 新手、生产工程师与 AI Agent 的中英双语实用文档，覆盖运行时、包管理、测试、打包、云部署与 AI 应用开发。"
+      },
+      "status": "active",
+      "dr": null,
+      "dr_update_enabled": true,
+      "dr_status": "pending",
+      "link_rel": "dofollow",
+      "dofollow": true,
+      "links_page_included": true,
       "dr_consecutive_errors": 0
     },
     {
@@ -3989,6 +4079,56 @@
       },
       "logo_svg": "/assets/logos/mariadb-edu-rich.svg",
       "logo_generated": true,
+      "dr_consecutive_errors": 0,
+      "source_collection": "authority_documentation_sites"
+    },
+    {
+      "id": "pg-edu-rich",
+      "name": "PostgreSQL Field Guide",
+      "domain": "pg.edu.rich",
+      "url": "https://pg.edu.rich/",
+      "category": "PostgreSQL 中英双语文档",
+      "placement": "links_page",
+      "description": "面向 PostgreSQL 新手、生产工程师与 AI Agent 的中英双语知识库，覆盖安装连接、性能优化、云数据库、版本升级、pgvector 与 RAG。",
+      "status": "active",
+      "dr": null,
+      "dr_update_enabled": true,
+      "dr_status": "pending",
+      "link_rel": "dofollow",
+      "dofollow": true,
+      "links_page_included": true,
+      "description_i18n": {
+        "en-US": "A bilingual PostgreSQL knowledge base for beginners, production engineers, and AI agents, covering setup, performance, managed cloud, upgrades, pgvector, and RAG.",
+        "zh-CN": "面向 PostgreSQL 新手、生产工程师与 AI Agent 的中英双语知识库，覆盖安装连接、性能优化、云数据库、版本升级、pgvector 与 RAG。"
+      },
+      "logo_svg": "/assets/logos/pg-edu-rich.svg",
+      "logo_source_url": "https://pg.edu.rich/icon.svg",
+      "logo_generated": false,
+      "dr_consecutive_errors": 0,
+      "source_collection": "authority_documentation_sites"
+    },
+    {
+      "id": "bun-edu-rich",
+      "name": "Bun Docs",
+      "domain": "bun.edu.rich",
+      "url": "https://bun.edu.rich/",
+      "category": "Bun 中英双语文档",
+      "placement": "links_page",
+      "description": "面向 Bun 新手、生产工程师与 AI Agent 的中英双语实用文档，覆盖运行时、包管理、测试、打包、云部署与 AI 应用开发。",
+      "status": "active",
+      "dr": null,
+      "dr_update_enabled": true,
+      "dr_status": "pending",
+      "link_rel": "dofollow",
+      "dofollow": true,
+      "links_page_included": true,
+      "description_i18n": {
+        "en-US": "A bilingual practical Bun knowledge base for newcomers, production engineers, and AI agents, covering the runtime, package manager, testing, bundling, cloud deployment, and AI app development.",
+        "zh-CN": "面向 Bun 新手、生产工程师与 AI Agent 的中英双语实用文档，覆盖运行时、包管理、测试、打包、云部署与 AI 应用开发。"
+      },
+      "logo_svg": "/assets/logos/bun-edu-rich.svg",
+      "logo_source_url": "https://bun.edu.rich/icon.svg",
+      "logo_generated": false,
       "dr_consecutive_errors": 0,
       "source_collection": "authority_documentation_sites"
     },
