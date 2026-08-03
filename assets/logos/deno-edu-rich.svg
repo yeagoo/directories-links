@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img"
+  aria-label="Deno 中文生态中心">
+  <rect width="64" height="64" rx="16" fill="#111814" />
+  <path
+    d="M16 15h18c11 0 18 6.8 18 17s-7 17-18 17H16V15Zm17.2 25.3c5.8 0 9.5-3 9.5-8.3s-3.7-8.3-9.5-8.3h-7.5v16.6h7.5Z"
+    fill="#f7f8f4" />
+  <circle cx="47" cy="17" r="5" fill="#86c238" />
+</svg>

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="TanStack 中文文档 logo">
+  <rect width="64" height="64" rx="14" fill="#0a0a0c"/>
+  <polygon points="16,18 28,13 28,41 16,46" fill="#f4f4f5" stroke="#f4f4f5" stroke-width="3" stroke-linejoin="round"/>
+  <polygon points="36,22 48,17 48,38 36,43" fill="#f97316" stroke="#f97316" stroke-width="3" stroke-linejoin="round"/>
+</svg>

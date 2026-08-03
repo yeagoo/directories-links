@@ -1724,6 +1724,53 @@
       "logo_svg": "/assets/logos/steamos-club.svg",
       "logo_source_url": "https://steamos.club/public/brand/steamos-handbook-mark.svg",
       "logo_generated": false
+    },
+    {
+      "id": "deno-edu-rich",
+      "name": "Deno Docs",
+      "domain": "deno.edu.rich",
+      "url": "https://deno.edu.rich/",
+      "category": "Deno 中英双语文档",
+      "placement": "links_page",
+      "description": "面向 Node.js 迁移者、全栈开发者与 AI Agent 的中英双语 Deno 实战文档，覆盖运行时、权限模型、Fresh/Hono、数据库、Deno Deploy 与 MCP 开发。",
+      "status": "pending_dns",
+      "dr": null,
+      "dr_update_enabled": true,
+      "dr_status": "pending",
+      "link_rel": "dofollow",
+      "dofollow": true,
+      "links_page_included": true,
+      "description_i18n": {
+        "en-US": "A bilingual practical Deno knowledge base for Node.js migrators, full-stack developers, and AI agents, covering the runtime, permission model, Fresh/Hono, databases, Deno Deploy, and MCP development.",
+        "zh-CN": "面向 Node.js 迁移者、全栈开发者与 AI Agent 的中英双语 Deno 实战文档，覆盖运行时、权限模型、Fresh/Hono、数据库、Deno Deploy 与 MCP 开发。"
+      },
+      "logo_svg": "/assets/logos/deno-edu-rich.svg",
+      "logo_source_url": "https://deno.edu.rich/icon.svg",
+      "logo_generated": false,
+      "dr_consecutive_errors": 0
+    },
+    {
+      "id": "tanstack-atlas",
+      "name": "TanStack 中文文档",
+      "domain": "tanstack-atlas.vercel.app",
+      "url": "https://tanstack-atlas.vercel.app/",
+      "category": "TanStack 中英双语文档",
+      "placement": "links_page",
+      "description": "面向初学者与 AI Agent 的 TanStack 中英双语知识库，覆盖 Start、Router、Query、Table 与 Form，提供入门教程、工程契约与 llms.txt 机器索引。",
+      "status": "active",
+      "dr": null,
+      "dr_update_enabled": true,
+      "dr_status": "pending",
+      "link_rel": "dofollow",
+      "dofollow": true,
+      "links_page_included": true,
+      "description_i18n": {
+        "en-US": "A bilingual TanStack knowledge base for beginners and AI agents, covering Start, Router, Query, Table, and Form, with a guided learning path, execution contracts, and an llms.txt machine index.",
+        "zh-CN": "面向初学者与 AI Agent 的 TanStack 中英双语知识库，覆盖 Start、Router、Query、Table 与 Form，提供入门教程、工程契约与 llms.txt 机器索引。"
+      },
+      "logo_svg": "/assets/logos/tanstack-atlas.svg",
+      "logo_generated": true,
+      "dr_consecutive_errors": 0
     }
   ],
   "badges": [
@@ -3308,6 +3355,48 @@
         "zh-CN": "独立维护的 SteamOS、Steam Deck 与 Linux Gaming 中英双语技术知识库，覆盖安装、硬件兼容、Proton、性能优化、工具生态和故障排查。"
       },
       "status": "pending_dns",
+      "link_rel": "dofollow",
+      "dofollow": true,
+      "links_page_included": true,
+      "dr": null,
+      "dr_update_enabled": true,
+      "dr_status": "pending",
+      "dr_consecutive_errors": 0
+    },
+    {
+      "id": "deno-edu-rich",
+      "name": "Deno Docs",
+      "domain": "deno.edu.rich",
+      "url": "https://deno.edu.rich/",
+      "category": "Deno 中英双语文档",
+      "placement": "links_page",
+      "description": "面向 Node.js 迁移者、全栈开发者与 AI Agent 的中英双语 Deno 实战文档，覆盖运行时、权限模型、Fresh/Hono、数据库、Deno Deploy 与 MCP 开发。",
+      "description_i18n": {
+        "en-US": "A bilingual practical Deno knowledge base for Node.js migrators, full-stack developers, and AI agents, covering the runtime, permission model, Fresh/Hono, databases, Deno Deploy, and MCP development.",
+        "zh-CN": "面向 Node.js 迁移者、全栈开发者与 AI Agent 的中英双语 Deno 实战文档，覆盖运行时、权限模型、Fresh/Hono、数据库、Deno Deploy 与 MCP 开发。"
+      },
+      "status": "pending_dns",
+      "link_rel": "dofollow",
+      "dofollow": true,
+      "links_page_included": true,
+      "dr": null,
+      "dr_update_enabled": true,
+      "dr_status": "pending",
+      "dr_consecutive_errors": 0
+    },
+    {
+      "id": "tanstack-atlas",
+      "name": "TanStack 中文文档",
+      "domain": "tanstack-atlas.vercel.app",
+      "url": "https://tanstack-atlas.vercel.app/",
+      "category": "TanStack 中英双语文档",
+      "placement": "links_page",
+      "description": "面向初学者与 AI Agent 的 TanStack 中英双语知识库，覆盖 Start、Router、Query、Table 与 Form，提供入门教程、工程契约与 llms.txt 机器索引。",
+      "description_i18n": {
+        "en-US": "A bilingual TanStack knowledge base for beginners and AI agents, covering Start, Router, Query, Table, and Form, with a guided learning path, execution contracts, and an llms.txt machine index.",
+        "zh-CN": "面向初学者与 AI Agent 的 TanStack 中英双语知识库，覆盖 Start、Router、Query、Table 与 Form，提供入门教程、工程契约与 llms.txt 机器索引。"
+      },
+      "status": "active",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
@@ -5161,6 +5250,55 @@
       "logo_svg": "/assets/logos/steamos-club.svg",
       "logo_source_url": "https://steamos.club/public/brand/steamos-handbook-mark.svg",
       "logo_generated": false,
+      "source_collection": "authority_documentation_sites"
+    },
+    {
+      "id": "deno-edu-rich",
+      "name": "Deno Docs",
+      "domain": "deno.edu.rich",
+      "url": "https://deno.edu.rich/",
+      "category": "Deno 中英双语文档",
+      "placement": "links_page",
+      "description": "面向 Node.js 迁移者、全栈开发者与 AI Agent 的中英双语 Deno 实战文档，覆盖运行时、权限模型、Fresh/Hono、数据库、Deno Deploy 与 MCP 开发。",
+      "status": "pending_dns",
+      "dr": null,
+      "dr_update_enabled": true,
+      "dr_status": "pending",
+      "link_rel": "dofollow",
+      "dofollow": true,
+      "links_page_included": true,
+      "description_i18n": {
+        "en-US": "A bilingual practical Deno knowledge base for Node.js migrators, full-stack developers, and AI agents, covering the runtime, permission model, Fresh/Hono, databases, Deno Deploy, and MCP development.",
+        "zh-CN": "面向 Node.js 迁移者、全栈开发者与 AI Agent 的中英双语 Deno 实战文档，覆盖运行时、权限模型、Fresh/Hono、数据库、Deno Deploy 与 MCP 开发。"
+      },
+      "logo_svg": "/assets/logos/deno-edu-rich.svg",
+      "logo_source_url": "https://deno.edu.rich/icon.svg",
+      "logo_generated": false,
+      "dr_consecutive_errors": 0,
+      "source_collection": "authority_documentation_sites"
+    },
+    {
+      "id": "tanstack-atlas",
+      "name": "TanStack 中文文档",
+      "domain": "tanstack-atlas.vercel.app",
+      "url": "https://tanstack-atlas.vercel.app/",
+      "category": "TanStack 中英双语文档",
+      "placement": "links_page",
+      "description": "面向初学者与 AI Agent 的 TanStack 中英双语知识库，覆盖 Start、Router、Query、Table 与 Form，提供入门教程、工程契约与 llms.txt 机器索引。",
+      "status": "active",
+      "dr": null,
+      "dr_update_enabled": true,
+      "dr_status": "pending",
+      "link_rel": "dofollow",
+      "dofollow": true,
+      "links_page_included": true,
+      "description_i18n": {
+        "en-US": "A bilingual TanStack knowledge base for beginners and AI agents, covering Start, Router, Query, Table, and Form, with a guided learning path, execution contracts, and an llms.txt machine index.",
+        "zh-CN": "面向初学者与 AI Agent 的 TanStack 中英双语知识库，覆盖 Start、Router、Query、Table 与 Form，提供入门教程、工程契约与 llms.txt 机器索引。"
+      },
+      "logo_svg": "/assets/logos/tanstack-atlas.svg",
+      "logo_generated": true,
+      "dr_consecutive_errors": 0,
       "source_collection": "authority_documentation_sites"
     }
   ]
