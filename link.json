@@ -41,15 +41,15 @@
       "footer_navigation_sites",
       "authority_documentation_sites"
     ],
-    "next_index": 61,
-    "last_run_at": "2026-08-05T05:25:54Z",
+    "next_index": 67,
+    "last_run_at": "2026-08-06T05:28:12Z",
     "last_updated_ids": [
-      "pkgseek",
-      "linux-band",
-      "astro-docs",
-      "astro-wordpress-migration",
-      "wordpress-documentation",
-      "wordpress-developer-resources"
+      "wp-cli",
+      "mdn-web-docs",
+      "vm-fyi",
+      "yunqianyi",
+      "steamos-club",
+      "deno-edu-rich"
     ],
     "retry_backoff_max_days": 7,
     "unreachable_after": 5
@@ -1624,13 +1624,14 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": null,
+      "dr": 81,
       "dr_update_enabled": true,
-      "dr_status": "pending",
+      "dr_status": "ok",
       "dr_consecutive_errors": 0,
       "logo_svg": null,
       "logo_source_url": null,
-      "logo_generated": false
+      "logo_generated": false,
+      "dr_last_checked_at": "2026-08-06"
     },
     {
       "id": "mdn-web-docs",
@@ -1648,13 +1649,14 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": null,
+      "dr": 96,
       "dr_update_enabled": true,
-      "dr_status": "pending",
+      "dr_status": "ok",
       "dr_consecutive_errors": 0,
       "logo_svg": null,
       "logo_source_url": null,
-      "logo_generated": false
+      "logo_generated": false,
+      "dr_last_checked_at": "2026-08-06"
     },
     {
       "id": "vm-fyi",
@@ -1672,14 +1674,14 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 0.9,
+      "dr": 3.7,
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0,
       "logo_svg": "/assets/logos/vm-fyi.svg",
       "logo_source_url": null,
       "logo_generated": true,
-      "dr_last_checked_at": "2026-07-29"
+      "dr_last_checked_at": "2026-08-06"
     },
     {
       "id": "yunqianyi",
@@ -1697,13 +1699,14 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": null,
+      "dr": 0,
       "dr_update_enabled": true,
-      "dr_status": "pending",
+      "dr_status": "ok",
       "dr_consecutive_errors": 0,
       "logo_svg": "/assets/logos/yunqianyi.svg",
       "logo_source_url": "https://yunqianyi.com/public/assets/logo.svg",
-      "logo_generated": false
+      "logo_generated": false,
+      "dr_last_checked_at": "2026-08-06"
     },
     {
       "id": "steamos-club",
@@ -1721,13 +1724,14 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": null,
+      "dr": 0,
       "dr_update_enabled": true,
-      "dr_status": "pending",
+      "dr_status": "ok",
       "dr_consecutive_errors": 0,
       "logo_svg": "/assets/logos/steamos-club.svg",
       "logo_source_url": "https://steamos.club/public/brand/steamos-handbook-mark.svg",
-      "logo_generated": false
+      "logo_generated": false,
+      "dr_last_checked_at": "2026-08-06"
     },
     {
       "id": "deno-edu-rich",
@@ -1738,9 +1742,9 @@
       "placement": "links_page",
       "description": "面向 Node.js 迁移者、全栈开发者与 AI Agent 的中英双语 Deno 实战文档，覆盖运行时、权限模型、Fresh/Hono、数据库、Deno Deploy 与 MCP 开发。",
       "status": "pending_dns",
-      "dr": null,
+      "dr": 19,
       "dr_update_enabled": true,
-      "dr_status": "pending",
+      "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
@@ -1751,7 +1755,8 @@
       "logo_svg": "/assets/logos/deno-edu-rich.svg",
       "logo_source_url": "https://deno.edu.rich/icon.svg",
       "logo_generated": false,
-      "dr_consecutive_errors": 0
+      "dr_consecutive_errors": 0,
+      "dr_last_checked_at": "2026-08-06"
     },
     {
       "id": "tanstack-atlas",
@@ -3281,9 +3286,10 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": null,
+      "dr": 81,
+      "dr_last_checked_at": "2026-08-06",
       "dr_update_enabled": true,
-      "dr_status": "pending",
+      "dr_status": "ok",
       "dr_consecutive_errors": 0
     },
     {
@@ -3302,9 +3308,10 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": null,
+      "dr": 96,
+      "dr_last_checked_at": "2026-08-06",
       "dr_update_enabled": true,
-      "dr_status": "pending",
+      "dr_status": "ok",
       "dr_consecutive_errors": 0
     },
     {
@@ -3323,8 +3330,8 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 0.9,
-      "dr_last_checked_at": "2026-07-29",
+      "dr": 3.7,
+      "dr_last_checked_at": "2026-08-06",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -3345,9 +3352,10 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": null,
+      "dr": 0,
+      "dr_last_checked_at": "2026-08-06",
       "dr_update_enabled": true,
-      "dr_status": "pending",
+      "dr_status": "ok",
       "dr_consecutive_errors": 0
     },
     {
@@ -3366,9 +3374,10 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": null,
+      "dr": 0,
+      "dr_last_checked_at": "2026-08-06",
       "dr_update_enabled": true,
-      "dr_status": "pending",
+      "dr_status": "ok",
       "dr_consecutive_errors": 0
     },
     {
@@ -3387,9 +3396,10 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": null,
+      "dr": 19,
+      "dr_last_checked_at": "2026-08-06",
       "dr_update_enabled": true,
-      "dr_status": "pending",
+      "dr_status": "ok",
       "dr_consecutive_errors": 0
     },
     {
@@ -5154,13 +5164,14 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": null,
+      "dr": 81,
       "dr_update_enabled": true,
-      "dr_status": "pending",
+      "dr_status": "ok",
       "dr_consecutive_errors": 0,
       "logo_svg": null,
       "logo_source_url": null,
       "logo_generated": false,
+      "dr_last_checked_at": "2026-08-06",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -5179,13 +5190,14 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": null,
+      "dr": 96,
       "dr_update_enabled": true,
-      "dr_status": "pending",
+      "dr_status": "ok",
       "dr_consecutive_errors": 0,
       "logo_svg": null,
       "logo_source_url": null,
       "logo_generated": false,
+      "dr_last_checked_at": "2026-08-06",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -5204,14 +5216,14 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 0.9,
+      "dr": 3.7,
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0,
       "logo_svg": "/assets/logos/vm-fyi.svg",
       "logo_source_url": null,
       "logo_generated": true,
-      "dr_last_checked_at": "2026-07-29",
+      "dr_last_checked_at": "2026-08-06",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -5230,13 +5242,14 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": null,
+      "dr": 0,
       "dr_update_enabled": true,
-      "dr_status": "pending",
+      "dr_status": "ok",
       "dr_consecutive_errors": 0,
       "logo_svg": "/assets/logos/yunqianyi.svg",
       "logo_source_url": "https://yunqianyi.com/public/assets/logo.svg",
       "logo_generated": false,
+      "dr_last_checked_at": "2026-08-06",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -5255,13 +5268,14 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": null,
+      "dr": 0,
       "dr_update_enabled": true,
-      "dr_status": "pending",
+      "dr_status": "ok",
       "dr_consecutive_errors": 0,
       "logo_svg": "/assets/logos/steamos-club.svg",
       "logo_source_url": "https://steamos.club/public/brand/steamos-handbook-mark.svg",
       "logo_generated": false,
+      "dr_last_checked_at": "2026-08-06",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -5273,9 +5287,9 @@
       "placement": "links_page",
       "description": "面向 Node.js 迁移者、全栈开发者与 AI Agent 的中英双语 Deno 实战文档，覆盖运行时、权限模型、Fresh/Hono、数据库、Deno Deploy 与 MCP 开发。",
       "status": "pending_dns",
-      "dr": null,
+      "dr": 19,
       "dr_update_enabled": true,
-      "dr_status": "pending",
+      "dr_status": "ok",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
@@ -5287,6 +5301,7 @@
       "logo_source_url": "https://deno.edu.rich/icon.svg",
       "logo_generated": false,
       "dr_consecutive_errors": 0,
+      "dr_last_checked_at": "2026-08-06",
       "source_collection": "authority_documentation_sites"
     },
     {
