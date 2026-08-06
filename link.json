@@ -1780,6 +1780,30 @@
       "logo_svg": "/assets/logos/tanstack-atlas.svg",
       "logo_generated": true,
       "dr_consecutive_errors": 0
+    },
+    {
+      "id": "fde-name",
+      "name": "FDE 指南",
+      "domain": "fde.name",
+      "url": "https://fde.name/",
+      "category": "FDE 岗位与企业 AI 落地",
+      "placement": "links_page",
+      "description": "前沿部署工程师（FDE）中文实战指南：岗位定义与能力边界、按背景选择的转型路径、企业组队与试点验收方法，并提供 ROI 估算器、交付模板与 llms.txt 机器索引。",
+      "status": "active",
+      "dr": null,
+      "dr_update_enabled": true,
+      "dr_status": "pending",
+      "link_rel": "dofollow",
+      "dofollow": true,
+      "links_page_included": true,
+      "description_i18n": {
+        "en-US": "A Chinese practical guide to the Forward Deployed Engineer (FDE) role, covering the job definition and its limits, transition paths by background, and enterprise team-building and pilot acceptance, with an ROI estimator, delivery templates, and an llms.txt machine index.",
+        "zh-CN": "前沿部署工程师（FDE）中文实战指南：岗位定义与能力边界、按背景选择的转型路径、企业组队与试点验收方法，并提供 ROI 估算器、交付模板与 llms.txt 机器索引。"
+      },
+      "logo_svg": "/assets/logos/fde-name.svg",
+      "logo_source_url": "https://fde.name/logo.svg",
+      "logo_generated": false,
+      "dr_consecutive_errors": 0
     }
   ],
   "badges": [
@@ -3413,6 +3437,27 @@
       "description_i18n": {
         "en-US": "A bilingual TanStack knowledge base for beginners and AI agents, covering Start, Router, Query, Table, and Form, with a guided learning path, execution contracts, and an llms.txt machine index.",
         "zh-CN": "面向初学者与 AI Agent 的 TanStack 中英双语知识库，覆盖 Start、Router、Query、Table 与 Form，提供入门教程、工程契约与 llms.txt 机器索引。"
+      },
+      "status": "active",
+      "link_rel": "dofollow",
+      "dofollow": true,
+      "links_page_included": true,
+      "dr": null,
+      "dr_update_enabled": true,
+      "dr_status": "pending",
+      "dr_consecutive_errors": 0
+    },
+    {
+      "id": "fde-name",
+      "name": "FDE 指南",
+      "domain": "fde.name",
+      "url": "https://fde.name/",
+      "category": "FDE 岗位与企业 AI 落地",
+      "placement": "links_page",
+      "description": "前沿部署工程师（FDE）中文实战指南：岗位定义与能力边界、按背景选择的转型路径、企业组队与试点验收方法，并提供 ROI 估算器、交付模板与 llms.txt 机器索引。",
+      "description_i18n": {
+        "en-US": "A Chinese practical guide to the Forward Deployed Engineer (FDE) role, covering the job definition and its limits, transition paths by background, and enterprise team-building and pilot acceptance, with an ROI estimator, delivery templates, and an llms.txt machine index.",
+        "zh-CN": "前沿部署工程师（FDE）中文实战指南：岗位定义与能力边界、按背景选择的转型路径、企业组队与试点验收方法，并提供 ROI 估算器、交付模板与 llms.txt 机器索引。"
       },
       "status": "active",
       "link_rel": "dofollow",
@@ -5325,6 +5370,31 @@
       },
       "logo_svg": "/assets/logos/tanstack-atlas.svg",
       "logo_generated": true,
+      "dr_consecutive_errors": 0,
+      "source_collection": "authority_documentation_sites"
+    },
+    {
+      "id": "fde-name",
+      "name": "FDE 指南",
+      "domain": "fde.name",
+      "url": "https://fde.name/",
+      "category": "FDE 岗位与企业 AI 落地",
+      "placement": "links_page",
+      "description": "前沿部署工程师（FDE）中文实战指南：岗位定义与能力边界、按背景选择的转型路径、企业组队与试点验收方法，并提供 ROI 估算器、交付模板与 llms.txt 机器索引。",
+      "status": "active",
+      "dr": null,
+      "dr_update_enabled": true,
+      "dr_status": "pending",
+      "link_rel": "dofollow",
+      "dofollow": true,
+      "links_page_included": true,
+      "description_i18n": {
+        "en-US": "A Chinese practical guide to the Forward Deployed Engineer (FDE) role, covering the job definition and its limits, transition paths by background, and enterprise team-building and pilot acceptance, with an ROI estimator, delivery templates, and an llms.txt machine index.",
+        "zh-CN": "前沿部署工程师（FDE）中文实战指南：岗位定义与能力边界、按背景选择的转型路径、企业组队与试点验收方法，并提供 ROI 估算器、交付模板与 llms.txt 机器索引。"
+      },
+      "logo_svg": "/assets/logos/fde-name.svg",
+      "logo_source_url": "https://fde.name/logo.svg",
+      "logo_generated": false,
       "dr_consecutive_errors": 0,
       "source_collection": "authority_documentation_sites"
     }
