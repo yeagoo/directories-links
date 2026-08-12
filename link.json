@@ -42,7 +42,7 @@
       "authority_documentation_sites"
     ],
     "next_index": 28,
-    "last_run_at": "2026-08-11T03:56:07Z",
+    "last_run_at": "2026-08-12T04:18:28Z",
     "last_updated_ids": [
       "mariadb-edu-rich",
       "pg-edu-rich",
@@ -673,7 +673,7 @@
       "description": "面向新手、AI 开发者与云上用户的现代 MariaDB 知识库。",
       "status": "active",
       "dr": 19,
-      "dr_last_checked_at": "2026-08-11",
+      "dr_last_checked_at": "2026-08-12",
       "dr_update_enabled": true,
       "dr_status": "error",
       "link_rel": "dofollow",
@@ -685,10 +685,10 @@
       },
       "logo_svg": "/assets/logos/mariadb-edu-rich.svg",
       "logo_generated": true,
-      "dr_consecutive_errors": 1,
+      "dr_consecutive_errors": 2,
       "dr_error": "HTTP Error 403: Forbidden",
-      "dr_last_error_at": "2026-08-11",
-      "dr_retry_after": "2026-08-12"
+      "dr_last_error_at": "2026-08-12",
+      "dr_retry_after": "2026-08-14"
     },
     {
       "id": "pg-edu-rich",
@@ -712,11 +712,11 @@
       "logo_svg": "/assets/logos/pg-edu-rich.svg",
       "logo_source_url": "https://pg.edu.rich/icon.svg",
       "logo_generated": false,
-      "dr_consecutive_errors": 1,
-      "dr_last_checked_at": "2026-08-11",
+      "dr_consecutive_errors": 2,
+      "dr_last_checked_at": "2026-08-12",
       "dr_error": "HTTP Error 403: Forbidden",
-      "dr_last_error_at": "2026-08-11",
-      "dr_retry_after": "2026-08-12"
+      "dr_last_error_at": "2026-08-12",
+      "dr_retry_after": "2026-08-14"
     },
     {
       "id": "bun-edu-rich",
@@ -740,11 +740,11 @@
       "logo_svg": "/assets/logos/bun-edu-rich.svg",
       "logo_source_url": "https://bun.edu.rich/icon.svg",
       "logo_generated": false,
-      "dr_consecutive_errors": 1,
-      "dr_last_checked_at": "2026-08-11",
+      "dr_consecutive_errors": 2,
+      "dr_last_checked_at": "2026-08-12",
       "dr_error": "HTTP Error 403: Forbidden",
-      "dr_last_error_at": "2026-08-11",
-      "dr_retry_after": "2026-08-12"
+      "dr_last_error_at": "2026-08-12",
+      "dr_retry_after": "2026-08-14"
     },
     {
       "id": "valkey-edu-rich",
@@ -756,7 +756,7 @@
       "description": "Valkey 中文知识库，覆盖 Redis 迁移、向量检索、Agent 记忆、云托管与版本路线图。",
       "status": "active",
       "dr": 19,
-      "dr_last_checked_at": "2026-08-11",
+      "dr_last_checked_at": "2026-08-12",
       "dr_update_enabled": true,
       "dr_status": "error",
       "link_rel": "dofollow",
@@ -768,10 +768,10 @@
       },
       "logo_svg": "/assets/logos/valkey-edu-rich.svg",
       "logo_generated": true,
-      "dr_consecutive_errors": 1,
+      "dr_consecutive_errors": 2,
       "dr_error": "HTTP Error 403: Forbidden",
-      "dr_last_error_at": "2026-08-11",
-      "dr_retry_after": "2026-08-12"
+      "dr_last_error_at": "2026-08-12",
+      "dr_retry_after": "2026-08-14"
     },
     {
       "id": "libmir-org",
@@ -783,7 +783,7 @@
       "description": "Mir 与 D 语言数值计算库生态的文档归档和参考资料。",
       "status": "active",
       "dr": 55,
-      "dr_last_checked_at": "2026-08-11",
+      "dr_last_checked_at": "2026-08-12",
       "dr_update_enabled": true,
       "dr_status": "error",
       "link_rel": "dofollow",
@@ -795,10 +795,10 @@
       },
       "logo_svg": "/assets/logos/libmir-org.svg",
       "logo_generated": true,
-      "dr_consecutive_errors": 1,
+      "dr_consecutive_errors": 2,
       "dr_error": "HTTP Error 403: Forbidden",
-      "dr_last_error_at": "2026-08-11",
-      "dr_retry_after": "2026-08-12"
+      "dr_last_error_at": "2026-08-12",
+      "dr_retry_after": "2026-08-14"
     },
     {
       "id": "mydll-wang",
@@ -810,7 +810,7 @@
       "description": "Windows DLL 缺失与损坏问题的官方安全修复指南。",
       "status": "active",
       "dr": 31,
-      "dr_last_checked_at": "2026-08-11",
+      "dr_last_checked_at": "2026-08-12",
       "dr_update_enabled": true,
       "dr_status": "error",
       "link_rel": "dofollow",
@@ -822,10 +822,10 @@
       },
       "logo_svg": "/assets/logos/mydll-wang.svg",
       "logo_source_url": "https://mydll.wang/favicon.svg",
-      "dr_consecutive_errors": 1,
+      "dr_consecutive_errors": 2,
       "dr_error": "HTTP Error 429: Too Many Requests",
-      "dr_last_error_at": "2026-08-11",
-      "dr_retry_after": "2026-08-12"
+      "dr_last_error_at": "2026-08-12",
+      "dr_retry_after": "2026-08-14"
     },
     {
       "id": "deepposekit-org",
@@ -2475,13 +2475,13 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 19,
-      "dr_last_checked_at": "2026-08-11",
+      "dr_last_checked_at": "2026-08-12",
       "dr_update_enabled": true,
       "dr_status": "error",
       "dr_error": "HTTP Error 403: Forbidden",
-      "dr_consecutive_errors": 1,
-      "dr_last_error_at": "2026-08-11",
-      "dr_retry_after": "2026-08-12"
+      "dr_consecutive_errors": 2,
+      "dr_last_error_at": "2026-08-12",
+      "dr_retry_after": "2026-08-14"
     },
     {
       "id": "pg-edu-rich",
@@ -2500,13 +2500,13 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": null,
-      "dr_last_checked_at": "2026-08-11",
+      "dr_last_checked_at": "2026-08-12",
       "dr_update_enabled": true,
       "dr_status": "error",
       "dr_error": "HTTP Error 403: Forbidden",
-      "dr_consecutive_errors": 1,
-      "dr_last_error_at": "2026-08-11",
-      "dr_retry_after": "2026-08-12"
+      "dr_consecutive_errors": 2,
+      "dr_last_error_at": "2026-08-12",
+      "dr_retry_after": "2026-08-14"
     },
     {
       "id": "bun-edu-rich",
@@ -2525,13 +2525,13 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": null,
-      "dr_last_checked_at": "2026-08-11",
+      "dr_last_checked_at": "2026-08-12",
       "dr_update_enabled": true,
       "dr_status": "error",
       "dr_error": "HTTP Error 403: Forbidden",
-      "dr_consecutive_errors": 1,
-      "dr_last_error_at": "2026-08-11",
-      "dr_retry_after": "2026-08-12"
+      "dr_consecutive_errors": 2,
+      "dr_last_error_at": "2026-08-12",
+      "dr_retry_after": "2026-08-14"
     },
     {
       "id": "valkey-edu-rich",
@@ -2550,13 +2550,13 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 19,
-      "dr_last_checked_at": "2026-08-11",
+      "dr_last_checked_at": "2026-08-12",
       "dr_update_enabled": true,
       "dr_status": "error",
       "dr_error": "HTTP Error 403: Forbidden",
-      "dr_consecutive_errors": 1,
-      "dr_last_error_at": "2026-08-11",
-      "dr_retry_after": "2026-08-12"
+      "dr_consecutive_errors": 2,
+      "dr_last_error_at": "2026-08-12",
+      "dr_retry_after": "2026-08-14"
     },
     {
       "id": "libmir-org",
@@ -2575,13 +2575,13 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 55,
-      "dr_last_checked_at": "2026-08-11",
+      "dr_last_checked_at": "2026-08-12",
       "dr_update_enabled": true,
       "dr_status": "error",
       "dr_error": "HTTP Error 403: Forbidden",
-      "dr_consecutive_errors": 1,
-      "dr_last_error_at": "2026-08-11",
-      "dr_retry_after": "2026-08-12"
+      "dr_consecutive_errors": 2,
+      "dr_last_error_at": "2026-08-12",
+      "dr_retry_after": "2026-08-14"
     },
     {
       "id": "mydll-wang",
@@ -2600,13 +2600,13 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 31,
-      "dr_last_checked_at": "2026-08-11",
+      "dr_last_checked_at": "2026-08-12",
       "dr_update_enabled": true,
       "dr_status": "error",
       "dr_error": "HTTP Error 429: Too Many Requests",
-      "dr_consecutive_errors": 1,
-      "dr_last_error_at": "2026-08-11",
-      "dr_retry_after": "2026-08-12"
+      "dr_consecutive_errors": 2,
+      "dr_last_error_at": "2026-08-12",
+      "dr_retry_after": "2026-08-14"
     },
     {
       "id": "deepposekit-org",
@@ -4263,7 +4263,7 @@
       "description": "面向新手、AI 开发者与云上用户的现代 MariaDB 知识库。",
       "status": "active",
       "dr": 19,
-      "dr_last_checked_at": "2026-08-11",
+      "dr_last_checked_at": "2026-08-12",
       "dr_update_enabled": true,
       "dr_status": "error",
       "link_rel": "dofollow",
@@ -4275,10 +4275,10 @@
       },
       "logo_svg": "/assets/logos/mariadb-edu-rich.svg",
       "logo_generated": true,
-      "dr_consecutive_errors": 1,
+      "dr_consecutive_errors": 2,
       "dr_error": "HTTP Error 403: Forbidden",
-      "dr_last_error_at": "2026-08-11",
-      "dr_retry_after": "2026-08-12",
+      "dr_last_error_at": "2026-08-12",
+      "dr_retry_after": "2026-08-14",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -4303,11 +4303,11 @@
       "logo_svg": "/assets/logos/pg-edu-rich.svg",
       "logo_source_url": "https://pg.edu.rich/icon.svg",
       "logo_generated": false,
-      "dr_consecutive_errors": 1,
-      "dr_last_checked_at": "2026-08-11",
+      "dr_consecutive_errors": 2,
+      "dr_last_checked_at": "2026-08-12",
       "dr_error": "HTTP Error 403: Forbidden",
-      "dr_last_error_at": "2026-08-11",
-      "dr_retry_after": "2026-08-12",
+      "dr_last_error_at": "2026-08-12",
+      "dr_retry_after": "2026-08-14",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -4332,11 +4332,11 @@
       "logo_svg": "/assets/logos/bun-edu-rich.svg",
       "logo_source_url": "https://bun.edu.rich/icon.svg",
       "logo_generated": false,
-      "dr_consecutive_errors": 1,
-      "dr_last_checked_at": "2026-08-11",
+      "dr_consecutive_errors": 2,
+      "dr_last_checked_at": "2026-08-12",
       "dr_error": "HTTP Error 403: Forbidden",
-      "dr_last_error_at": "2026-08-11",
-      "dr_retry_after": "2026-08-12",
+      "dr_last_error_at": "2026-08-12",
+      "dr_retry_after": "2026-08-14",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -4349,7 +4349,7 @@
       "description": "Valkey 中文知识库，覆盖 Redis 迁移、向量检索、Agent 记忆、云托管与版本路线图。",
       "status": "active",
       "dr": 19,
-      "dr_last_checked_at": "2026-08-11",
+      "dr_last_checked_at": "2026-08-12",
       "dr_update_enabled": true,
       "dr_status": "error",
       "link_rel": "dofollow",
@@ -4361,10 +4361,10 @@
       },
       "logo_svg": "/assets/logos/valkey-edu-rich.svg",
       "logo_generated": true,
-      "dr_consecutive_errors": 1,
+      "dr_consecutive_errors": 2,
       "dr_error": "HTTP Error 403: Forbidden",
-      "dr_last_error_at": "2026-08-11",
-      "dr_retry_after": "2026-08-12",
+      "dr_last_error_at": "2026-08-12",
+      "dr_retry_after": "2026-08-14",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -4377,7 +4377,7 @@
       "description": "Mir 与 D 语言数值计算库生态的文档归档和参考资料。",
       "status": "active",
       "dr": 55,
-      "dr_last_checked_at": "2026-08-11",
+      "dr_last_checked_at": "2026-08-12",
       "dr_update_enabled": true,
       "dr_status": "error",
       "link_rel": "dofollow",
@@ -4389,10 +4389,10 @@
       },
       "logo_svg": "/assets/logos/libmir-org.svg",
       "logo_generated": true,
-      "dr_consecutive_errors": 1,
+      "dr_consecutive_errors": 2,
       "dr_error": "HTTP Error 403: Forbidden",
-      "dr_last_error_at": "2026-08-11",
-      "dr_retry_after": "2026-08-12",
+      "dr_last_error_at": "2026-08-12",
+      "dr_retry_after": "2026-08-14",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -4405,7 +4405,7 @@
       "description": "Windows DLL 缺失与损坏问题的官方安全修复指南。",
       "status": "active",
       "dr": 31,
-      "dr_last_checked_at": "2026-08-11",
+      "dr_last_checked_at": "2026-08-12",
       "dr_update_enabled": true,
       "dr_status": "error",
       "link_rel": "dofollow",
@@ -4417,10 +4417,10 @@
       },
       "logo_svg": "/assets/logos/mydll-wang.svg",
       "logo_source_url": "https://mydll.wang/favicon.svg",
-      "dr_consecutive_errors": 1,
+      "dr_consecutive_errors": 2,
       "dr_error": "HTTP Error 429: Too Many Requests",
-      "dr_last_error_at": "2026-08-11",
-      "dr_retry_after": "2026-08-12",
+      "dr_last_error_at": "2026-08-12",
+      "dr_retry_after": "2026-08-14",
       "source_collection": "authority_documentation_sites"
     },
     {
