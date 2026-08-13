@@ -41,15 +41,15 @@
       "footer_navigation_sites",
       "authority_documentation_sites"
     ],
-    "next_index": 28,
-    "last_run_at": "2026-08-12T04:18:28Z",
+    "next_index": 34,
+    "last_run_at": "2026-08-13T04:21:57Z",
     "last_updated_ids": [
-      "mariadb-edu-rich",
-      "pg-edu-rich",
-      "bun-edu-rich",
-      "valkey-edu-rich",
-      "libmir-org",
-      "mydll-wang"
+      "deepposekit-org",
+      "asimovjs-org",
+      "silverblog-org",
+      "claygl-xyz",
+      "itoffers-online",
+      "patet-xyz"
     ],
     "retry_backoff_max_days": 7,
     "unreachable_after": 5
@@ -837,9 +837,9 @@
       "description": "基于深度学习的 2D 姿态估计工具包文档与项目资料。",
       "status": "active",
       "dr": 38,
-      "dr_last_checked_at": "2026-07-31",
+      "dr_last_checked_at": "2026-08-13",
       "dr_update_enabled": true,
-      "dr_status": "ok",
+      "dr_status": "error",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
@@ -849,7 +849,10 @@
       },
       "logo_svg": "/assets/logos/deepposekit-org.svg",
       "logo_generated": true,
-      "dr_consecutive_errors": 0
+      "dr_consecutive_errors": 1,
+      "dr_error": "HTTP Error 403: Forbidden",
+      "dr_last_error_at": "2026-08-13",
+      "dr_retry_after": "2026-08-14"
     },
     {
       "id": "asimovjs-org",
@@ -861,9 +864,9 @@
       "description": "用于通过插件、初始化器和命令行脚本组合应用的 Node.js 框架文档。",
       "status": "active",
       "dr": 39,
-      "dr_last_checked_at": "2026-07-31",
+      "dr_last_checked_at": "2026-08-13",
       "dr_update_enabled": true,
-      "dr_status": "ok",
+      "dr_status": "error",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
@@ -873,7 +876,10 @@
       },
       "logo_svg": "/assets/logos/asimovjs-org.svg",
       "logo_source_url": "https://asimovjs.org/favicon.svg",
-      "dr_consecutive_errors": 0
+      "dr_consecutive_errors": 1,
+      "dr_error": "HTTP Error 403: Forbidden",
+      "dr_last_error_at": "2026-08-13",
+      "dr_retry_after": "2026-08-14"
     },
     {
       "id": "silverblog-org",
@@ -885,9 +891,9 @@
       "description": "面向 EmDash CMS 的快速深色博客模板，支持 Markdown 和 Cloudflare 或 Node 部署。",
       "status": "active",
       "dr": 37,
-      "dr_last_checked_at": "2026-07-31",
+      "dr_last_checked_at": "2026-08-13",
       "dr_update_enabled": true,
-      "dr_status": "ok",
+      "dr_status": "error",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
@@ -897,7 +903,10 @@
       },
       "logo_svg": "/assets/logos/silverblog-org.svg",
       "logo_generated": true,
-      "dr_consecutive_errors": 0
+      "dr_consecutive_errors": 1,
+      "dr_error": "HTTP Error 403: Forbidden",
+      "dr_last_error_at": "2026-08-13",
+      "dr_retry_after": "2026-08-14"
     },
     {
       "id": "claygl-xyz",
@@ -909,9 +918,9 @@
       "description": "WebGL 图形库文档，提供浏览器 3D 场景的示例和 API 参考。",
       "status": "active",
       "dr": 35,
-      "dr_last_checked_at": "2026-07-31",
+      "dr_last_checked_at": "2026-08-13",
       "dr_update_enabled": true,
-      "dr_status": "ok",
+      "dr_status": "error",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
@@ -921,7 +930,10 @@
       },
       "logo_svg": "/assets/logos/claygl-xyz.svg",
       "logo_source_url": "https://claygl.xyz/img/logo.svg",
-      "dr_consecutive_errors": 0
+      "dr_consecutive_errors": 1,
+      "dr_error": "HTTP Error 403: Forbidden",
+      "dr_last_error_at": "2026-08-13",
+      "dr_retry_after": "2026-08-14"
     },
     {
       "id": "itoffers-online",
@@ -933,9 +945,9 @@
       "description": "面向 IT 招聘者和候选人的开源职位发布与求职信息平台。",
       "status": "active",
       "dr": 37,
-      "dr_last_checked_at": "2026-08-01",
+      "dr_last_checked_at": "2026-08-13",
       "dr_update_enabled": true,
-      "dr_status": "ok",
+      "dr_status": "error",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
@@ -945,7 +957,10 @@
       },
       "logo_svg": "/assets/logos/itoffers-online.svg",
       "logo_source_url": "https://itoffers.online/favicon.svg",
-      "dr_consecutive_errors": 0
+      "dr_consecutive_errors": 1,
+      "dr_error": "HTTP Error 403: Forbidden",
+      "dr_last_error_at": "2026-08-13",
+      "dr_retry_after": "2026-08-14"
     },
     {
       "id": "patet-xyz",
@@ -957,9 +972,9 @@
       "description": "面向 AI 与快速开发项目上线的指南、模板、清单和部署笔记。",
       "status": "active",
       "dr": 33,
-      "dr_last_checked_at": "2026-08-01",
+      "dr_last_checked_at": "2026-08-13",
       "dr_update_enabled": true,
-      "dr_status": "ok",
+      "dr_status": "error",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
@@ -969,7 +984,10 @@
       },
       "logo_svg": "/assets/logos/patet-xyz.svg",
       "logo_generated": true,
-      "dr_consecutive_errors": 0
+      "dr_consecutive_errors": 1,
+      "dr_error": "HTTP Error 429: Too Many Requests",
+      "dr_last_error_at": "2026-08-13",
+      "dr_retry_after": "2026-08-14"
     },
     {
       "id": "sabwap-xyz",
@@ -2625,10 +2643,13 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 38,
-      "dr_last_checked_at": "2026-07-31",
+      "dr_last_checked_at": "2026-08-13",
       "dr_update_enabled": true,
-      "dr_status": "ok",
-      "dr_consecutive_errors": 0
+      "dr_status": "error",
+      "dr_error": "HTTP Error 403: Forbidden",
+      "dr_consecutive_errors": 1,
+      "dr_last_error_at": "2026-08-13",
+      "dr_retry_after": "2026-08-14"
     },
     {
       "id": "asimovjs-org",
@@ -2647,10 +2668,13 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 39,
-      "dr_last_checked_at": "2026-07-31",
+      "dr_last_checked_at": "2026-08-13",
       "dr_update_enabled": true,
-      "dr_status": "ok",
-      "dr_consecutive_errors": 0
+      "dr_status": "error",
+      "dr_error": "HTTP Error 403: Forbidden",
+      "dr_consecutive_errors": 1,
+      "dr_last_error_at": "2026-08-13",
+      "dr_retry_after": "2026-08-14"
     },
     {
       "id": "silverblog-org",
@@ -2669,10 +2693,13 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 37,
-      "dr_last_checked_at": "2026-07-31",
+      "dr_last_checked_at": "2026-08-13",
       "dr_update_enabled": true,
-      "dr_status": "ok",
-      "dr_consecutive_errors": 0
+      "dr_status": "error",
+      "dr_error": "HTTP Error 403: Forbidden",
+      "dr_consecutive_errors": 1,
+      "dr_last_error_at": "2026-08-13",
+      "dr_retry_after": "2026-08-14"
     },
     {
       "id": "claygl-xyz",
@@ -2691,10 +2718,13 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 35,
-      "dr_last_checked_at": "2026-07-31",
+      "dr_last_checked_at": "2026-08-13",
       "dr_update_enabled": true,
-      "dr_status": "ok",
-      "dr_consecutive_errors": 0
+      "dr_status": "error",
+      "dr_error": "HTTP Error 403: Forbidden",
+      "dr_consecutive_errors": 1,
+      "dr_last_error_at": "2026-08-13",
+      "dr_retry_after": "2026-08-14"
     },
     {
       "id": "itoffers-online",
@@ -2713,10 +2743,13 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 37,
-      "dr_last_checked_at": "2026-08-01",
+      "dr_last_checked_at": "2026-08-13",
       "dr_update_enabled": true,
-      "dr_status": "ok",
-      "dr_consecutive_errors": 0
+      "dr_status": "error",
+      "dr_error": "HTTP Error 403: Forbidden",
+      "dr_consecutive_errors": 1,
+      "dr_last_error_at": "2026-08-13",
+      "dr_retry_after": "2026-08-14"
     },
     {
       "id": "patet-xyz",
@@ -2735,10 +2768,13 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 33,
-      "dr_last_checked_at": "2026-08-01",
+      "dr_last_checked_at": "2026-08-13",
       "dr_update_enabled": true,
-      "dr_status": "ok",
-      "dr_consecutive_errors": 0
+      "dr_status": "error",
+      "dr_error": "HTTP Error 429: Too Many Requests",
+      "dr_consecutive_errors": 1,
+      "dr_last_error_at": "2026-08-13",
+      "dr_retry_after": "2026-08-14"
     },
     {
       "id": "sabwap-xyz",
@@ -4433,9 +4469,9 @@
       "description": "基于深度学习的 2D 姿态估计工具包文档与项目资料。",
       "status": "active",
       "dr": 38,
-      "dr_last_checked_at": "2026-07-31",
+      "dr_last_checked_at": "2026-08-13",
       "dr_update_enabled": true,
-      "dr_status": "ok",
+      "dr_status": "error",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
@@ -4445,7 +4481,10 @@
       },
       "logo_svg": "/assets/logos/deepposekit-org.svg",
       "logo_generated": true,
-      "dr_consecutive_errors": 0,
+      "dr_consecutive_errors": 1,
+      "dr_error": "HTTP Error 403: Forbidden",
+      "dr_last_error_at": "2026-08-13",
+      "dr_retry_after": "2026-08-14",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -4458,9 +4497,9 @@
       "description": "用于通过插件、初始化器和命令行脚本组合应用的 Node.js 框架文档。",
       "status": "active",
       "dr": 39,
-      "dr_last_checked_at": "2026-07-31",
+      "dr_last_checked_at": "2026-08-13",
       "dr_update_enabled": true,
-      "dr_status": "ok",
+      "dr_status": "error",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
@@ -4470,7 +4509,10 @@
       },
       "logo_svg": "/assets/logos/asimovjs-org.svg",
       "logo_source_url": "https://asimovjs.org/favicon.svg",
-      "dr_consecutive_errors": 0,
+      "dr_consecutive_errors": 1,
+      "dr_error": "HTTP Error 403: Forbidden",
+      "dr_last_error_at": "2026-08-13",
+      "dr_retry_after": "2026-08-14",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -4483,9 +4525,9 @@
       "description": "面向 EmDash CMS 的快速深色博客模板，支持 Markdown 和 Cloudflare 或 Node 部署。",
       "status": "active",
       "dr": 37,
-      "dr_last_checked_at": "2026-07-31",
+      "dr_last_checked_at": "2026-08-13",
       "dr_update_enabled": true,
-      "dr_status": "ok",
+      "dr_status": "error",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
@@ -4495,7 +4537,10 @@
       },
       "logo_svg": "/assets/logos/silverblog-org.svg",
       "logo_generated": true,
-      "dr_consecutive_errors": 0,
+      "dr_consecutive_errors": 1,
+      "dr_error": "HTTP Error 403: Forbidden",
+      "dr_last_error_at": "2026-08-13",
+      "dr_retry_after": "2026-08-14",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -4508,9 +4553,9 @@
       "description": "WebGL 图形库文档，提供浏览器 3D 场景的示例和 API 参考。",
       "status": "active",
       "dr": 35,
-      "dr_last_checked_at": "2026-07-31",
+      "dr_last_checked_at": "2026-08-13",
       "dr_update_enabled": true,
-      "dr_status": "ok",
+      "dr_status": "error",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
@@ -4520,7 +4565,10 @@
       },
       "logo_svg": "/assets/logos/claygl-xyz.svg",
       "logo_source_url": "https://claygl.xyz/img/logo.svg",
-      "dr_consecutive_errors": 0,
+      "dr_consecutive_errors": 1,
+      "dr_error": "HTTP Error 403: Forbidden",
+      "dr_last_error_at": "2026-08-13",
+      "dr_retry_after": "2026-08-14",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -4533,9 +4581,9 @@
       "description": "面向 IT 招聘者和候选人的开源职位发布与求职信息平台。",
       "status": "active",
       "dr": 37,
-      "dr_last_checked_at": "2026-08-01",
+      "dr_last_checked_at": "2026-08-13",
       "dr_update_enabled": true,
-      "dr_status": "ok",
+      "dr_status": "error",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
@@ -4545,7 +4593,10 @@
       },
       "logo_svg": "/assets/logos/itoffers-online.svg",
       "logo_source_url": "https://itoffers.online/favicon.svg",
-      "dr_consecutive_errors": 0,
+      "dr_consecutive_errors": 1,
+      "dr_error": "HTTP Error 403: Forbidden",
+      "dr_last_error_at": "2026-08-13",
+      "dr_retry_after": "2026-08-14",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -4558,9 +4609,9 @@
       "description": "面向 AI 与快速开发项目上线的指南、模板、清单和部署笔记。",
       "status": "active",
       "dr": 33,
-      "dr_last_checked_at": "2026-08-01",
+      "dr_last_checked_at": "2026-08-13",
       "dr_update_enabled": true,
-      "dr_status": "ok",
+      "dr_status": "error",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
@@ -4570,7 +4621,10 @@
       },
       "logo_svg": "/assets/logos/patet-xyz.svg",
       "logo_generated": true,
-      "dr_consecutive_errors": 0,
+      "dr_consecutive_errors": 1,
+      "dr_error": "HTTP Error 429: Too Many Requests",
+      "dr_last_error_at": "2026-08-13",
+      "dr_retry_after": "2026-08-14",
       "source_collection": "authority_documentation_sites"
     },
     {
