@@ -41,15 +41,15 @@
       "footer_navigation_sites",
       "authority_documentation_sites"
     ],
-    "next_index": 34,
-    "last_run_at": "2026-08-15T03:06:54Z",
+    "next_index": 40,
+    "last_run_at": "2026-08-16T03:14:20Z",
     "last_updated_ids": [
-      "deepposekit-org",
-      "asimovjs-org",
-      "silverblog-org",
-      "claygl-xyz",
-      "itoffers-online",
-      "patet-xyz"
+      "sabwap-xyz",
+      "thanktolaw-com",
+      "cms-joomla-help-com",
+      "themescorners-com",
+      "material-theme-dev",
+      "pastecode-xyz"
     ],
     "retry_backoff_max_days": 7,
     "unreachable_after": 5
@@ -999,9 +999,9 @@
       "description": "将现代网站转换为轻量文本优先 WAP 页面的网站转换工具与实验项目。",
       "status": "active",
       "dr": 34,
-      "dr_last_checked_at": "2026-08-01",
+      "dr_last_checked_at": "2026-08-16",
       "dr_update_enabled": true,
-      "dr_status": "ok",
+      "dr_status": "error",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
@@ -1011,7 +1011,10 @@
       },
       "logo_svg": "/assets/logos/sabwap-xyz.svg",
       "logo_generated": true,
-      "dr_consecutive_errors": 0
+      "dr_consecutive_errors": 1,
+      "dr_error": "HTTP Error 403: Forbidden",
+      "dr_last_error_at": "2026-08-16",
+      "dr_retry_after": "2026-08-17"
     },
     {
       "id": "thanktolaw-com",
@@ -1023,9 +1026,9 @@
       "description": "提供刑事案件、交通事故、青少年犯罪等法律与合规资讯。",
       "status": "active",
       "dr": 29,
-      "dr_last_checked_at": "2026-08-01",
+      "dr_last_checked_at": "2026-08-16",
       "dr_update_enabled": true,
-      "dr_status": "ok",
+      "dr_status": "error",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
@@ -1035,7 +1038,10 @@
       },
       "logo_svg": "/assets/logos/thanktolaw-com.svg",
       "logo_generated": true,
-      "dr_consecutive_errors": 0
+      "dr_consecutive_errors": 1,
+      "dr_error": "HTTP Error 403: Forbidden",
+      "dr_last_error_at": "2026-08-16",
+      "dr_retry_after": "2026-08-17"
     },
     {
       "id": "cms-joomla-help-com",
@@ -1047,9 +1053,9 @@
       "description": "Joomla 教程、错误修复、迁移清单、安全加固和在线工具。",
       "status": "active",
       "dr": 47,
-      "dr_last_checked_at": "2026-08-01",
+      "dr_last_checked_at": "2026-08-16",
       "dr_update_enabled": true,
-      "dr_status": "ok",
+      "dr_status": "error",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
@@ -1059,7 +1065,10 @@
       },
       "logo_svg": "/assets/logos/cms-joomla-help-com.svg",
       "logo_source_url": "https://cms-joomla-help.com/favicon.svg",
-      "dr_consecutive_errors": 0
+      "dr_consecutive_errors": 1,
+      "dr_error": "HTTP Error 403: Forbidden",
+      "dr_last_error_at": "2026-08-16",
+      "dr_retry_after": "2026-08-17"
     },
     {
       "id": "themescorners-com",
@@ -1071,9 +1080,9 @@
       "description": "提供免费和专业 WordPress 主题，覆盖响应式、SEO 与 WooCommerce 场景。",
       "status": "active",
       "dr": 46,
-      "dr_last_checked_at": "2026-08-01",
+      "dr_last_checked_at": "2026-08-16",
       "dr_update_enabled": true,
-      "dr_status": "ok",
+      "dr_status": "error",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
@@ -1083,7 +1092,10 @@
       },
       "logo_svg": "/assets/logos/themescorners-com.svg",
       "logo_generated": true,
-      "dr_consecutive_errors": 0
+      "dr_consecutive_errors": 1,
+      "dr_error": "HTTP Error 403: Forbidden",
+      "dr_last_error_at": "2026-08-16",
+      "dr_retry_after": "2026-08-17"
     },
     {
       "id": "material-theme-dev",
@@ -1095,9 +1107,9 @@
       "description": "Material Theme 原始配色与主题资源文档。",
       "status": "active",
       "dr": 38,
-      "dr_last_checked_at": "2026-07-23",
+      "dr_last_checked_at": "2026-08-16",
       "dr_update_enabled": true,
-      "dr_status": "ok",
+      "dr_status": "error",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
@@ -1107,7 +1119,10 @@
       },
       "logo_svg": "/assets/logos/material-theme-dev.svg",
       "logo_generated": true,
-      "dr_consecutive_errors": 0
+      "dr_consecutive_errors": 1,
+      "dr_error": "HTTP Error 403: Forbidden",
+      "dr_last_error_at": "2026-08-16",
+      "dr_retry_after": "2026-08-17"
     },
     {
       "id": "pastecode-xyz",
@@ -1119,9 +1134,9 @@
       "description": "面向 AI 编码代理的提示词、规则、清单和上下文片段库。",
       "status": "active",
       "dr": 34,
-      "dr_last_checked_at": "2026-08-02",
+      "dr_last_checked_at": "2026-08-16",
       "dr_update_enabled": true,
-      "dr_status": "ok",
+      "dr_status": "error",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
@@ -1131,7 +1146,10 @@
       },
       "logo_svg": "/assets/logos/pastecode-xyz.svg",
       "logo_source_url": "https://pastecode.xyz/favicon.svg",
-      "dr_consecutive_errors": 0
+      "dr_consecutive_errors": 1,
+      "dr_error": "HTTP Error 429: Too Many Requests",
+      "dr_last_error_at": "2026-08-16",
+      "dr_retry_after": "2026-08-17"
     },
     {
       "id": "techvibeblog-org",
@@ -2793,10 +2811,13 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 34,
-      "dr_last_checked_at": "2026-08-01",
+      "dr_last_checked_at": "2026-08-16",
       "dr_update_enabled": true,
-      "dr_status": "ok",
-      "dr_consecutive_errors": 0
+      "dr_status": "error",
+      "dr_error": "HTTP Error 403: Forbidden",
+      "dr_consecutive_errors": 1,
+      "dr_last_error_at": "2026-08-16",
+      "dr_retry_after": "2026-08-17"
     },
     {
       "id": "thanktolaw-com",
@@ -2815,10 +2836,13 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 29,
-      "dr_last_checked_at": "2026-08-01",
+      "dr_last_checked_at": "2026-08-16",
       "dr_update_enabled": true,
-      "dr_status": "ok",
-      "dr_consecutive_errors": 0
+      "dr_status": "error",
+      "dr_error": "HTTP Error 403: Forbidden",
+      "dr_consecutive_errors": 1,
+      "dr_last_error_at": "2026-08-16",
+      "dr_retry_after": "2026-08-17"
     },
     {
       "id": "cms-joomla-help-com",
@@ -2837,10 +2861,13 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 47,
-      "dr_last_checked_at": "2026-08-01",
+      "dr_last_checked_at": "2026-08-16",
       "dr_update_enabled": true,
-      "dr_status": "ok",
-      "dr_consecutive_errors": 0
+      "dr_status": "error",
+      "dr_error": "HTTP Error 403: Forbidden",
+      "dr_consecutive_errors": 1,
+      "dr_last_error_at": "2026-08-16",
+      "dr_retry_after": "2026-08-17"
     },
     {
       "id": "themescorners-com",
@@ -2859,10 +2886,13 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 46,
-      "dr_last_checked_at": "2026-08-01",
+      "dr_last_checked_at": "2026-08-16",
       "dr_update_enabled": true,
-      "dr_status": "ok",
-      "dr_consecutive_errors": 0
+      "dr_status": "error",
+      "dr_error": "HTTP Error 403: Forbidden",
+      "dr_consecutive_errors": 1,
+      "dr_last_error_at": "2026-08-16",
+      "dr_retry_after": "2026-08-17"
     },
     {
       "id": "material-theme-dev",
@@ -2881,10 +2911,13 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 38,
-      "dr_last_checked_at": "2026-07-23",
+      "dr_last_checked_at": "2026-08-16",
       "dr_update_enabled": true,
-      "dr_status": "ok",
-      "dr_consecutive_errors": 0
+      "dr_status": "error",
+      "dr_error": "HTTP Error 403: Forbidden",
+      "dr_consecutive_errors": 1,
+      "dr_last_error_at": "2026-08-16",
+      "dr_retry_after": "2026-08-17"
     },
     {
       "id": "pastecode-xyz",
@@ -2903,10 +2936,13 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 34,
-      "dr_last_checked_at": "2026-08-02",
+      "dr_last_checked_at": "2026-08-16",
       "dr_update_enabled": true,
-      "dr_status": "ok",
-      "dr_consecutive_errors": 0
+      "dr_status": "error",
+      "dr_error": "HTTP Error 429: Too Many Requests",
+      "dr_consecutive_errors": 1,
+      "dr_last_error_at": "2026-08-16",
+      "dr_retry_after": "2026-08-17"
     },
     {
       "id": "techvibeblog-org",
@@ -4637,9 +4673,9 @@
       "description": "将现代网站转换为轻量文本优先 WAP 页面的网站转换工具与实验项目。",
       "status": "active",
       "dr": 34,
-      "dr_last_checked_at": "2026-08-01",
+      "dr_last_checked_at": "2026-08-16",
       "dr_update_enabled": true,
-      "dr_status": "ok",
+      "dr_status": "error",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
@@ -4649,7 +4685,10 @@
       },
       "logo_svg": "/assets/logos/sabwap-xyz.svg",
       "logo_generated": true,
-      "dr_consecutive_errors": 0,
+      "dr_consecutive_errors": 1,
+      "dr_error": "HTTP Error 403: Forbidden",
+      "dr_last_error_at": "2026-08-16",
+      "dr_retry_after": "2026-08-17",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -4662,9 +4701,9 @@
       "description": "提供刑事案件、交通事故、青少年犯罪等法律与合规资讯。",
       "status": "active",
       "dr": 29,
-      "dr_last_checked_at": "2026-08-01",
+      "dr_last_checked_at": "2026-08-16",
       "dr_update_enabled": true,
-      "dr_status": "ok",
+      "dr_status": "error",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
@@ -4674,7 +4713,10 @@
       },
       "logo_svg": "/assets/logos/thanktolaw-com.svg",
       "logo_generated": true,
-      "dr_consecutive_errors": 0,
+      "dr_consecutive_errors": 1,
+      "dr_error": "HTTP Error 403: Forbidden",
+      "dr_last_error_at": "2026-08-16",
+      "dr_retry_after": "2026-08-17",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -4687,9 +4729,9 @@
       "description": "Joomla 教程、错误修复、迁移清单、安全加固和在线工具。",
       "status": "active",
       "dr": 47,
-      "dr_last_checked_at": "2026-08-01",
+      "dr_last_checked_at": "2026-08-16",
       "dr_update_enabled": true,
-      "dr_status": "ok",
+      "dr_status": "error",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
@@ -4699,7 +4741,10 @@
       },
       "logo_svg": "/assets/logos/cms-joomla-help-com.svg",
       "logo_source_url": "https://cms-joomla-help.com/favicon.svg",
-      "dr_consecutive_errors": 0,
+      "dr_consecutive_errors": 1,
+      "dr_error": "HTTP Error 403: Forbidden",
+      "dr_last_error_at": "2026-08-16",
+      "dr_retry_after": "2026-08-17",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -4712,9 +4757,9 @@
       "description": "提供免费和专业 WordPress 主题，覆盖响应式、SEO 与 WooCommerce 场景。",
       "status": "active",
       "dr": 46,
-      "dr_last_checked_at": "2026-08-01",
+      "dr_last_checked_at": "2026-08-16",
       "dr_update_enabled": true,
-      "dr_status": "ok",
+      "dr_status": "error",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
@@ -4724,7 +4769,10 @@
       },
       "logo_svg": "/assets/logos/themescorners-com.svg",
       "logo_generated": true,
-      "dr_consecutive_errors": 0,
+      "dr_consecutive_errors": 1,
+      "dr_error": "HTTP Error 403: Forbidden",
+      "dr_last_error_at": "2026-08-16",
+      "dr_retry_after": "2026-08-17",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -4737,9 +4785,9 @@
       "description": "Material Theme 原始配色与主题资源文档。",
       "status": "active",
       "dr": 38,
-      "dr_last_checked_at": "2026-07-23",
+      "dr_last_checked_at": "2026-08-16",
       "dr_update_enabled": true,
-      "dr_status": "ok",
+      "dr_status": "error",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
@@ -4749,7 +4797,10 @@
       },
       "logo_svg": "/assets/logos/material-theme-dev.svg",
       "logo_generated": true,
-      "dr_consecutive_errors": 0,
+      "dr_consecutive_errors": 1,
+      "dr_error": "HTTP Error 403: Forbidden",
+      "dr_last_error_at": "2026-08-16",
+      "dr_retry_after": "2026-08-17",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -4762,9 +4813,9 @@
       "description": "面向 AI 编码代理的提示词、规则、清单和上下文片段库。",
       "status": "active",
       "dr": 34,
-      "dr_last_checked_at": "2026-08-02",
+      "dr_last_checked_at": "2026-08-16",
       "dr_update_enabled": true,
-      "dr_status": "ok",
+      "dr_status": "error",
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
@@ -4774,7 +4825,10 @@
       },
       "logo_svg": "/assets/logos/pastecode-xyz.svg",
       "logo_source_url": "https://pastecode.xyz/favicon.svg",
-      "dr_consecutive_errors": 0,
+      "dr_consecutive_errors": 1,
+      "dr_error": "HTTP Error 429: Too Many Requests",
+      "dr_last_error_at": "2026-08-16",
+      "dr_retry_after": "2026-08-17",
       "source_collection": "authority_documentation_sites"
     },
     {
