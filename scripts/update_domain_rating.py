@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Update Domain Rating (DR) values in link.json.
 
-DR is fetched from a free public Domain Rating endpoint (no API key required).
+DR is fetched from Ahrefs' free public Domain Rating endpoint. The endpoint
+requires an API key but does not consume API units.
 Only the DR value and bookkeeping fields are written to link.json — no
 third-party branding, attribution or license text is stored in the data.
 
@@ -25,8 +26,9 @@ from typing import Any
 
 
 COLLECTION_KEYS = ("footer_navigation_sites", "authority_documentation_sites")
-# Free, key-less public Domain Rating endpoint used only to fetch the number.
+# Free public Domain Rating endpoint used only to fetch the number.
 DR_ENDPOINT = "https://api.ahrefs.com/v3/public/domain-rating-free"
+API_KEY_ENV = "AHREFS_API_KEY"
 DEFAULT_DAILY_LIMIT = 6
 MAX_RETRY_BACKOFF_DAYS = 7
 # After this many consecutive failures a site is auto-flagged status=unreachable
@@ -48,6 +50,10 @@ FETCH_ERRORS = (
     ValueError,
     json.JSONDecodeError,
 )
+
+
+class AhrefsAuthenticationError(Exception):
+    """The API key was rejected; continuing would corrupt DR health state."""
 
 
 def parse_args() -> argparse.Namespace:
@@ -82,6 +88,13 @@ def current_timestamp() -> str:
 def normalize_rating(value: Any) -> int | float:
     rating = float(value)
     return int(rating) if rating.is_integer() else round(rating, 1)
+
+
+def require_api_key() -> str:
+    api_key = os.environ.get(API_KEY_ENV, "").strip()
+    if not api_key:
+        raise ValueError(f"{API_KEY_ENV} is required")
+    return api_key
 
 
 def strip_legacy_fields(item: dict[str, Any]) -> None:
@@ -152,18 +165,26 @@ def select_targets(
     return selected, next_index
 
 
-def fetch_domain_rating(domain: str) -> int | float:
+def fetch_domain_rating(domain: str, api_key: str) -> int | float:
     query = urllib.parse.urlencode({"target": domain, "output": "json"})
     request = urllib.request.Request(
         f"{DR_ENDPOINT}?{query}",
         headers={
             "Accept": "application/json",
+            "Authorization": f"Bearer {api_key}",
             "User-Agent": "github-actions-link-dr-updater/1.0",
         },
     )
 
-    with urllib.request.urlopen(request, timeout=30) as response:
-        payload = json.loads(response.read().decode("utf-8"))
+    try:
+        with urllib.request.urlopen(request, timeout=30) as response:
+            payload = json.loads(response.read().decode("utf-8"))
+    except urllib.error.HTTPError as error:
+        if error.code in (401, 403):
+            raise AhrefsAuthenticationError(
+                f"Ahrefs rejected {API_KEY_ENV} with HTTP {error.code}"
+            ) from error
+        raise
 
     domain_rating = payload.get("domain_rating")
     if not isinstance(domain_rating, dict) or "domain_rating" not in domain_rating:
@@ -322,6 +343,12 @@ def main() -> int:
         print("No DR-enabled targets found.")
         return 0
 
+    try:
+        api_key = require_api_key()
+    except ValueError as error:
+        print(f"Configuration error: {error}", file=sys.stderr)
+        return 2
+
     meta = data.setdefault("_dr_update_meta", {})
     # Drop any legacy third-party metadata so it never reappears in the data.
     for legacy in ("source", "api_docs", "api_endpoint", "attribution", "license_url"):
@@ -349,9 +376,12 @@ def main() -> int:
         domain = item["domain"]
         label = f"{item.get('id', domain)} ({domain})"
         try:
-            rating = fetch_domain_rating(domain)
+            rating = fetch_domain_rating(domain, api_key)
             update_item_success(item, rating, checked_at)
             print(f"[{sequence}/{len(selected)}] {collection_key}[{item_index}] {label}: DR {rating}")
+        except AhrefsAuthenticationError as error:
+            print(f"Authentication error: {error}", file=sys.stderr)
+            return 2
         except FETCH_ERRORS as error:
             update_item_error(item, error, checked_at)
             print(f"[{sequence}/{len(selected)}] {collection_key}[{item_index}] {label}: ERROR {error}")

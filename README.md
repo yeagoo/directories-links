@@ -45,6 +45,11 @@ when a locale is missing.
 from the `dr` field. Per-entry bookkeeping (`dr_status`, `dr_last_checked_at`,
 `dr_consecutive_errors`, …) lets a renderer show freshness if desired.
 
+The updater uses Ahrefs' free public Domain Rating endpoint. It requires an API
+key but does not consume API units. The GitHub Actions workflow maps the
+repository secret `ahrefs_key` to the script's `AHREFS_API_KEY` environment
+variable; GitHub secret names are case-insensitive.
+
 The daily workflow refreshes 6 sites per run in JSON order. Failed updates are
 retried first with exponential backoff (capped at `retry_backoff_max_days`);
 after `unreachable_after` (5) consecutive failures a site is auto-flagged
@@ -54,19 +59,20 @@ surface as GitHub Actions warnings + a job summary.
 Manual dry run:
 
 ```bash
-PYTHONDONTWRITEBYTECODE=1 python3 scripts/update_domain_rating.py --file link.json --limit 6 --dry-run
+AHREFS_API_KEY="..." PYTHONDONTWRITEBYTECODE=1 python3 scripts/update_domain_rating.py --file link.json --limit 6 --dry-run
 ```
 
 Update all sites locally:
 
 ```bash
-PYTHONDONTWRITEBYTECODE=1 python3 scripts/update_domain_rating.py --file link.json --all
+AHREFS_API_KEY="..." PYTHONDONTWRITEBYTECODE=1 python3 scripts/update_domain_rating.py --file link.json --all
 ```
 
 ## Validation
 
 ```bash
 pip install jsonschema
+python3 -m unittest discover -s tests
 python3 scripts/validate_link.py
 ```
 

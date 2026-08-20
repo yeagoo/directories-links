@@ -26,6 +26,8 @@ jobs:
           python-version: "3.x"
 
       - name: Update Domain Ratings
+        env:
+          AHREFS_API_KEY: ${{ secrets.ahrefs_key }}
         run: python scripts/update_domain_rating.py --file link.json --limit 6
 
       - name: Validate link.json
