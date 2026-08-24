@@ -41,15 +41,15 @@
       "footer_navigation_sites",
       "authority_documentation_sites"
     ],
-    "next_index": 58,
-    "last_run_at": "2026-08-23T03:17:18Z",
+    "next_index": 64,
+    "last_run_at": "2026-08-24T03:18:09Z",
     "last_updated_ids": [
-      "techvibeblog-org",
-      "jennaferscott-com",
-      "aquila-network",
-      "onarm-net",
-      "artemstar-com",
-      "flag92-com"
+      "astro-wordpress-migration",
+      "wordpress-documentation",
+      "wordpress-developer-resources",
+      "wp-cli",
+      "mdn-web-docs",
+      "vm-fyi"
     ],
     "retry_backoff_max_days": 7,
     "unreachable_after": 5
@@ -1576,7 +1576,7 @@
       "logo_svg": null,
       "logo_source_url": null,
       "logo_generated": false,
-      "dr_last_checked_at": "2026-08-05"
+      "dr_last_checked_at": "2026-08-24"
     },
     {
       "id": "wordpress-documentation",
@@ -1601,7 +1601,7 @@
       "logo_svg": null,
       "logo_source_url": null,
       "logo_generated": false,
-      "dr_last_checked_at": "2026-08-05"
+      "dr_last_checked_at": "2026-08-24"
     },
     {
       "id": "wordpress-developer-resources",
@@ -1626,7 +1626,7 @@
       "logo_svg": null,
       "logo_source_url": null,
       "logo_generated": false,
-      "dr_last_checked_at": "2026-08-05"
+      "dr_last_checked_at": "2026-08-24"
     },
     {
       "id": "wp-cli",
@@ -1651,7 +1651,7 @@
       "logo_svg": null,
       "logo_source_url": null,
       "logo_generated": false,
-      "dr_last_checked_at": "2026-08-06"
+      "dr_last_checked_at": "2026-08-24"
     },
     {
       "id": "mdn-web-docs",
@@ -1676,7 +1676,7 @@
       "logo_svg": null,
       "logo_source_url": null,
       "logo_generated": false,
-      "dr_last_checked_at": "2026-08-06"
+      "dr_last_checked_at": "2026-08-24"
     },
     {
       "id": "vm-fyi",
@@ -1694,14 +1694,14 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 3.7,
+      "dr": 9,
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0,
       "logo_svg": "/assets/logos/vm-fyi.svg",
       "logo_source_url": null,
       "logo_generated": true,
-      "dr_last_checked_at": "2026-08-06"
+      "dr_last_checked_at": "2026-08-24"
     },
     {
       "id": "yunqianyi",
@@ -3287,7 +3287,7 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 90,
-      "dr_last_checked_at": "2026-08-05",
+      "dr_last_checked_at": "2026-08-24",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -3309,7 +3309,7 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 97,
-      "dr_last_checked_at": "2026-08-05",
+      "dr_last_checked_at": "2026-08-24",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -3331,7 +3331,7 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 97,
-      "dr_last_checked_at": "2026-08-05",
+      "dr_last_checked_at": "2026-08-24",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -3353,7 +3353,7 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 81,
-      "dr_last_checked_at": "2026-08-06",
+      "dr_last_checked_at": "2026-08-24",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -3375,7 +3375,7 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 96,
-      "dr_last_checked_at": "2026-08-06",
+      "dr_last_checked_at": "2026-08-24",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -3396,8 +3396,8 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 3.7,
-      "dr_last_checked_at": "2026-08-06",
+      "dr": 9,
+      "dr_last_checked_at": "2026-08-24",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -5202,7 +5202,7 @@
       "logo_svg": null,
       "logo_source_url": null,
       "logo_generated": false,
-      "dr_last_checked_at": "2026-08-05",
+      "dr_last_checked_at": "2026-08-24",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -5228,7 +5228,7 @@
       "logo_svg": null,
       "logo_source_url": null,
       "logo_generated": false,
-      "dr_last_checked_at": "2026-08-05",
+      "dr_last_checked_at": "2026-08-24",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -5254,7 +5254,7 @@
       "logo_svg": null,
       "logo_source_url": null,
       "logo_generated": false,
-      "dr_last_checked_at": "2026-08-05",
+      "dr_last_checked_at": "2026-08-24",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -5280,7 +5280,7 @@
       "logo_svg": null,
       "logo_source_url": null,
       "logo_generated": false,
-      "dr_last_checked_at": "2026-08-06",
+      "dr_last_checked_at": "2026-08-24",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -5306,7 +5306,7 @@
       "logo_svg": null,
       "logo_source_url": null,
       "logo_generated": false,
-      "dr_last_checked_at": "2026-08-06",
+      "dr_last_checked_at": "2026-08-24",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -5325,14 +5325,14 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 3.7,
+      "dr": 9,
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0,
       "logo_svg": "/assets/logos/vm-fyi.svg",
       "logo_source_url": null,
       "logo_generated": true,
-      "dr_last_checked_at": "2026-08-06",
+      "dr_last_checked_at": "2026-08-24",
       "source_collection": "authority_documentation_sites"
     },
     {
