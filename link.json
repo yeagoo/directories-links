@@ -41,15 +41,15 @@
       "footer_navigation_sites",
       "authority_documentation_sites"
     ],
-    "next_index": 64,
-    "last_run_at": "2026-08-25T03:14:07Z",
+    "next_index": 1,
+    "last_run_at": "2026-08-26T03:27:22Z",
     "last_updated_ids": [
-      "mariadb-edu-rich",
-      "pg-edu-rich",
-      "bun-edu-rich",
-      "valkey-edu-rich",
-      "libmir-org",
-      "mydll-wang"
+      "yunqianyi",
+      "steamos-club",
+      "deno-edu-rich",
+      "tanstack-atlas",
+      "fde-name",
+      "aat-ee"
     ],
     "retry_backoff_max_days": 7,
     "unreachable_after": 5
@@ -66,8 +66,8 @@
       "placement": "footer",
       "description": "面向创业者和开发者的产品发现与发布平台，收录 AI 工具、SaaS 与新项目。",
       "status": "active",
-      "dr": 48,
-      "dr_last_checked_at": "2026-08-07",
+      "dr": 46,
+      "dr_last_checked_at": "2026-08-26",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -1701,14 +1701,14 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 0,
+      "dr": 3.3,
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0,
       "logo_svg": "/assets/logos/yunqianyi.svg",
       "logo_source_url": "https://yunqianyi.com/public/assets/logo.svg",
       "logo_generated": false,
-      "dr_last_checked_at": "2026-08-06"
+      "dr_last_checked_at": "2026-08-26"
     },
     {
       "id": "steamos-club",
@@ -1726,14 +1726,14 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 0,
+      "dr": 3.3,
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0,
       "logo_svg": "/assets/logos/steamos-club.svg",
       "logo_source_url": "https://steamos.club/public/brand/steamos-handbook-mark.svg",
       "logo_generated": false,
-      "dr_last_checked_at": "2026-08-06"
+      "dr_last_checked_at": "2026-08-26"
     },
     {
       "id": "deno-edu-rich",
@@ -1744,7 +1744,7 @@
       "placement": "links_page",
       "description": "面向 Node.js 迁移者、全栈开发者与 AI Agent 的中英双语 Deno 实战文档，覆盖运行时、权限模型、Fresh/Hono、数据库、Deno Deploy 与 MCP 开发。",
       "status": "active",
-      "dr": 19,
+      "dr": 29,
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -1758,7 +1758,7 @@
       "logo_source_url": "https://deno.edu.rich/icon.svg",
       "logo_generated": false,
       "dr_consecutive_errors": 0,
-      "dr_last_checked_at": "2026-08-06"
+      "dr_last_checked_at": "2026-08-26"
     },
     {
       "id": "tanstack-atlas",
@@ -1782,7 +1782,7 @@
       "logo_svg": "/assets/logos/tanstack-atlas.svg",
       "logo_generated": true,
       "dr_consecutive_errors": 0,
-      "dr_last_checked_at": "2026-08-07"
+      "dr_last_checked_at": "2026-08-26"
     },
     {
       "id": "fde-name",
@@ -1793,7 +1793,7 @@
       "placement": "links_page",
       "description": "前沿部署工程师（FDE）中文实战指南：岗位定义与能力边界、按背景选择的转型路径、企业组队与试点验收方法，并提供 ROI 估算器、交付模板与 llms.txt 机器索引。",
       "status": "active",
-      "dr": 0,
+      "dr": 4.6,
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -1807,7 +1807,7 @@
       "logo_source_url": "https://fde.name/logo.svg",
       "logo_generated": false,
       "dr_consecutive_errors": 0,
-      "dr_last_checked_at": "2026-08-07"
+      "dr_last_checked_at": "2026-08-26"
     }
   ],
   "badges": [
@@ -1836,8 +1836,8 @@
       "default_footer_display_mode": "logo_with_name",
       "links_page_included": true,
       "links_page_category": "导航站",
-      "dr": 48,
-      "dr_last_checked_at": "2026-08-07",
+      "dr": 46,
+      "dr_last_checked_at": "2026-08-26",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0,
@@ -3382,8 +3382,8 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 0,
-      "dr_last_checked_at": "2026-08-06",
+      "dr": 3.3,
+      "dr_last_checked_at": "2026-08-26",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -3404,8 +3404,8 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 0,
-      "dr_last_checked_at": "2026-08-06",
+      "dr": 3.3,
+      "dr_last_checked_at": "2026-08-26",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -3426,8 +3426,8 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 19,
-      "dr_last_checked_at": "2026-08-06",
+      "dr": 29,
+      "dr_last_checked_at": "2026-08-26",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -3449,7 +3449,7 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 93,
-      "dr_last_checked_at": "2026-08-07",
+      "dr_last_checked_at": "2026-08-26",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -3470,8 +3470,8 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 0,
-      "dr_last_checked_at": "2026-08-07",
+      "dr": 4.6,
+      "dr_last_checked_at": "2026-08-26",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -3600,8 +3600,8 @@
       "placement": "footer_and_links_page",
       "description": "面向创业者和开发者的产品发现与发布平台，收录 AI 工具、SaaS 与新项目。",
       "status": "active",
-      "dr": 48,
-      "dr_last_checked_at": "2026-08-07",
+      "dr": 46,
+      "dr_last_checked_at": "2026-08-26",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -5297,14 +5297,14 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 0,
+      "dr": 3.3,
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0,
       "logo_svg": "/assets/logos/yunqianyi.svg",
       "logo_source_url": "https://yunqianyi.com/public/assets/logo.svg",
       "logo_generated": false,
-      "dr_last_checked_at": "2026-08-06",
+      "dr_last_checked_at": "2026-08-26",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -5323,14 +5323,14 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 0,
+      "dr": 3.3,
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0,
       "logo_svg": "/assets/logos/steamos-club.svg",
       "logo_source_url": "https://steamos.club/public/brand/steamos-handbook-mark.svg",
       "logo_generated": false,
-      "dr_last_checked_at": "2026-08-06",
+      "dr_last_checked_at": "2026-08-26",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -5342,7 +5342,7 @@
       "placement": "links_page",
       "description": "面向 Node.js 迁移者、全栈开发者与 AI Agent 的中英双语 Deno 实战文档，覆盖运行时、权限模型、Fresh/Hono、数据库、Deno Deploy 与 MCP 开发。",
       "status": "active",
-      "dr": 19,
+      "dr": 29,
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -5356,7 +5356,7 @@
       "logo_source_url": "https://deno.edu.rich/icon.svg",
       "logo_generated": false,
       "dr_consecutive_errors": 0,
-      "dr_last_checked_at": "2026-08-06",
+      "dr_last_checked_at": "2026-08-26",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -5381,7 +5381,7 @@
       "logo_svg": "/assets/logos/tanstack-atlas.svg",
       "logo_generated": true,
       "dr_consecutive_errors": 0,
-      "dr_last_checked_at": "2026-08-07",
+      "dr_last_checked_at": "2026-08-26",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -5393,7 +5393,7 @@
       "placement": "links_page",
       "description": "前沿部署工程师（FDE）中文实战指南：岗位定义与能力边界、按背景选择的转型路径、企业组队与试点验收方法，并提供 ROI 估算器、交付模板与 llms.txt 机器索引。",
       "status": "active",
-      "dr": 0,
+      "dr": 4.6,
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -5407,7 +5407,7 @@
       "logo_source_url": "https://fde.name/logo.svg",
       "logo_generated": false,
       "dr_consecutive_errors": 0,
-      "dr_last_checked_at": "2026-08-07",
+      "dr_last_checked_at": "2026-08-26",
       "source_collection": "authority_documentation_sites"
     }
   ]
