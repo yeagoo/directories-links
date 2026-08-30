@@ -41,15 +41,15 @@
       "footer_navigation_sites",
       "authority_documentation_sites"
     ],
-    "next_index": 19,
-    "last_run_at": "2026-08-29T09:06:33Z",
+    "next_index": 25,
+    "last_run_at": "2026-08-30T08:21:40Z",
     "last_updated_ids": [
-      "debian-club",
-      "ubuntu-fan",
-      "almalinux-com-cn",
-      "runentlinux-com",
-      "eol-wiki",
-      "litehttpd-com"
+      "portcyou-com",
+      "rank-fan",
+      "geo-fan",
+      "mariadb-edu-rich",
+      "pg-edu-rich",
+      "bun-edu-rich"
     ],
     "retry_backoff_max_days": 7,
     "unreachable_after": 5
@@ -600,8 +600,8 @@
       "placement": "links_page",
       "description": "端口号查询数据库，帮助开发者识别端口用途并避免端口冲突。",
       "status": "active",
-      "dr": 26,
-      "dr_last_checked_at": "2026-08-10",
+      "dr": 31,
+      "dr_last_checked_at": "2026-08-30",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -624,8 +624,8 @@
       "placement": "links_page",
       "description": "提供 SEO、GEO、AIEO 报告与排名分析工具。",
       "status": "active",
-      "dr": 25,
-      "dr_last_checked_at": "2026-08-10",
+      "dr": 31,
+      "dr_last_checked_at": "2026-08-30",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -648,8 +648,8 @@
       "placement": "links_page",
       "description": "生成式引擎优化文档站，帮助内容更容易被 AI 搜索与问答引擎信任和引用。",
       "status": "active",
-      "dr": 25,
-      "dr_last_checked_at": "2026-08-10",
+      "dr": 31,
+      "dr_last_checked_at": "2026-08-30",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -673,7 +673,7 @@
       "description": "面向新手、AI 开发者与云上用户的现代 MariaDB 知识库。",
       "status": "active",
       "dr": 29,
-      "dr_last_checked_at": "2026-08-25",
+      "dr_last_checked_at": "2026-08-30",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -710,7 +710,7 @@
       "logo_source_url": "https://pg.edu.rich/icon.svg",
       "logo_generated": false,
       "dr_consecutive_errors": 0,
-      "dr_last_checked_at": "2026-08-25"
+      "dr_last_checked_at": "2026-08-30"
     },
     {
       "id": "bun-edu-rich",
@@ -735,7 +735,7 @@
       "logo_source_url": "https://bun.edu.rich/icon.svg",
       "logo_generated": false,
       "dr_consecutive_errors": 0,
-      "dr_last_checked_at": "2026-08-25"
+      "dr_last_checked_at": "2026-08-30"
     },
     {
       "id": "valkey-edu-rich",
@@ -2390,8 +2390,8 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 26,
-      "dr_last_checked_at": "2026-08-10",
+      "dr": 31,
+      "dr_last_checked_at": "2026-08-30",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -2412,8 +2412,8 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 25,
-      "dr_last_checked_at": "2026-08-10",
+      "dr": 31,
+      "dr_last_checked_at": "2026-08-30",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -2434,8 +2434,8 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 25,
-      "dr_last_checked_at": "2026-08-10",
+      "dr": 31,
+      "dr_last_checked_at": "2026-08-30",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -2457,7 +2457,7 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 29,
-      "dr_last_checked_at": "2026-08-25",
+      "dr_last_checked_at": "2026-08-30",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -2479,7 +2479,7 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 29,
-      "dr_last_checked_at": "2026-08-25",
+      "dr_last_checked_at": "2026-08-30",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -2501,7 +2501,7 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 29,
-      "dr_last_checked_at": "2026-08-25",
+      "dr_last_checked_at": "2026-08-30",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -4151,8 +4151,8 @@
       "placement": "links_page",
       "description": "端口号查询数据库，帮助开发者识别端口用途并避免端口冲突。",
       "status": "active",
-      "dr": 26,
-      "dr_last_checked_at": "2026-08-10",
+      "dr": 31,
+      "dr_last_checked_at": "2026-08-30",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -4176,8 +4176,8 @@
       "placement": "links_page",
       "description": "提供 SEO、GEO、AIEO 报告与排名分析工具。",
       "status": "active",
-      "dr": 25,
-      "dr_last_checked_at": "2026-08-10",
+      "dr": 31,
+      "dr_last_checked_at": "2026-08-30",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -4201,8 +4201,8 @@
       "placement": "links_page",
       "description": "生成式引擎优化文档站，帮助内容更容易被 AI 搜索与问答引擎信任和引用。",
       "status": "active",
-      "dr": 25,
-      "dr_last_checked_at": "2026-08-10",
+      "dr": 31,
+      "dr_last_checked_at": "2026-08-30",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -4227,7 +4227,7 @@
       "description": "面向新手、AI 开发者与云上用户的现代 MariaDB 知识库。",
       "status": "active",
       "dr": 29,
-      "dr_last_checked_at": "2026-08-25",
+      "dr_last_checked_at": "2026-08-30",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -4265,7 +4265,7 @@
       "logo_source_url": "https://pg.edu.rich/icon.svg",
       "logo_generated": false,
       "dr_consecutive_errors": 0,
-      "dr_last_checked_at": "2026-08-25",
+      "dr_last_checked_at": "2026-08-30",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -4291,7 +4291,7 @@
       "logo_source_url": "https://bun.edu.rich/icon.svg",
       "logo_generated": false,
       "dr_consecutive_errors": 0,
-      "dr_last_checked_at": "2026-08-25",
+      "dr_last_checked_at": "2026-08-30",
       "source_collection": "authority_documentation_sites"
     },
     {
