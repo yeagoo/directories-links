@@ -41,15 +41,15 @@
       "footer_navigation_sites",
       "authority_documentation_sites"
     ],
-    "next_index": 55,
-    "last_run_at": "2026-09-04T07:16:24Z",
+    "next_index": 61,
+    "last_run_at": "2026-09-05T06:57:58Z",
     "last_updated_ids": [
-      "hiemdash-com",
-      "p-cafe",
-      "web-casa",
-      "apponarm-com",
-      "screenhello-com",
-      "tratra-travel"
+      "pkgseek",
+      "linux-band",
+      "astro-docs",
+      "astro-wordpress-migration",
+      "wordpress-documentation",
+      "wordpress-developer-resources"
     ],
     "retry_backoff_max_days": 7,
     "unreachable_after": 5
@@ -1476,14 +1476,14 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 12,
+      "dr": 19,
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0,
       "logo_svg": "/assets/logos/pkgseek.svg",
       "logo_source_url": null,
       "logo_generated": true,
-      "dr_last_checked_at": "2026-08-20"
+      "dr_last_checked_at": "2026-09-05"
     },
     {
       "id": "linux-band",
@@ -1501,14 +1501,14 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 8,
+      "dr": 14,
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0,
       "logo_svg": "/assets/logos/linux-band.svg",
       "logo_source_url": null,
       "logo_generated": true,
-      "dr_last_checked_at": "2026-08-20"
+      "dr_last_checked_at": "2026-09-05"
     },
     {
       "id": "astro-docs",
@@ -1533,7 +1533,7 @@
       "logo_svg": null,
       "logo_source_url": null,
       "logo_generated": false,
-      "dr_last_checked_at": "2026-08-20"
+      "dr_last_checked_at": "2026-09-05"
     },
     {
       "id": "astro-wordpress-migration",
@@ -1558,7 +1558,7 @@
       "logo_svg": null,
       "logo_source_url": null,
       "logo_generated": false,
-      "dr_last_checked_at": "2026-08-24"
+      "dr_last_checked_at": "2026-09-05"
     },
     {
       "id": "wordpress-documentation",
@@ -1583,7 +1583,7 @@
       "logo_svg": null,
       "logo_source_url": null,
       "logo_generated": false,
-      "dr_last_checked_at": "2026-08-24"
+      "dr_last_checked_at": "2026-09-05"
     },
     {
       "id": "wordpress-developer-resources",
@@ -1608,7 +1608,7 @@
       "logo_svg": null,
       "logo_source_url": null,
       "logo_generated": false,
-      "dr_last_checked_at": "2026-08-24"
+      "dr_last_checked_at": "2026-09-05"
     },
     {
       "id": "wp-cli",
@@ -3184,8 +3184,8 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 12,
-      "dr_last_checked_at": "2026-08-20",
+      "dr": 19,
+      "dr_last_checked_at": "2026-09-05",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -3206,8 +3206,8 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 8,
-      "dr_last_checked_at": "2026-08-20",
+      "dr": 14,
+      "dr_last_checked_at": "2026-09-05",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -3229,7 +3229,7 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 90,
-      "dr_last_checked_at": "2026-08-20",
+      "dr_last_checked_at": "2026-09-05",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -3251,7 +3251,7 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 90,
-      "dr_last_checked_at": "2026-08-24",
+      "dr_last_checked_at": "2026-09-05",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -3273,7 +3273,7 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 97,
-      "dr_last_checked_at": "2026-08-24",
+      "dr_last_checked_at": "2026-09-05",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -3295,7 +3295,7 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 97,
-      "dr_last_checked_at": "2026-08-24",
+      "dr_last_checked_at": "2026-09-05",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -5063,14 +5063,14 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 12,
+      "dr": 19,
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0,
       "logo_svg": "/assets/logos/pkgseek.svg",
       "logo_source_url": null,
       "logo_generated": true,
-      "dr_last_checked_at": "2026-08-20",
+      "dr_last_checked_at": "2026-09-05",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -5089,14 +5089,14 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 8,
+      "dr": 14,
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0,
       "logo_svg": "/assets/logos/linux-band.svg",
       "logo_source_url": null,
       "logo_generated": true,
-      "dr_last_checked_at": "2026-08-20",
+      "dr_last_checked_at": "2026-09-05",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -5122,7 +5122,7 @@
       "logo_svg": null,
       "logo_source_url": null,
       "logo_generated": false,
-      "dr_last_checked_at": "2026-08-20",
+      "dr_last_checked_at": "2026-09-05",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -5148,7 +5148,7 @@
       "logo_svg": null,
       "logo_source_url": null,
       "logo_generated": false,
-      "dr_last_checked_at": "2026-08-24",
+      "dr_last_checked_at": "2026-09-05",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -5174,7 +5174,7 @@
       "logo_svg": null,
       "logo_source_url": null,
       "logo_generated": false,
-      "dr_last_checked_at": "2026-08-24",
+      "dr_last_checked_at": "2026-09-05",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -5200,7 +5200,7 @@
       "logo_svg": null,
       "logo_source_url": null,
       "logo_generated": false,
-      "dr_last_checked_at": "2026-08-24",
+      "dr_last_checked_at": "2026-09-05",
       "source_collection": "authority_documentation_sites"
     },
     {
