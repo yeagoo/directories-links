@@ -41,15 +41,15 @@
       "footer_navigation_sites",
       "authority_documentation_sites"
     ],
-    "next_index": 19,
-    "last_run_at": "2026-09-21T08:00:13Z",
+    "next_index": 25,
+    "last_run_at": "2026-09-22T07:45:33Z",
     "last_updated_ids": [
-      "debian-club",
-      "ubuntu-fan",
-      "almalinux-com-cn",
-      "runentlinux-com",
-      "eol-wiki",
-      "litehttpd-com"
+      "portcyou-com",
+      "rank-fan",
+      "geo-fan",
+      "mariadb-edu-rich",
+      "pg-edu-rich",
+      "bun-edu-rich"
     ],
     "retry_backoff_max_days": 7,
     "unreachable_after": 5
@@ -601,7 +601,7 @@
       "description": "端口号查询数据库，帮助开发者识别端口用途并避免端口冲突。",
       "status": "active",
       "dr": 30,
-      "dr_last_checked_at": "2026-09-10",
+      "dr_last_checked_at": "2026-09-22",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -625,7 +625,7 @@
       "description": "提供 SEO、GEO、AIEO 报告与排名分析工具。",
       "status": "active",
       "dr": 29,
-      "dr_last_checked_at": "2026-09-10",
+      "dr_last_checked_at": "2026-09-22",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -649,7 +649,7 @@
       "description": "生成式引擎优化文档站，帮助内容更容易被 AI 搜索与问答引擎信任和引用。",
       "status": "active",
       "dr": 30,
-      "dr_last_checked_at": "2026-09-10",
+      "dr_last_checked_at": "2026-09-22",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -673,7 +673,7 @@
       "description": "面向新手、AI 开发者与云上用户的现代 MariaDB 知识库。",
       "status": "active",
       "dr": 27,
-      "dr_last_checked_at": "2026-09-11",
+      "dr_last_checked_at": "2026-09-22",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -710,7 +710,7 @@
       "logo_source_url": "https://pg.edu.rich/icon.svg",
       "logo_generated": false,
       "dr_consecutive_errors": 0,
-      "dr_last_checked_at": "2026-09-11"
+      "dr_last_checked_at": "2026-09-22"
     },
     {
       "id": "bun-edu-rich",
@@ -735,7 +735,7 @@
       "logo_source_url": "https://bun.edu.rich/icon.svg",
       "logo_generated": false,
       "dr_consecutive_errors": 0,
-      "dr_last_checked_at": "2026-09-11"
+      "dr_last_checked_at": "2026-09-22"
     },
     {
       "id": "valkey-edu-rich",
@@ -2391,7 +2391,7 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 30,
-      "dr_last_checked_at": "2026-09-10",
+      "dr_last_checked_at": "2026-09-22",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -2413,7 +2413,7 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 29,
-      "dr_last_checked_at": "2026-09-10",
+      "dr_last_checked_at": "2026-09-22",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -2435,7 +2435,7 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 30,
-      "dr_last_checked_at": "2026-09-10",
+      "dr_last_checked_at": "2026-09-22",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -2457,7 +2457,7 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 27,
-      "dr_last_checked_at": "2026-09-11",
+      "dr_last_checked_at": "2026-09-22",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -2479,7 +2479,7 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 27,
-      "dr_last_checked_at": "2026-09-11",
+      "dr_last_checked_at": "2026-09-22",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -2501,7 +2501,7 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 27,
-      "dr_last_checked_at": "2026-09-11",
+      "dr_last_checked_at": "2026-09-22",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -4152,7 +4152,7 @@
       "description": "端口号查询数据库，帮助开发者识别端口用途并避免端口冲突。",
       "status": "active",
       "dr": 30,
-      "dr_last_checked_at": "2026-09-10",
+      "dr_last_checked_at": "2026-09-22",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -4177,7 +4177,7 @@
       "description": "提供 SEO、GEO、AIEO 报告与排名分析工具。",
       "status": "active",
       "dr": 29,
-      "dr_last_checked_at": "2026-09-10",
+      "dr_last_checked_at": "2026-09-22",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -4202,7 +4202,7 @@
       "description": "生成式引擎优化文档站，帮助内容更容易被 AI 搜索与问答引擎信任和引用。",
       "status": "active",
       "dr": 30,
-      "dr_last_checked_at": "2026-09-10",
+      "dr_last_checked_at": "2026-09-22",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -4227,7 +4227,7 @@
       "description": "面向新手、AI 开发者与云上用户的现代 MariaDB 知识库。",
       "status": "active",
       "dr": 27,
-      "dr_last_checked_at": "2026-09-11",
+      "dr_last_checked_at": "2026-09-22",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -4265,7 +4265,7 @@
       "logo_source_url": "https://pg.edu.rich/icon.svg",
       "logo_generated": false,
       "dr_consecutive_errors": 0,
-      "dr_last_checked_at": "2026-09-11",
+      "dr_last_checked_at": "2026-09-22",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -4291,7 +4291,7 @@
       "logo_source_url": "https://bun.edu.rich/icon.svg",
       "logo_generated": false,
       "dr_consecutive_errors": 0,
-      "dr_last_checked_at": "2026-09-11",
+      "dr_last_checked_at": "2026-09-22",
       "source_collection": "authority_documentation_sites"
     },
     {
