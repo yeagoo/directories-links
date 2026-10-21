@@ -41,15 +41,15 @@
       "footer_navigation_sites",
       "authority_documentation_sites"
     ],
-    "next_index": 55,
-    "last_run_at": "2026-10-20T07:40:31Z",
+    "next_index": 61,
+    "last_run_at": "2026-10-21T07:44:26Z",
     "last_updated_ids": [
-      "hiemdash-com",
-      "p-cafe",
-      "web-casa",
-      "apponarm-com",
-      "screenhello-com",
-      "tratra-travel"
+      "pkgseek",
+      "linux-band",
+      "astro-docs",
+      "astro-wordpress-migration",
+      "wordpress-documentation",
+      "wordpress-developer-resources"
     ],
     "retry_backoff_max_days": 7,
     "unreachable_after": 5
@@ -1483,7 +1483,7 @@
       "logo_svg": "/assets/logos/pkgseek.svg",
       "logo_source_url": null,
       "logo_generated": true,
-      "dr_last_checked_at": "2026-10-09"
+      "dr_last_checked_at": "2026-10-21"
     },
     {
       "id": "linux-band",
@@ -1508,7 +1508,7 @@
       "logo_svg": "/assets/logos/linux-band.svg",
       "logo_source_url": null,
       "logo_generated": true,
-      "dr_last_checked_at": "2026-10-09"
+      "dr_last_checked_at": "2026-10-21"
     },
     {
       "id": "astro-docs",
@@ -1533,7 +1533,7 @@
       "logo_svg": null,
       "logo_source_url": null,
       "logo_generated": false,
-      "dr_last_checked_at": "2026-10-09"
+      "dr_last_checked_at": "2026-10-21"
     },
     {
       "id": "astro-wordpress-migration",
@@ -1558,7 +1558,7 @@
       "logo_svg": null,
       "logo_source_url": null,
       "logo_generated": false,
-      "dr_last_checked_at": "2026-10-10"
+      "dr_last_checked_at": "2026-10-21"
     },
     {
       "id": "wordpress-documentation",
@@ -1583,7 +1583,7 @@
       "logo_svg": null,
       "logo_source_url": null,
       "logo_generated": false,
-      "dr_last_checked_at": "2026-10-10"
+      "dr_last_checked_at": "2026-10-21"
     },
     {
       "id": "wordpress-developer-resources",
@@ -1608,7 +1608,7 @@
       "logo_svg": null,
       "logo_source_url": null,
       "logo_generated": false,
-      "dr_last_checked_at": "2026-10-10"
+      "dr_last_checked_at": "2026-10-21"
     },
     {
       "id": "wp-cli",
@@ -3185,7 +3185,7 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 29,
-      "dr_last_checked_at": "2026-10-09",
+      "dr_last_checked_at": "2026-10-21",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -3207,7 +3207,7 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 27,
-      "dr_last_checked_at": "2026-10-09",
+      "dr_last_checked_at": "2026-10-21",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -3229,7 +3229,7 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 90,
-      "dr_last_checked_at": "2026-10-09",
+      "dr_last_checked_at": "2026-10-21",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -3251,7 +3251,7 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 90,
-      "dr_last_checked_at": "2026-10-10",
+      "dr_last_checked_at": "2026-10-21",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -3273,7 +3273,7 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 97,
-      "dr_last_checked_at": "2026-10-10",
+      "dr_last_checked_at": "2026-10-21",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -3295,7 +3295,7 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 97,
-      "dr_last_checked_at": "2026-10-10",
+      "dr_last_checked_at": "2026-10-21",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -5070,7 +5070,7 @@
       "logo_svg": "/assets/logos/pkgseek.svg",
       "logo_source_url": null,
       "logo_generated": true,
-      "dr_last_checked_at": "2026-10-09",
+      "dr_last_checked_at": "2026-10-21",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -5096,7 +5096,7 @@
       "logo_svg": "/assets/logos/linux-band.svg",
       "logo_source_url": null,
       "logo_generated": true,
-      "dr_last_checked_at": "2026-10-09",
+      "dr_last_checked_at": "2026-10-21",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -5122,7 +5122,7 @@
       "logo_svg": null,
       "logo_source_url": null,
       "logo_generated": false,
-      "dr_last_checked_at": "2026-10-09",
+      "dr_last_checked_at": "2026-10-21",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -5148,7 +5148,7 @@
       "logo_svg": null,
       "logo_source_url": null,
       "logo_generated": false,
-      "dr_last_checked_at": "2026-10-10",
+      "dr_last_checked_at": "2026-10-21",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -5174,7 +5174,7 @@
       "logo_svg": null,
       "logo_source_url": null,
       "logo_generated": false,
-      "dr_last_checked_at": "2026-10-10",
+      "dr_last_checked_at": "2026-10-21",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -5200,7 +5200,7 @@
       "logo_svg": null,
       "logo_source_url": null,
       "logo_generated": false,
-      "dr_last_checked_at": "2026-10-10",
+      "dr_last_checked_at": "2026-10-21",
       "source_collection": "authority_documentation_sites"
     },
     {
