@@ -41,15 +41,15 @@
       "footer_navigation_sites",
       "authority_documentation_sites"
     ],
-    "next_index": 52,
-    "last_run_at": "2026-11-23T10:52:26Z",
+    "next_index": 58,
+    "last_run_at": "2026-11-24T12:34:48Z",
     "last_updated_ids": [
-      "llstack-com",
-      "cloud-fan",
-      "hestiacp-cn",
-      "hiemdash-com",
-      "p-cafe",
-      "web-casa"
+      "apponarm-com",
+      "screenhello-com",
+      "tratra-travel",
+      "pkgseek",
+      "linux-band",
+      "astro-docs"
     ],
     "retry_backoff_max_days": 7,
     "unreachable_after": 5
@@ -1404,7 +1404,7 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 29,
-      "dr_last_checked_at": "2026-11-12",
+      "dr_last_checked_at": "2026-11-24",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0,
@@ -1428,7 +1428,7 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 29,
-      "dr_last_checked_at": "2026-11-12",
+      "dr_last_checked_at": "2026-11-24",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0,
@@ -1451,14 +1451,14 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 34,
+      "dr": 33,
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0,
       "logo_svg": "/assets/logos/tratra-travel.svg",
       "logo_source_url": null,
       "logo_generated": true,
-      "dr_last_checked_at": "2026-11-12"
+      "dr_last_checked_at": "2026-11-24"
     },
     {
       "id": "pkgseek",
@@ -1483,7 +1483,7 @@
       "logo_svg": "/assets/logos/pkgseek.svg",
       "logo_source_url": null,
       "logo_generated": true,
-      "dr_last_checked_at": "2026-11-13"
+      "dr_last_checked_at": "2026-11-24"
     },
     {
       "id": "linux-band",
@@ -1501,14 +1501,14 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 26,
+      "dr": 25,
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0,
       "logo_svg": "/assets/logos/linux-band.svg",
       "logo_source_url": null,
       "logo_generated": true,
-      "dr_last_checked_at": "2026-11-13"
+      "dr_last_checked_at": "2026-11-24"
     },
     {
       "id": "astro-docs",
@@ -1533,7 +1533,7 @@
       "logo_svg": null,
       "logo_source_url": null,
       "logo_generated": false,
-      "dr_last_checked_at": "2026-11-13"
+      "dr_last_checked_at": "2026-11-24"
     },
     {
       "id": "astro-wordpress-migration",
@@ -3119,7 +3119,7 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 29,
-      "dr_last_checked_at": "2026-11-12",
+      "dr_last_checked_at": "2026-11-24",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -3141,7 +3141,7 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 29,
-      "dr_last_checked_at": "2026-11-12",
+      "dr_last_checked_at": "2026-11-24",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -3162,8 +3162,8 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 34,
-      "dr_last_checked_at": "2026-11-12",
+      "dr": 33,
+      "dr_last_checked_at": "2026-11-24",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -3185,7 +3185,7 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 27,
-      "dr_last_checked_at": "2026-11-13",
+      "dr_last_checked_at": "2026-11-24",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -3206,8 +3206,8 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 26,
-      "dr_last_checked_at": "2026-11-13",
+      "dr": 25,
+      "dr_last_checked_at": "2026-11-24",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -3229,7 +3229,7 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 91,
-      "dr_last_checked_at": "2026-11-13",
+      "dr_last_checked_at": "2026-11-24",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -4988,7 +4988,7 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 29,
-      "dr_last_checked_at": "2026-11-12",
+      "dr_last_checked_at": "2026-11-24",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0,
@@ -5013,7 +5013,7 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 29,
-      "dr_last_checked_at": "2026-11-12",
+      "dr_last_checked_at": "2026-11-24",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0,
@@ -5037,14 +5037,14 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 34,
+      "dr": 33,
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0,
       "logo_svg": "/assets/logos/tratra-travel.svg",
       "logo_source_url": null,
       "logo_generated": true,
-      "dr_last_checked_at": "2026-11-12",
+      "dr_last_checked_at": "2026-11-24",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -5070,7 +5070,7 @@
       "logo_svg": "/assets/logos/pkgseek.svg",
       "logo_source_url": null,
       "logo_generated": true,
-      "dr_last_checked_at": "2026-11-13",
+      "dr_last_checked_at": "2026-11-24",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -5089,14 +5089,14 @@
       "link_rel": "dofollow",
       "dofollow": true,
       "links_page_included": true,
-      "dr": 26,
+      "dr": 25,
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0,
       "logo_svg": "/assets/logos/linux-band.svg",
       "logo_source_url": null,
       "logo_generated": true,
-      "dr_last_checked_at": "2026-11-13",
+      "dr_last_checked_at": "2026-11-24",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -5122,7 +5122,7 @@
       "logo_svg": null,
       "logo_source_url": null,
       "logo_generated": false,
-      "dr_last_checked_at": "2026-11-13",
+      "dr_last_checked_at": "2026-11-24",
       "source_collection": "authority_documentation_sites"
     },
     {
