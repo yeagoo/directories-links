@@ -41,15 +41,15 @@
       "footer_navigation_sites",
       "authority_documentation_sites"
     ],
-    "next_index": 64,
-    "last_run_at": "2026-11-25T11:24:35Z",
+    "next_index": 1,
+    "last_run_at": "2026-11-26T10:59:25Z",
     "last_updated_ids": [
-      "astro-wordpress-migration",
-      "wordpress-documentation",
-      "wordpress-developer-resources",
-      "wp-cli",
-      "mdn-web-docs",
-      "vm-fyi"
+      "yunqianyi",
+      "steamos-club",
+      "deno-edu-rich",
+      "tanstack-atlas",
+      "fde-name",
+      "aat-ee"
     ],
     "retry_backoff_max_days": 7,
     "unreachable_after": 5
@@ -67,7 +67,7 @@
       "description": "面向创业者和开发者的产品发现与发布平台，收录 AI 工具、SaaS 与新项目。",
       "status": "active",
       "dr": 46,
-      "dr_last_checked_at": "2026-11-15",
+      "dr_last_checked_at": "2026-11-26",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -1708,7 +1708,7 @@
       "logo_svg": "/assets/logos/yunqianyi.svg",
       "logo_source_url": "https://yunqianyi.com/public/assets/logo.svg",
       "logo_generated": false,
-      "dr_last_checked_at": "2026-11-14"
+      "dr_last_checked_at": "2026-11-26"
     },
     {
       "id": "steamos-club",
@@ -1733,7 +1733,7 @@
       "logo_svg": "/assets/logos/steamos-club.svg",
       "logo_source_url": "https://steamos.club/public/brand/steamos-handbook-mark.svg",
       "logo_generated": false,
-      "dr_last_checked_at": "2026-11-14"
+      "dr_last_checked_at": "2026-11-26"
     },
     {
       "id": "deno-edu-rich",
@@ -1758,7 +1758,7 @@
       "logo_source_url": "https://deno.edu.rich/icon.svg",
       "logo_generated": false,
       "dr_consecutive_errors": 0,
-      "dr_last_checked_at": "2026-11-14"
+      "dr_last_checked_at": "2026-11-26"
     },
     {
       "id": "tanstack-atlas",
@@ -1782,7 +1782,7 @@
       "logo_svg": "/assets/logos/tanstack-atlas.svg",
       "logo_generated": true,
       "dr_consecutive_errors": 0,
-      "dr_last_checked_at": "2026-11-15"
+      "dr_last_checked_at": "2026-11-26"
     },
     {
       "id": "fde-name",
@@ -1807,7 +1807,7 @@
       "logo_source_url": "https://fde.name/logo.svg",
       "logo_generated": false,
       "dr_consecutive_errors": 0,
-      "dr_last_checked_at": "2026-11-15"
+      "dr_last_checked_at": "2026-11-26"
     }
   ],
   "badges": [
@@ -1837,7 +1837,7 @@
       "links_page_included": true,
       "links_page_category": "导航站",
       "dr": 46,
-      "dr_last_checked_at": "2026-11-15",
+      "dr_last_checked_at": "2026-11-26",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0,
@@ -3383,7 +3383,7 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 8,
-      "dr_last_checked_at": "2026-11-14",
+      "dr_last_checked_at": "2026-11-26",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -3405,7 +3405,7 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 8,
-      "dr_last_checked_at": "2026-11-14",
+      "dr_last_checked_at": "2026-11-26",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -3427,7 +3427,7 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 26,
-      "dr_last_checked_at": "2026-11-14",
+      "dr_last_checked_at": "2026-11-26",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -3449,7 +3449,7 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 93,
-      "dr_last_checked_at": "2026-11-15",
+      "dr_last_checked_at": "2026-11-26",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -3471,7 +3471,7 @@
       "dofollow": true,
       "links_page_included": true,
       "dr": 23,
-      "dr_last_checked_at": "2026-11-15",
+      "dr_last_checked_at": "2026-11-26",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "dr_consecutive_errors": 0
@@ -3601,7 +3601,7 @@
       "description": "面向创业者和开发者的产品发现与发布平台，收录 AI 工具、SaaS 与新项目。",
       "status": "active",
       "dr": 46,
-      "dr_last_checked_at": "2026-11-15",
+      "dr_last_checked_at": "2026-11-26",
       "dr_update_enabled": true,
       "dr_status": "ok",
       "link_rel": "dofollow",
@@ -5304,7 +5304,7 @@
       "logo_svg": "/assets/logos/yunqianyi.svg",
       "logo_source_url": "https://yunqianyi.com/public/assets/logo.svg",
       "logo_generated": false,
-      "dr_last_checked_at": "2026-11-14",
+      "dr_last_checked_at": "2026-11-26",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -5330,7 +5330,7 @@
       "logo_svg": "/assets/logos/steamos-club.svg",
       "logo_source_url": "https://steamos.club/public/brand/steamos-handbook-mark.svg",
       "logo_generated": false,
-      "dr_last_checked_at": "2026-11-14",
+      "dr_last_checked_at": "2026-11-26",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -5356,7 +5356,7 @@
       "logo_source_url": "https://deno.edu.rich/icon.svg",
       "logo_generated": false,
       "dr_consecutive_errors": 0,
-      "dr_last_checked_at": "2026-11-14",
+      "dr_last_checked_at": "2026-11-26",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -5381,7 +5381,7 @@
       "logo_svg": "/assets/logos/tanstack-atlas.svg",
       "logo_generated": true,
       "dr_consecutive_errors": 0,
-      "dr_last_checked_at": "2026-11-15",
+      "dr_last_checked_at": "2026-11-26",
       "source_collection": "authority_documentation_sites"
     },
     {
@@ -5407,7 +5407,7 @@
       "logo_source_url": "https://fde.name/logo.svg",
       "logo_generated": false,
       "dr_consecutive_errors": 0,
-      "dr_last_checked_at": "2026-11-15",
+      "dr_last_checked_at": "2026-11-26",
       "source_collection": "authority_documentation_sites"
     }
   ]
